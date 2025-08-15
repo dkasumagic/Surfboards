@@ -39,3 +39,8 @@
 
 # debug information files
 *.dwo
+
+.zig-cache/
+zig-out/
+.vscode
+output.txt

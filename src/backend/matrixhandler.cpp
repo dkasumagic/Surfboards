@@ -1,6 +1,23 @@
 #include <iostream>
 #include <fstream>
 #include <cstdint>
+
+// Thing the app produces the textfile for the operations
+
+
+// float32_t** createMatrix(int rows, int cols) {
+//     float32_t** matrix = new float32_t*[rows];
+//     for (int i = 0; i < rows; ++i) {
+//         matrix[i] = new float32_t[cols];
+//     }
+//     return matrix;
+// }
+
+
+void writetofile(int size) {
+    std::ofstream output;
+    std::string nowsize = std::to_string(size);
+#include <cstdint>
 using namespace std;
 
 void writetofile(uint8_t size)
@@ -12,8 +29,7 @@ void writetofile(uint8_t size)
     output.close();
 }
 
-int main()
-{
+int main() {
     // This is a placeholder for the main function.
     // The actual implementation will depend on the specific requirements of the application.
     std::cout << "Matrix Handler Initialized." << std::endl;

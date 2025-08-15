@@ -1,3 +1,4 @@
+// Takes the textfile and produce valid verilog code.
 #include <iostream>
 #include <fstream>
 #include <filesystem>
