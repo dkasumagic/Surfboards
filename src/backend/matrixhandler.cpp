@@ -1,8 +1,9 @@
 #include <iostream>
 #include <fstream>
+#include <cstdint>
 using namespace std;
 
-void writetofile(u_int8_t size)
+void writetofile(uint8_t size)
 {
     ofstream output;
     string nowsize = std::to_string(size);
