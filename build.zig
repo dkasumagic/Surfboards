@@ -13,7 +13,10 @@ pub fn build(b: *std.Build) void {
     exe.addCSourceFiles(.{
         .files = &.{
             "src/frontend/app.cpp",
-            // add more files here
+            "src/backend/matrixhandler.cpp",
+            "src/backend/SVD.cpp",
+            "src/backend/verilog_writer.cpp",
+            "src/backend/visualiser.cpp",
         }
     });
 

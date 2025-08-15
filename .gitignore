@@ -42,3 +42,5 @@
 
 .zig-cache/
 zig-out/
+.vscode
+output.txt
