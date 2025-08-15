@@ -85,8 +85,3 @@ int write_verilog_file(const std::string& inputFileName, const std::string& outp
 
     return 0;
 }
-
-int main() {
-    int exitCode = write_verilog_file("output/MH_output_22.txt", "output/verilog.v");
-    return exitCode;
-}
