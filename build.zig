@@ -4,6 +4,13 @@ pub fn build(b: *std.Build) void {
     const target = b.standardTargetOptions(.{});
     const optimize = b.standardOptimizeOption(.{});
 
+    const webui_de = b.dependency("webui", .{
+        .target = target,
+        .optimize = optimize,
+    });
+
+    const webui = webui_de.artifact("webui");
+
     const exe = b.addExecutable(.{
         .name = "Surfboards",
         .target = target,
@@ -21,6 +28,14 @@ pub fn build(b: *std.Build) void {
     });
 
     exe.linkLibCpp();
+            // add more files here
+        }
+    });
+
+    exe.addIncludePath(b.path("vendor/webui/include/"));
+
+    exe.linkLibCpp();
+    exe.linkLibrary(webui);
 
     b.installArtifact(exe);
 
