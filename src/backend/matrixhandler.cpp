@@ -32,7 +32,7 @@ public:
 
         std::ostringstream oss;
         for (int k = 0; k < m_; ++k) {
-            oss << i_ * m_ + k << "*" << k * r_ + j;
+            oss << i_ * m_ + k << "*" << k * r_ + j_;
             if (k < m_ - 1) {
                 oss << "+";
             }
@@ -74,12 +74,6 @@ void writetofile(int rows1, int cols1, int rows2, int cols2) {
     }
     output.close();
 }
-
-
-iterator<std::string> split(const std::string& str, char delimiter) {
-    return std::find(str.begin(), str.end(), delimiter);
-}
-
 
 
 int main() {
