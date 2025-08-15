@@ -1,2 +1,2 @@
 # Surfboards
-Hackathon 2025 for UQCS! My team is creating a program that produces circuit boards that will perform a specific matrix multiplication. We hope that this will make operations in fields of AI and general high performance computing much faster and close to O(1) time.
+Project for UQCS Hackathon 2025! Our team is building an app which outputs a printable schematic of a circuit board which performs O(1) matrix multiplication according to user submitted preferences. This will invaluable in fields such as AI and high performance computing.
