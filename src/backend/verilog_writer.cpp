@@ -1,45 +1,21 @@
-// Takes the textfile and produce valid verilog code.
+// Takes the matrixhandler output and produces valid verilog code.
 #include <iostream>
 #include <fstream>
 #include <filesystem>
 
 int main() {
-
-    std::ofstream outputFile;
-    outputFile.open("verilog.txt");
+    std::ofstream outputFile { "output/verilog.txt" };
+    // outputFile.open;
 
     if (outputFile.is_open()) {
 
-        outputFile << "module\n"; // open the module for the main file.
-
-
+        outputFile << "yo\n"; // open the module for the main file.
 
         outputFile.close();
-        std::cout << "Finish.";
+        std::cout << "Finish." << std::endl;
     } else {
         std::cerr << "Error: could not open .txt file\n";
     }
 
     return 0;
-}
-
-std::string matrixReader() {
-
-
-
-    return "0";
-}
-
-std::string adder() {
-
-    
-
-    return "0";
-}
-
-std::string mult() {
-
-
-
-    return "0";
 }
