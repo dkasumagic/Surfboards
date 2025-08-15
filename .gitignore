@@ -44,3 +44,4 @@
 zig-out/
 .vscode
 output.txt
+output/*
