@@ -1,12 +1,8 @@
 #include <iostream>
-#include "webui.hpp"
+#include "app.hpp"
 
 int main() {
+  App app = App();
 
-    webui::window win;
-    win.show("<html><script src=\"webui.js\"></script> Hello World from C++! </html>");
-    webui::wait();
-
-    return 0;
+  return 0;
 }
-// User frontend/interface
