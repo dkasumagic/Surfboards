@@ -45,3 +45,4 @@ zig-out/
 .vscode
 output.txt
 output/*
+src/backend/testingtxt.cpp
