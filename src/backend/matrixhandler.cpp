@@ -4,44 +4,55 @@
 
 // Thing the app produces the textfile for the operations
 
-
-// float32_t** createMatrix(int rows, int cols) {
-//     float32_t** matrix = new float32_t*[rows];
+// float* createMatrix(int rows, int cols) {
+//     float* matrix = new float[rows * cols];
 //     for (int i = 0; i < rows; ++i) {
-//         matrix[i] = new float32_t[cols];
+//         for (int j = 0; j < cols; ++j) {
+//             matrix[i * cols + j] = i * j;
+//         }
 //     }
+
 //     return matrix;
 // }
 
 
-// void writetofile(int size) {
-//     std::ofstream output;
-//     std::string nowsize = std::to_string(size);
-using namespace std;
-
-void writetofile(uint8_t size)
-{
-    ofstream output;
-    string nowsize = std::to_string(size);
+void writetofile(int rows1, int cols1, int rows2, int cols2) {
+    std::ofstream output;
     output.open("output.txt");
-    output << "This is the size of the matrix: " << nowsize << std::endl;
+    output << rows1 << " " << cols2 << ";" << std::endl;
+    for (int i = 0; i < rows1; i++) {
+        for (int j = 0; j < cols2; j++) {
+            for (int k = 0; k < cols1; k++) { // rows2 = cols1 and k is the inbetween index
+                output << std::to_string(i * cols1 + k) << "*" << std::to_string(k * cols2 + j);
+
+                if (k < cols1 - 1) {
+                    output << "+";
+                } else {
+                    output << ";";
+                }
+            }
+            output << std::endl;
+        }
+    }
     output.close();
 }
 
-// int main() {
-//     // This is a placeholder for the main function.
-//     // The actual implementation will depend on the specific requirements of the application.
-//     std::cout << "Matrix Handler Initialized." << std::endl;
-//
-//     std::cout << "Please enter the dimensions of the first matrix: " << std::endl;
-//     int rows1, cols1;
-//     std::cin >> rows1 >> cols1;
-//
-//     std::cout << "Please enter the dimensions of the second matrix: " << std::endl;
-//     int rows2, cols2;
-//     std::cin >> rows2 >> cols2;
-//
-//     int size = rows1 * cols2;
-//     writetofile(size);
-// }
-//
+int main() {
+    std::cout << "Matrix Handler Initialized." << std::endl;
+
+    // std::cout << "Please enter the dimensions of the first matrix: " << std::endl;
+    // int rows1, cols1;
+    // std::cin >> rows1 >> cols1;
+
+    // std::cout << "Please enter the dimensions of the second matrix: " << std::endl;
+    // int rows2, cols2;
+    // std::cin >> rows2 >> cols2;
+    
+    int rows1 = 2, cols1 = 3; // Example dimensions for the first matrix
+    int rows2 = 3, cols2 = 4; // Example dimensions for the
+
+    writetofile(rows1, cols1, rows2, cols2);
+
+    return 0;
+}
+
