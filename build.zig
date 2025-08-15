@@ -24,10 +24,6 @@ pub fn build(b: *std.Build) void {
             "src/backend/SVD.cpp",
             "src/backend/verilog_writer.cpp",
             "src/backend/visualiser.cpp",
-        }
-    });
-
-    exe.linkLibCpp();
             // add more files here
         }
     });

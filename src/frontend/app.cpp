@@ -1,5 +1,5 @@
 #include <iostream>
-#include "..\..\vendor\webui\include\webui.hpp"
+#include "webui.hpp"
 
 int main() {
 

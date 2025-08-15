@@ -4,6 +4,9 @@
     .fingerprint = 0x4fa2d025aa758d8a,
     .minimum_zig_version = "0.14.1",
     .dependencies = .{
+        .webui = .{
+            .path = "vendor/webui"
+        },
     },
 
     .paths = .{
