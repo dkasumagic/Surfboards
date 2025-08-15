@@ -48,8 +48,8 @@ int main() {
     // int rows2, cols2;
     // std::cin >> rows2 >> cols2;
     
-    int rows1 = 2, cols1 = 3; // Example dimensions for the first matrix
-    int rows2 = 3, cols2 = 4; // Example dimensions for the
+    int rows1 = 10, cols1 = 40; // Example dimensions for the first matrix
+    int rows2 = 40, cols2 = 200; // Example dimensions for the
 
     writetofile(rows1, cols1, rows2, cols2);
 
