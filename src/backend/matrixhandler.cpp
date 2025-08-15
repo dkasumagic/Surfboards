@@ -1,8 +1,18 @@
 #include <iostream>
 #include <fstream>
+#include <cstdint>
 
 
-void writetofile(u_int8_t size) {
+// float32_t** createMatrix(int rows, int cols) {
+//     float32_t** matrix = new float32_t*[rows];
+//     for (int i = 0; i < rows; ++i) {
+//         matrix[i] = new float32_t[cols];
+//     }
+//     return matrix;
+// }
+
+
+void writetofile(uint8_t size) {
     std::ofstream output;
     std::string nowsize = std::to_string(size);
     output.open("output.txt");
