@@ -1,0 +1,3 @@
+[submodule "vendor/webui"]
+	path = vendor/webui
+	url = https://github.com/webui-dev/webui.git
