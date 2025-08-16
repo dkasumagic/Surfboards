@@ -23,7 +23,7 @@ pub fn build(b: *std.Build) void {
             "src/backend/matrixhandler.cpp",
             "src/backend/SVD.cpp",
             "src/backend/verilog_writer.cpp",
-            "src/backend/visualiser.cpp",
+            "src/backend/synthesis_engine.cpp",
             // add more files here
         },
         .flags = &.{
