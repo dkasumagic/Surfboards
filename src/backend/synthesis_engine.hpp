@@ -3,9 +3,6 @@
 
 #include <string>
 #include <vector>
-// #include <optional>
-// #include <iostream>
-// #include <fstream>
 #include <filesystem>
 
 struct SynthesisResult {
