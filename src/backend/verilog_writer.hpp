@@ -1,5 +1,5 @@
-#ifndef VERILOG_WRITER.HPP
-#define VERILOG_WRITER.HPP
+#ifndef VERILOG_WRITER_HPP
+#define VERILOG_WRITER_HPP
 
 // Takes the matrixhandler output and produces valid verilog code.
 #include <iostream>

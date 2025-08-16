@@ -13,6 +13,7 @@ void inputMatrix(webui::window::event *e) {
     long long c2 = e->get_int(3);
     long long q1 = e->get_int(4);
     long long q2 = e->get_int(5);
+    // long long s1 = e->get_int(6); Signed bool value for from frontend
 
     std::cout << "Executing...\n";
 
@@ -29,12 +30,13 @@ void inputMatrix(webui::window::event *e) {
     std::string inputFile = "output.txt";
     std::string outputFile = "verilog_out.txt";
     write_verilog_file(inputFile, outputFile, (q1+q2));
+    //write_verilog_file(inputFile, outputFile, (q1+q2), s1)
     std::cout << "Verilog file generated...\n";
 
     std::cout << "A: " << r1 << "x" << c1
                 << " | B: " << r2 << "x" << c2 
                 << " | C: " << r1 << "x" << c2 
-                << "\nQ" << q1 << "." << q2 << "\n";
+                << " | Q" << q1 << "." << q2 << "\n";
 
     e->return_string("ok");
 }
