@@ -14,7 +14,6 @@ void inputMatrix(webui::window::event *e) {
     long long q1 = e->get_int(4);
     long long q2 = e->get_int(5);
     // long long s1 = e->get_int(6); Signed bool value for from frontend
-    // user choice to do svd or not.
 
     std::cout << "Executing...\n";
 
@@ -46,38 +45,13 @@ class App {
 public:
   webui::window win;
 
-
-  App()  {
-    webui::set_config(folder_monitor, true);
-    win.set_port(port);
-
-
-    win.bind("inputMatrix", inputMatrix);
-
-    webui::set_default_root_folder(root_folder);
-    std::string_view url = win.start_server(root_file);
-    std::cout << url << "\n";
-    webui::wait();
-
-  }
-
-  // void run() {
-  //   webui::wait();
-  // }
-
-
-  ~App() {
-    webui::clean();
-  }
+  App();
+  ~App();
 
 private:
   const int port = 5000;
   const std::string root_folder = "src/frontend";
   const std::string root_file = "index.html";
-
 };
-
-
-
 
 #endif // !APP_HEADER_H

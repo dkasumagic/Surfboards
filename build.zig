@@ -19,6 +19,7 @@ pub fn build(b: *std.Build) void {
 
     exe.addCSourceFiles(.{
         .files = &.{
+            "src/main.cpp",
             "src/frontend/app.cpp",
             "src/backend/matrixhandler.cpp",
             "src/backend/SVD.cpp",
@@ -29,6 +30,8 @@ pub fn build(b: *std.Build) void {
         .flags = &.{
             "-std=c++17",
             "-I/usr/include/eigen3",
+            "-I./src/frontend",
+            "-I./src/backend"
         }
     });
 

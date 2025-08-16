@@ -4,20 +4,6 @@
 #include <cstdint>
 #include "matrixhandler.hpp"
 
-
-// Thing the app produces the textfile for the operations
-
-// float* createMatrix(int rows, int cols) {
-//     float* matrix = new float[rows * cols];
-//     for (int i = 0; i < rows; ++i) {
-//         for (int j = 0; j < cols; ++j) {
-//             matrix[i * cols + j] = i * j;
-//         }
-//     }
-
-//     return matrix;
-// }
-
 MatrixIterator::MatrixIterator(int n, int m, int r) 
     : n_(n), m_(m), r_(r), i_(0), j_(0)  {}
 
@@ -46,7 +32,6 @@ std::string MatrixIterator::next_line() {
     }
     return oss.str();
 }
-
      
 void generateMatrixMathBlueprint(const std::string& outputFile, int rows1, int cols1, int rows2, int cols2) {
     std::ofstream output { outputFile };
@@ -68,7 +53,6 @@ void generateMatrixMathBlueprint(const std::string& outputFile, int rows1, int c
     output.close();
 }
 
-
 // int main() {
 //     std::cout << "Matrix Handler Initialized." << std::endl;
 
@@ -87,4 +71,3 @@ void generateMatrixMathBlueprint(const std::string& outputFile, int rows1, int c
 
 //     return 0;
 // }
-
