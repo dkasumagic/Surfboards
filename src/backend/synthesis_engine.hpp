@@ -8,8 +8,8 @@
 // #include <fstream>
 #include <filesystem>
 
-struct synthesisResult {
-  bool ok;
+struct SynthesisResult {
+  int code;
   std::string message;
   std::filesystem::path design_json;
   std::filesystem::path schematic_svg;
@@ -19,5 +19,6 @@ struct synthesisResult {
 
 static bool file_exists(const std::filesystem::path& path);
 static int run_command(const std::vector<std::string>& cmd, const std::filesystem::path& logfilePath);
+SynthesisResult run_synthesis(const std::filesystem::path& verilogFilePath, const std::filesystem::path& yosysFilePath, bool quiteYosys=true);
 
 #endif
