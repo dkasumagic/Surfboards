@@ -4,7 +4,7 @@
 #include <iostream>
 #include "webui.hpp"
 
-void inputMatrix(webui::window::event *e);
+void workflow(webui::window::event *e);
 
 class App {
 public:
