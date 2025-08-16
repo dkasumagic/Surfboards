@@ -61,6 +61,7 @@ SynthesisResult runSynthesis(const std::filesystem::path& verilogFilePath, const
   {
     std::vector<std::string> command;
     command.push_back("npx");
+    command.push_back("--yes");
     command.push_back("netlistsvg");
     command.push_back(result.design_json.string());
     command.push_back("-o");
