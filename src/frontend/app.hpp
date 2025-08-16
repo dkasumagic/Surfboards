@@ -14,7 +14,7 @@ void inputMatrix(webui::window::event *e) {
     long long q1 = e->get_int(4);
     long long q2 = e->get_int(5);
 
-    std::cout << "hi\n";
+    std::cout << "Executing...\n";
 
     bool valid = r1 > 0 && c1 > 0 && r2 > 0 && c2 > 0;
     if (!valid) {
@@ -24,9 +24,12 @@ void inputMatrix(webui::window::event *e) {
     }
 
     writetofile(r1, c1, r2, c2);
-    std::string inputFile = "";
-    std::string outputFile = "";
+    std::cout << "Matrix generated...\n";
+
+    std::string inputFile = "output.txt";
+    std::string outputFile = "verilog_out.txt";
     write_verilog_file(inputFile, outputFile, (q1+q2));
+    std::cout << "Verilog file generated...\n";
 
     std::cout << "A: " << r1 << "x" << c1
                 << " | B: " << r2 << "x" << c2 
@@ -51,12 +54,13 @@ public:
     webui::set_default_root_folder(root_folder);
     std::string_view url = win.start_server(root_file);
     std::cout << url << "\n";
-
-  }
-
-  void run() {
     webui::wait();
+
   }
+
+  // void run() {
+  //   webui::wait();
+  // }
 
 
   ~App() {
