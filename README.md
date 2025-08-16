@@ -9,6 +9,7 @@ It was these thoughts that pushed our team to attempt to produce O(1) matrix mul
 - [zig](https://github.com/ziglang/zig)
 - [yosys](https://github.com/YosysHQ/yosys)
 - [node.js](https://github.com/nodejs/node)
+- [npm](https://github.com/npm/cli)
 
 # Installation/Setup
 Just run `zig build run` in the project's home directory. Zig compiles the C++ code and runs a webpage on the localhost (see the terminal output for the port). Use from is pretty trivial, although it is left as an exercise for the reader to prove this result.
