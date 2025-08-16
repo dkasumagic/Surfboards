@@ -11,6 +11,7 @@ int writeVerilogFile(const std::string& inputFileName, const std::string& output
     std::ifstream inputFile { inputFileName };
     std::ofstream outputFile { outputFileName };
     std::string line;
+    // SVDMatGen gen = SVDMetGen(n,m,v,s1,s2);
    
     if (inputFile.is_open() && outputFile.is_open()) {
         // Initalise some more stuff and get the matrix size
