@@ -3,7 +3,6 @@ async function applyMatrices() {
   const values = ids.map(getInputValue);
   ids.forEach((id, i) => markValidity(id, values[i] !== null));
 
-  console.log("applying matrixes")
   if (values.some(v => v === null)) {
     alert('Enter positive integer values for all matrix dimensions.');
     return;
@@ -26,10 +25,19 @@ async function applyMatrices() {
 
 document.addEventListener('DOMContentLoaded', () => {
   const btn = document.getElementById('applyMatricesBtn');
-  console.log("loaded");
   if (btn) btn.addEventListener('click', applyMatrices);
-});
 
+  const aCols = document.getElementById("matrixA_cols");
+  const bRows = document.getElementById("matrixB_rows");
+
+  aCols.addEventListener("input", (e) => {
+    bRows.value = e.target.value;
+  });
+  bRows.addEventListener("input", (e) => {
+    aCols.value = e.target.value;
+  });
+
+});
 
 function getInputValue(id) {
   const el = document.getElementById(id);
@@ -41,28 +49,15 @@ function getInputValue(id) {
 function markValidity(id, ok) {
   const el = document.getElementById(id);
   if (!el) return;
-
-  // Clear previous state (neutral or error)
   el.classList.remove(
-    'ring-2',
-    'ring-neutral-400',
-    'border-neutral-400',
-    'ring-red-500',
-    'border-red-500',
-    'ring-red-400',
-    'border-red-400',
-    'ring-red-300',
-    'border-red-300',
-    'bg-red-50'
+    'ring-2','ring-neutral-400','border-neutral-400',
+    'ring-red-500','border-red-500','ring-red-400','border-red-400',
+    'ring-red-300','border-red-300','bg-red-50'
   );
-
   if (!ok) {
     el.classList.remove('border-neutral-300');
-    el.classList.add('ring-2', 'ring-red-300', 'border-red-300', 'bg-red-50');
-  } else {
-    // Restore default neutral border if missing
-    if (!el.classList.contains('border-neutral-300')) {
-      el.classList.add('border-neutral-300');
-    }
+    el.classList.add('ring-2','ring-red-300','border-red-300','bg-red-50');
+  } else if (!el.classList.contains('border-neutral-300')) {
+    el.classList.add('border-neutral-300');
   }
 }
