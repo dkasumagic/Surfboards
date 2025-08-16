@@ -22,7 +22,8 @@ void inputMatrix(webui::window::event *e) {
     writetofile(r1, c1, r2, c2);
 
     std::cout << "A: " << r1 << "x" << c1
-                << " | B: " << r2 << "x" << c2 << std::endl;
+                << " | B: " << r2 << "x" << c2 
+                << " | C: " << r1 << "x" << c2 << std::endl;
 
     e->return_string("ok");
 }
