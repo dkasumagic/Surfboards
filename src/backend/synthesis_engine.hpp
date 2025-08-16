@@ -16,6 +16,6 @@ struct SynthesisResult {
 
 static bool file_exists(const std::filesystem::path& path);
 static int run_command(const std::vector<std::string>& cmd, const std::filesystem::path& logfilePath);
-SynthesisResult run_synthesis(const std::filesystem::path& verilogFilePath, const std::filesystem::path& yosysFilePath, bool quiteYosys=true);
+SynthesisResult runSynthesis(const std::filesystem::path& verilogFilePath, const std::filesystem::path& yosysFilePath, bool quiteYosys=true);
 
 #endif

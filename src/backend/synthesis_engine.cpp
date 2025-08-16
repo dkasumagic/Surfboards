@@ -25,7 +25,7 @@ static int run_command(const std::vector<std::string>& cmd, const std::filesyste
   return WEXITSTATUS(run);
 }
 
-SynthesisResult run_synthesis(const std::filesystem::path& verilogFilePath, const std::filesystem::path& yosysFilePath, bool quiteYosys) {
+SynthesisResult runSynthesis(const std::filesystem::path& verilogFilePath, const std::filesystem::path& yosysFilePath, bool quiteYosys) {
   SynthesisResult result {
     .code { -1 },
     .message { "Undefined Error" },
