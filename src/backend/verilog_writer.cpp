@@ -25,29 +25,29 @@ int write_verilog_file(const std::string& inputFileName, const std::string& outp
 
         // Write the preamble
         outputFile 
-            << "`timescale 1ns/1ps" << std::endl << std::endl
-            << "module surfboard #(" << std::endl
-            << "\tparameter int W = " << numBits << "," << std::endl 
-            << "\tparameter bit SIGNED = " << signBit << std::endl 
-            << ")(" << std::endl
-            << "\tinput  logic [W-1:0] A [0:" << maxIndex << "]," << std::endl
-            << "\tinput  logic [W-1:0] B [0:" << maxIndex << "]," << std::endl
-            << "\toutput logic [SUMW-1:0] C [0:" << maxIndex << "]" << std::endl
-            << ");" << std::endl
-            << "\tlocalparam int PROD_W = 2*W;" << std::endl
-            << "\tlocalparam int SUMW   = PROD_W + 1;" << std::endl << std::endl
-            << "\tlogic signed   [W-1:0] As [0:" << maxIndex << "];" << std::endl
-            << "\tlogic signed   [W-1:0] Bs [0:" << maxIndex << "];" << std::endl
-            << "\tlogic          [W-1:0] Au [0:" << maxIndex << "];" << std::endl
-            << "\tlogic          [W-1:0] Bu [0:" << maxIndex << "];" << std::endl << std::endl
-            << "\tassign Au = A; assign Bu = B;" << std::endl
-            << "\tassign As = A; assign Bs = B;" << std::endl << std::endl
-            << "\tfunction automatic logic [PROD_W-1:0] mul(input int i, input int j);" << std::endl
-            << "\t\tif (SIGNED)" << std::endl
-            << "\t\t\tmul = As[i] * Bs[j];" << std::endl
-            << "\t\telse" << std::endl
-            << "\t\t\tmul = Au[i] * Bu[j];" << std::endl
-            << "\tendfunction" << std::endl << std::endl << std::endl;
+            << "`timescale 1ns/1ps\n\n"
+            << "module surfboard #(\n"
+            << "\tparameter int W = " << numBits << ",\n"// W is number of input bits
+            << "\tparameter bit SIGNED = " << signBit << "\n" // is it 2's compliment.
+            << ")(\n"
+            << "\tinput  logic [W-1:0] A [0:" << maxIndex << "],\n"
+            << "\tinput  logic [W-1:0] B [0:" << maxIndex << "],\n"
+            << "\toutput logic [SUMW-1:0] C [0:" << maxIndex << "]\n"
+            << ");\n"
+            << "\tlocalparam int PROD_W = 2*W;\n" // This creates 32bit wire 
+            << "\tlocalparam int SUMW   = PROD_W + 1;\n\n" //
+            << "\tlogic signed   [W-1:0] As [0:" << maxIndex << "];\n"
+            << "\tlogic signed   [W-1:0] Bs [0:" << maxIndex << "];\n"
+            << "\tlogic          [W-1:0] Au [0:" << maxIndex << "];\n"
+            << "\tlogic          [W-1:0] Bu [0:" << maxIndex << "];\n\n"
+            << "\tassign Au = A; assign Bu = B;\n"
+            << "\tassign As = A; assign Bs = B;\n\n"
+            << "\tfunction automatic logic [PROD_W-1:0] mul(input int i, input int j);\n"
+            << "\t\tif (SIGNED)\n"
+            << "\t\t\tmul = As[i] * Bs[j];\n" // '*' needs to be changed out for a module
+            << "\t\telse\n"
+            << "\t\t\tmul = Au[i] * Bu[j];\n"
+            << "\tendfunction\n\n";
 
         // Actual Meat and Potatoes
         uint64_t a { 0 }, b { 0 }, c { 0 };
@@ -64,12 +64,12 @@ int write_verilog_file(const std::string& inputFileName, const std::string& outp
                 else outputFile << " + ";
                 outputFile << "mul(" << a << "," << b << ")";
             }
-            outputFile << ";" << std::endl;
+            outputFile << ";\n";
         }
-        outputFile << std::endl << "endmodule" << std::endl;
+        outputFile << "\n" << "endmodule\n";
 
         outputFile.close();
-        std::cout << "Finish." << std::endl;
+        std::cout << "Finish.\n";
     } else {
         std::cerr << "Error: could not open file/s: "
             << (!inputFile.is_open() ? inputFileName + ".txt " : "")

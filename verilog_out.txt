@@ -1,0 +1,110 @@
+`timescale 1ns/1ps
+
+module surfboard #(
+	parameter int W = 16,
+	parameter bit SIGNED = 1
+)(
+	input  logic [W-1:0] A [0:79],
+	input  logic [W-1:0] B [0:79],
+	output logic [SUMW-1:0] C [0:79]
+);
+	localparam int PROD_W = 2*W;
+	localparam int SUMW   = PROD_W + 1;
+
+	logic signed   [W-1:0] As [0:79];
+	logic signed   [W-1:0] Bs [0:79];
+	logic          [W-1:0] Au [0:79];
+	logic          [W-1:0] Bu [0:79];
+
+	assign Au = A; assign Bu = B;
+	assign As = A; assign Bs = B;
+
+	function automatic logic [PROD_W-1:0] mul(input int i, input int j);
+		if (SIGNED)
+			mul = As[i] * Bs[j];
+		else
+			mul = Au[i] * Bu[j];
+	endfunction
+
+	assign C[0] = mul(0,0) + mul(1,10) + mul(2,20) + mul(3,30) + mul(4,40) + mul(5,50) + mul(6,60) + mul(7,70) + mul(8,80) + mul(9,90) + mul(10,100) + mul(11,110);
+	assign C[1] = mul(0,1) + mul(1,11) + mul(2,21) + mul(3,31) + mul(4,41) + mul(5,51) + mul(6,61) + mul(7,71) + mul(8,81) + mul(9,91) + mul(10,101) + mul(11,111);
+	assign C[2] = mul(0,2) + mul(1,12) + mul(2,22) + mul(3,32) + mul(4,42) + mul(5,52) + mul(6,62) + mul(7,72) + mul(8,82) + mul(9,92) + mul(10,102) + mul(11,112);
+	assign C[3] = mul(0,3) + mul(1,13) + mul(2,23) + mul(3,33) + mul(4,43) + mul(5,53) + mul(6,63) + mul(7,73) + mul(8,83) + mul(9,93) + mul(10,103) + mul(11,113);
+	assign C[4] = mul(0,4) + mul(1,14) + mul(2,24) + mul(3,34) + mul(4,44) + mul(5,54) + mul(6,64) + mul(7,74) + mul(8,84) + mul(9,94) + mul(10,104) + mul(11,114);
+	assign C[5] = mul(0,5) + mul(1,15) + mul(2,25) + mul(3,35) + mul(4,45) + mul(5,55) + mul(6,65) + mul(7,75) + mul(8,85) + mul(9,95) + mul(10,105) + mul(11,115);
+	assign C[6] = mul(0,6) + mul(1,16) + mul(2,26) + mul(3,36) + mul(4,46) + mul(5,56) + mul(6,66) + mul(7,76) + mul(8,86) + mul(9,96) + mul(10,106) + mul(11,116);
+	assign C[7] = mul(0,7) + mul(1,17) + mul(2,27) + mul(3,37) + mul(4,47) + mul(5,57) + mul(6,67) + mul(7,77) + mul(8,87) + mul(9,97) + mul(10,107) + mul(11,117);
+	assign C[8] = mul(0,8) + mul(1,18) + mul(2,28) + mul(3,38) + mul(4,48) + mul(5,58) + mul(6,68) + mul(7,78) + mul(8,88) + mul(9,98) + mul(10,108) + mul(11,118);
+	assign C[9] = mul(0,9) + mul(1,19) + mul(2,29) + mul(3,39) + mul(4,49) + mul(5,59) + mul(6,69) + mul(7,79) + mul(8,89) + mul(9,99) + mul(10,109) + mul(11,119);
+	assign C[10] = mul(12,0) + mul(13,10) + mul(14,20) + mul(15,30) + mul(16,40) + mul(17,50) + mul(18,60) + mul(19,70) + mul(20,80) + mul(21,90) + mul(22,100) + mul(23,110);
+	assign C[11] = mul(12,1) + mul(13,11) + mul(14,21) + mul(15,31) + mul(16,41) + mul(17,51) + mul(18,61) + mul(19,71) + mul(20,81) + mul(21,91) + mul(22,101) + mul(23,111);
+	assign C[12] = mul(12,2) + mul(13,12) + mul(14,22) + mul(15,32) + mul(16,42) + mul(17,52) + mul(18,62) + mul(19,72) + mul(20,82) + mul(21,92) + mul(22,102) + mul(23,112);
+	assign C[13] = mul(12,3) + mul(13,13) + mul(14,23) + mul(15,33) + mul(16,43) + mul(17,53) + mul(18,63) + mul(19,73) + mul(20,83) + mul(21,93) + mul(22,103) + mul(23,113);
+	assign C[14] = mul(12,4) + mul(13,14) + mul(14,24) + mul(15,34) + mul(16,44) + mul(17,54) + mul(18,64) + mul(19,74) + mul(20,84) + mul(21,94) + mul(22,104) + mul(23,114);
+	assign C[15] = mul(12,5) + mul(13,15) + mul(14,25) + mul(15,35) + mul(16,45) + mul(17,55) + mul(18,65) + mul(19,75) + mul(20,85) + mul(21,95) + mul(22,105) + mul(23,115);
+	assign C[16] = mul(12,6) + mul(13,16) + mul(14,26) + mul(15,36) + mul(16,46) + mul(17,56) + mul(18,66) + mul(19,76) + mul(20,86) + mul(21,96) + mul(22,106) + mul(23,116);
+	assign C[17] = mul(12,7) + mul(13,17) + mul(14,27) + mul(15,37) + mul(16,47) + mul(17,57) + mul(18,67) + mul(19,77) + mul(20,87) + mul(21,97) + mul(22,107) + mul(23,117);
+	assign C[18] = mul(12,8) + mul(13,18) + mul(14,28) + mul(15,38) + mul(16,48) + mul(17,58) + mul(18,68) + mul(19,78) + mul(20,88) + mul(21,98) + mul(22,108) + mul(23,118);
+	assign C[19] = mul(12,9) + mul(13,19) + mul(14,29) + mul(15,39) + mul(16,49) + mul(17,59) + mul(18,69) + mul(19,79) + mul(20,89) + mul(21,99) + mul(22,109) + mul(23,119);
+	assign C[20] = mul(24,0) + mul(25,10) + mul(26,20) + mul(27,30) + mul(28,40) + mul(29,50) + mul(30,60) + mul(31,70) + mul(32,80) + mul(33,90) + mul(34,100) + mul(35,110);
+	assign C[21] = mul(24,1) + mul(25,11) + mul(26,21) + mul(27,31) + mul(28,41) + mul(29,51) + mul(30,61) + mul(31,71) + mul(32,81) + mul(33,91) + mul(34,101) + mul(35,111);
+	assign C[22] = mul(24,2) + mul(25,12) + mul(26,22) + mul(27,32) + mul(28,42) + mul(29,52) + mul(30,62) + mul(31,72) + mul(32,82) + mul(33,92) + mul(34,102) + mul(35,112);
+	assign C[23] = mul(24,3) + mul(25,13) + mul(26,23) + mul(27,33) + mul(28,43) + mul(29,53) + mul(30,63) + mul(31,73) + mul(32,83) + mul(33,93) + mul(34,103) + mul(35,113);
+	assign C[24] = mul(24,4) + mul(25,14) + mul(26,24) + mul(27,34) + mul(28,44) + mul(29,54) + mul(30,64) + mul(31,74) + mul(32,84) + mul(33,94) + mul(34,104) + mul(35,114);
+	assign C[25] = mul(24,5) + mul(25,15) + mul(26,25) + mul(27,35) + mul(28,45) + mul(29,55) + mul(30,65) + mul(31,75) + mul(32,85) + mul(33,95) + mul(34,105) + mul(35,115);
+	assign C[26] = mul(24,6) + mul(25,16) + mul(26,26) + mul(27,36) + mul(28,46) + mul(29,56) + mul(30,66) + mul(31,76) + mul(32,86) + mul(33,96) + mul(34,106) + mul(35,116);
+	assign C[27] = mul(24,7) + mul(25,17) + mul(26,27) + mul(27,37) + mul(28,47) + mul(29,57) + mul(30,67) + mul(31,77) + mul(32,87) + mul(33,97) + mul(34,107) + mul(35,117);
+	assign C[28] = mul(24,8) + mul(25,18) + mul(26,28) + mul(27,38) + mul(28,48) + mul(29,58) + mul(30,68) + mul(31,78) + mul(32,88) + mul(33,98) + mul(34,108) + mul(35,118);
+	assign C[29] = mul(24,9) + mul(25,19) + mul(26,29) + mul(27,39) + mul(28,49) + mul(29,59) + mul(30,69) + mul(31,79) + mul(32,89) + mul(33,99) + mul(34,109) + mul(35,119);
+	assign C[30] = mul(36,0) + mul(37,10) + mul(38,20) + mul(39,30) + mul(40,40) + mul(41,50) + mul(42,60) + mul(43,70) + mul(44,80) + mul(45,90) + mul(46,100) + mul(47,110);
+	assign C[31] = mul(36,1) + mul(37,11) + mul(38,21) + mul(39,31) + mul(40,41) + mul(41,51) + mul(42,61) + mul(43,71) + mul(44,81) + mul(45,91) + mul(46,101) + mul(47,111);
+	assign C[32] = mul(36,2) + mul(37,12) + mul(38,22) + mul(39,32) + mul(40,42) + mul(41,52) + mul(42,62) + mul(43,72) + mul(44,82) + mul(45,92) + mul(46,102) + mul(47,112);
+	assign C[33] = mul(36,3) + mul(37,13) + mul(38,23) + mul(39,33) + mul(40,43) + mul(41,53) + mul(42,63) + mul(43,73) + mul(44,83) + mul(45,93) + mul(46,103) + mul(47,113);
+	assign C[34] = mul(36,4) + mul(37,14) + mul(38,24) + mul(39,34) + mul(40,44) + mul(41,54) + mul(42,64) + mul(43,74) + mul(44,84) + mul(45,94) + mul(46,104) + mul(47,114);
+	assign C[35] = mul(36,5) + mul(37,15) + mul(38,25) + mul(39,35) + mul(40,45) + mul(41,55) + mul(42,65) + mul(43,75) + mul(44,85) + mul(45,95) + mul(46,105) + mul(47,115);
+	assign C[36] = mul(36,6) + mul(37,16) + mul(38,26) + mul(39,36) + mul(40,46) + mul(41,56) + mul(42,66) + mul(43,76) + mul(44,86) + mul(45,96) + mul(46,106) + mul(47,116);
+	assign C[37] = mul(36,7) + mul(37,17) + mul(38,27) + mul(39,37) + mul(40,47) + mul(41,57) + mul(42,67) + mul(43,77) + mul(44,87) + mul(45,97) + mul(46,107) + mul(47,117);
+	assign C[38] = mul(36,8) + mul(37,18) + mul(38,28) + mul(39,38) + mul(40,48) + mul(41,58) + mul(42,68) + mul(43,78) + mul(44,88) + mul(45,98) + mul(46,108) + mul(47,118);
+	assign C[39] = mul(36,9) + mul(37,19) + mul(38,29) + mul(39,39) + mul(40,49) + mul(41,59) + mul(42,69) + mul(43,79) + mul(44,89) + mul(45,99) + mul(46,109) + mul(47,119);
+	assign C[40] = mul(48,0) + mul(49,10) + mul(50,20) + mul(51,30) + mul(52,40) + mul(53,50) + mul(54,60) + mul(55,70) + mul(56,80) + mul(57,90) + mul(58,100) + mul(59,110);
+	assign C[41] = mul(48,1) + mul(49,11) + mul(50,21) + mul(51,31) + mul(52,41) + mul(53,51) + mul(54,61) + mul(55,71) + mul(56,81) + mul(57,91) + mul(58,101) + mul(59,111);
+	assign C[42] = mul(48,2) + mul(49,12) + mul(50,22) + mul(51,32) + mul(52,42) + mul(53,52) + mul(54,62) + mul(55,72) + mul(56,82) + mul(57,92) + mul(58,102) + mul(59,112);
+	assign C[43] = mul(48,3) + mul(49,13) + mul(50,23) + mul(51,33) + mul(52,43) + mul(53,53) + mul(54,63) + mul(55,73) + mul(56,83) + mul(57,93) + mul(58,103) + mul(59,113);
+	assign C[44] = mul(48,4) + mul(49,14) + mul(50,24) + mul(51,34) + mul(52,44) + mul(53,54) + mul(54,64) + mul(55,74) + mul(56,84) + mul(57,94) + mul(58,104) + mul(59,114);
+	assign C[45] = mul(48,5) + mul(49,15) + mul(50,25) + mul(51,35) + mul(52,45) + mul(53,55) + mul(54,65) + mul(55,75) + mul(56,85) + mul(57,95) + mul(58,105) + mul(59,115);
+	assign C[46] = mul(48,6) + mul(49,16) + mul(50,26) + mul(51,36) + mul(52,46) + mul(53,56) + mul(54,66) + mul(55,76) + mul(56,86) + mul(57,96) + mul(58,106) + mul(59,116);
+	assign C[47] = mul(48,7) + mul(49,17) + mul(50,27) + mul(51,37) + mul(52,47) + mul(53,57) + mul(54,67) + mul(55,77) + mul(56,87) + mul(57,97) + mul(58,107) + mul(59,117);
+	assign C[48] = mul(48,8) + mul(49,18) + mul(50,28) + mul(51,38) + mul(52,48) + mul(53,58) + mul(54,68) + mul(55,78) + mul(56,88) + mul(57,98) + mul(58,108) + mul(59,118);
+	assign C[49] = mul(48,9) + mul(49,19) + mul(50,29) + mul(51,39) + mul(52,49) + mul(53,59) + mul(54,69) + mul(55,79) + mul(56,89) + mul(57,99) + mul(58,109) + mul(59,119);
+	assign C[50] = mul(60,0) + mul(61,10) + mul(62,20) + mul(63,30) + mul(64,40) + mul(65,50) + mul(66,60) + mul(67,70) + mul(68,80) + mul(69,90) + mul(70,100) + mul(71,110);
+	assign C[51] = mul(60,1) + mul(61,11) + mul(62,21) + mul(63,31) + mul(64,41) + mul(65,51) + mul(66,61) + mul(67,71) + mul(68,81) + mul(69,91) + mul(70,101) + mul(71,111);
+	assign C[52] = mul(60,2) + mul(61,12) + mul(62,22) + mul(63,32) + mul(64,42) + mul(65,52) + mul(66,62) + mul(67,72) + mul(68,82) + mul(69,92) + mul(70,102) + mul(71,112);
+	assign C[53] = mul(60,3) + mul(61,13) + mul(62,23) + mul(63,33) + mul(64,43) + mul(65,53) + mul(66,63) + mul(67,73) + mul(68,83) + mul(69,93) + mul(70,103) + mul(71,113);
+	assign C[54] = mul(60,4) + mul(61,14) + mul(62,24) + mul(63,34) + mul(64,44) + mul(65,54) + mul(66,64) + mul(67,74) + mul(68,84) + mul(69,94) + mul(70,104) + mul(71,114);
+	assign C[55] = mul(60,5) + mul(61,15) + mul(62,25) + mul(63,35) + mul(64,45) + mul(65,55) + mul(66,65) + mul(67,75) + mul(68,85) + mul(69,95) + mul(70,105) + mul(71,115);
+	assign C[56] = mul(60,6) + mul(61,16) + mul(62,26) + mul(63,36) + mul(64,46) + mul(65,56) + mul(66,66) + mul(67,76) + mul(68,86) + mul(69,96) + mul(70,106) + mul(71,116);
+	assign C[57] = mul(60,7) + mul(61,17) + mul(62,27) + mul(63,37) + mul(64,47) + mul(65,57) + mul(66,67) + mul(67,77) + mul(68,87) + mul(69,97) + mul(70,107) + mul(71,117);
+	assign C[58] = mul(60,8) + mul(61,18) + mul(62,28) + mul(63,38) + mul(64,48) + mul(65,58) + mul(66,68) + mul(67,78) + mul(68,88) + mul(69,98) + mul(70,108) + mul(71,118);
+	assign C[59] = mul(60,9) + mul(61,19) + mul(62,29) + mul(63,39) + mul(64,49) + mul(65,59) + mul(66,69) + mul(67,79) + mul(68,89) + mul(69,99) + mul(70,109) + mul(71,119);
+	assign C[60] = mul(72,0) + mul(73,10) + mul(74,20) + mul(75,30) + mul(76,40) + mul(77,50) + mul(78,60) + mul(79,70) + mul(80,80) + mul(81,90) + mul(82,100) + mul(83,110);
+	assign C[61] = mul(72,1) + mul(73,11) + mul(74,21) + mul(75,31) + mul(76,41) + mul(77,51) + mul(78,61) + mul(79,71) + mul(80,81) + mul(81,91) + mul(82,101) + mul(83,111);
+	assign C[62] = mul(72,2) + mul(73,12) + mul(74,22) + mul(75,32) + mul(76,42) + mul(77,52) + mul(78,62) + mul(79,72) + mul(80,82) + mul(81,92) + mul(82,102) + mul(83,112);
+	assign C[63] = mul(72,3) + mul(73,13) + mul(74,23) + mul(75,33) + mul(76,43) + mul(77,53) + mul(78,63) + mul(79,73) + mul(80,83) + mul(81,93) + mul(82,103) + mul(83,113);
+	assign C[64] = mul(72,4) + mul(73,14) + mul(74,24) + mul(75,34) + mul(76,44) + mul(77,54) + mul(78,64) + mul(79,74) + mul(80,84) + mul(81,94) + mul(82,104) + mul(83,114);
+	assign C[65] = mul(72,5) + mul(73,15) + mul(74,25) + mul(75,35) + mul(76,45) + mul(77,55) + mul(78,65) + mul(79,75) + mul(80,85) + mul(81,95) + mul(82,105) + mul(83,115);
+	assign C[66] = mul(72,6) + mul(73,16) + mul(74,26) + mul(75,36) + mul(76,46) + mul(77,56) + mul(78,66) + mul(79,76) + mul(80,86) + mul(81,96) + mul(82,106) + mul(83,116);
+	assign C[67] = mul(72,7) + mul(73,17) + mul(74,27) + mul(75,37) + mul(76,47) + mul(77,57) + mul(78,67) + mul(79,77) + mul(80,87) + mul(81,97) + mul(82,107) + mul(83,117);
+	assign C[68] = mul(72,8) + mul(73,18) + mul(74,28) + mul(75,38) + mul(76,48) + mul(77,58) + mul(78,68) + mul(79,78) + mul(80,88) + mul(81,98) + mul(82,108) + mul(83,118);
+	assign C[69] = mul(72,9) + mul(73,19) + mul(74,29) + mul(75,39) + mul(76,49) + mul(77,59) + mul(78,69) + mul(79,79) + mul(80,89) + mul(81,99) + mul(82,109) + mul(83,119);
+	assign C[70] = mul(84,0) + mul(85,10) + mul(86,20) + mul(87,30) + mul(88,40) + mul(89,50) + mul(90,60) + mul(91,70) + mul(92,80) + mul(93,90) + mul(94,100) + mul(95,110);
+	assign C[71] = mul(84,1) + mul(85,11) + mul(86,21) + mul(87,31) + mul(88,41) + mul(89,51) + mul(90,61) + mul(91,71) + mul(92,81) + mul(93,91) + mul(94,101) + mul(95,111);
+	assign C[72] = mul(84,2) + mul(85,12) + mul(86,22) + mul(87,32) + mul(88,42) + mul(89,52) + mul(90,62) + mul(91,72) + mul(92,82) + mul(93,92) + mul(94,102) + mul(95,112);
+	assign C[73] = mul(84,3) + mul(85,13) + mul(86,23) + mul(87,33) + mul(88,43) + mul(89,53) + mul(90,63) + mul(91,73) + mul(92,83) + mul(93,93) + mul(94,103) + mul(95,113);
+	assign C[74] = mul(84,4) + mul(85,14) + mul(86,24) + mul(87,34) + mul(88,44) + mul(89,54) + mul(90,64) + mul(91,74) + mul(92,84) + mul(93,94) + mul(94,104) + mul(95,114);
+	assign C[75] = mul(84,5) + mul(85,15) + mul(86,25) + mul(87,35) + mul(88,45) + mul(89,55) + mul(90,65) + mul(91,75) + mul(92,85) + mul(93,95) + mul(94,105) + mul(95,115);
+	assign C[76] = mul(84,6) + mul(85,16) + mul(86,26) + mul(87,36) + mul(88,46) + mul(89,56) + mul(90,66) + mul(91,76) + mul(92,86) + mul(93,96) + mul(94,106) + mul(95,116);
+	assign C[77] = mul(84,7) + mul(85,17) + mul(86,27) + mul(87,37) + mul(88,47) + mul(89,57) + mul(90,67) + mul(91,77) + mul(92,87) + mul(93,97) + mul(94,107) + mul(95,117);
+	assign C[78] = mul(84,8) + mul(85,18) + mul(86,28) + mul(87,38) + mul(88,48) + mul(89,58) + mul(90,68) + mul(91,78) + mul(92,88) + mul(93,98) + mul(94,108) + mul(95,118);
+	assign C[79] = mul(84,9) + mul(85,19) + mul(86,29) + mul(87,39) + mul(88,49) + mul(89,59) + mul(90,69) + mul(91,79) + mul(92,89) + mul(93,99) + mul(94,109) + mul(95,119);
+
+endmodule
