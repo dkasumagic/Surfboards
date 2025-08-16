@@ -20,7 +20,7 @@ The program is accessed throught a locally hosted webpage as so:
 
 The user chooses their desired matrix sizes, with the inner dimensions being locked together to provide valid matrices. The user can also choose the size of their input variables, using the fixed point Q notation, and whether negative values can be used. 
 
-After this, the user presses the generate button and should recieve the applicable circuit diagram.
+After this, the user presses the generate button and should receive the applicable circuit diagram.
 
 # Examples/Demos
 TODO: insert demo images here please.
@@ -29,7 +29,7 @@ TODO: insert demo images here please.
 This is an open source project under the MIT license - see the LICENSE file if you're struggling to get to sleep.
 
 # Limitations
-This is a flawless and fully complete program ready to enable the AI takeover
+This is a flawless and fully complete program ready to enable the AI takeover.
 
 # Acknowledgements
 Stimulants, sponsors, and sleeplessness.

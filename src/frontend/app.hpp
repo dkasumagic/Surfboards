@@ -3,8 +3,8 @@
 
 #include <iostream>
 #include "webui.hpp"
-
-void workflow(webui::window::event *e);
+#include "../backend/matrixhandler.hpp"
+#include "../backend/verilog_writer.hpp"
 
 class App {
 public:
