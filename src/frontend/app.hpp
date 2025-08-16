@@ -24,13 +24,13 @@ void inputMatrix(webui::window::event *e) {
         return;
     }
 
-    writetofile(r1, c1, r2, c2);
+    std::string matrixMathBlueprint = "./build/matrix_math.txt";
+    std::string verilogOutput = "./build/verilog_out.sv";
+
+    generateMatrixMathBlueprint(matrixMathBlueprint, r1, c1, r2, c2);
     std::cout << "Matrix generated...\n";
 
-    std::string inputFile = "output.txt";
-    std::string outputFile = "verilog_out.txt";
-    write_verilog_file(inputFile, outputFile, (q1+q2));
-    //write_verilog_file(inputFile, outputFile, (q1+q2), s1)
+    writeVerilogFile(matrixMathBlueprint, verilogOutput, (q1+q2));
     std::cout << "Verilog file generated...\n";
 
     std::cout << "A: " << r1 << "x" << c1

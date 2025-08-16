@@ -5,8 +5,7 @@
 #include <filesystem>
 #include <cstdint>
 
-// int write_verilog_file(const std::string& inputFileName, const std::string& outputFileName, int numBits, bool signBit) {
-int write_verilog_file(const std::string& inputFileName, const std::string& outputFileName, int numBits) {
+int writeVerilogFile(const std::string& inputFileName, const std::string& outputFileName, const size_t& numBits) {
     // HUMAN COMMENTS btw haha
     // Initalise my files
     std::ifstream inputFile { inputFileName };
@@ -28,27 +27,24 @@ int write_verilog_file(const std::string& inputFileName, const std::string& outp
         outputFile 
             << "`timescale 1ns/1ps\n\n"
             << "module surfboard #(\n"
-            << "\tparameter int W = " << numBits << "\n"// W is number of input bits
-            << ")(\n";
-        if (signBit) {
-            outputFile
-                << "\tinput signed logic [W-1:0] A [0:" << maxIndex << "],\n"
-                << "\tinput signed logic [W-1:0] B [0:" << maxIndex << "],\n";
-        } else {
-            outputFile
-                << "\tinput  logic [W-1:0] A [0:" << maxIndex << "],\n"
-                << "\tinput  logic [W-1:0] B [0:" << maxIndex << "],\n";
-        }
-        outputFile
+            << "\tparameter int W = " << numBits << ",\n"
+            << "\tparameter bit SIGNED = " << signBit
+            << "\n)(\n"
+            << "\tinput  logic [W-1:0] A [0:" << maxIndex << "],\n"
+            << "\tinput  logic [W-1:0] B [0:" << maxIndex << "],\n"
             << "\toutput logic [W-1:0] C [0:" << maxIndex << "]\n"
             << ");\n"
-            << "\tlocalparam int PROD_W = 2*W;\n\n"
-            << "\tlocalparam int HIGH = (3*PROD_W)/4 - 1;\n"
-            << "\tlocalparam int LOW = PROD_W/4"
+            << "\tlogic signed   [W-1:0] As [0:" << maxIndex << "];\n"
+            << "\tlogic signed   [W-1:0] Bs [0:" << maxIndex << "];\n"
+            << "\tlogic          [W-1:0] Au [0:" << maxIndex << "];\n"
+            << "\tlogic          [W-1:0] Bu [0:" << maxIndex << "];\n\n"
+            << "\tassign Au = A; assign Bu = B;\n"
+            << "\tassign As = A; assign Bs = B;\n\n"
             << "\tfunction automatic logic [W-1:0] mul(input int i, input int j);\n"
-            << "\t\tlogic [PROD_W-1:0] tempResult;\n"
-            << "\t\ttempResult = A[i] * B[j];\n" // '*' needs to be changed out for a module
-            << "\t\tmul = tempResult[HIGH:LOW];\n"
+            << "\t\tif (SIGNED)\n"
+            << "\t\t\tmul = As[i] * Bs[j];\n"
+            << "\t\telse\n"
+            << "\t\t\tmul = Au[i] * Bu[j];\n"
             << "\tendfunction\n\n";
 
         // Actual Meat and Potatoes
@@ -73,10 +69,15 @@ int write_verilog_file(const std::string& inputFileName, const std::string& outp
         outputFile.close();
     } else {
         std::cerr << "Error: could not open file/s: "
-            << (!inputFile.is_open() ? inputFileName + ".txt " : "")
-            << (!outputFile.is_open() ? outputFileName + ".txt " : "")
+            << (!inputFile.is_open() ? inputFileName : "")
+            << (!outputFile.is_open() ? outputFileName : "")
             << std::endl;
     }
 
     return 0;
 }
+
+// int main() {
+//     writeVerilogFile("./build/MH_output_22.txt", "./build/verilog.sv", 4);
+//     return 0;
+// }
