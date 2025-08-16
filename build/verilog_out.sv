@@ -1,27 +1,26 @@
 `timescale 1ns/1ps
 
 module surfboard #(
-	parameter int W = 4,
+	parameter int W = 8,
 	parameter bit SIGNED = 1
 )(
-	input  logic [W-1:0] A [0:8],
-	input  logic [W-1:0] B [0:8],
-	output logic [W-1:0] C [0:8]
+	input  logic [0:8][W-1:0] A,
+	input  logic [0:8][W-1:0] B,
+	output logic [0:8][W-1:0] C
 );
-	logic signed   [W-1:0] As [0:8];
-	logic signed   [W-1:0] Bs [0:8];
-	logic          [W-1:0] Au [0:8];
-	logic          [W-1:0] Bu [0:8];
+	logic signed [0:8][W-1:0] As;
+	logic signed [0:8][W-1:0] Bs;
+	logic        [0:8][W-1:0] Au;
+	logic        [0:8][W-1:0] Bu;
 
 	assign Au = A; assign Bu = B;
 	assign As = A; assign Bs = B;
 
 	function automatic logic [W-1:0] mul(input int i, input int j);
-		if (SIGNED)
-			mul = As[i] * Bs[j];
-		else
-			mul = Au[i] * Bu[j];
+		if (SIGNED) mul = As[i] * Bs[j];
+		else mul = Au[i] * Bu[j];
 	endfunction
+
 	assign C[0] = mul(0,0) + mul(1,3) + mul(2,6);
 	assign C[1] = mul(0,1) + mul(1,4) + mul(2,7);
 	assign C[2] = mul(0,2) + mul(1,5) + mul(2,8);
