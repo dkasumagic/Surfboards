@@ -1,3 +1,0 @@
-(sym_lib_table
-  (lib (name "HackathonLib")(type "KiCad")(uri "${{KIPRJMOD}}/HackathonLib.kicad_sym")(options "")(descr ""))
-)

@@ -1,8 +1,8 @@
 `timescale 1ns/1ps
 
 module surfboard #(
-	parameter int W = 16,
-	parameter bit SIGNED = 1
+	parameter int W = 4,
+	parameter bit SIGNED = 0
 )(
 	input  logic [W-1:0] A [0:3],
 	input  logic [W-1:0] B [0:3],
