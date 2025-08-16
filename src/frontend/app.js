@@ -26,6 +26,7 @@ function stopGenerating(btn) {
   btn.classList.remove("opacity-60","cursor-not-allowed");
 }
 
+
 async function applyMatrices() {
   const applyBtn = document.getElementById("applyMatricesBtn");
   startGenerating(applyBtn);
@@ -42,9 +43,12 @@ async function applyMatrices() {
 
   const [r1, c1, r2, c2] = values;
 
+  const q1 = document.getElementById("q_integer").value;
+  const q2 = document.getElementById("q_fractional").value;
+
   try {
     if (typeof webui !== "undefined" && typeof webui.call === "function") {
-      const result = await webui.call("inputMatrix", r1, c1, r2, c2);
+      const result = await webui.call("inputMatrix", r1, c1, r2, c2, q1, q2);
       console.log("result:", result);
     } else {
       console.warn("webui.call is not available.");
@@ -70,6 +74,7 @@ document.addEventListener("DOMContentLoaded", () => {
     aCols.value = e.target.value;
   });
 
+  initToggle();
 });
 
 function getInputValue(id) {
@@ -93,4 +98,23 @@ function markValidity(id, ok) {
   } else if (!el.classList.contains("border-neutral-300")) {
     el.classList.add("border-neutral-300");
   }
+}
+
+function initToggle() {
+  const toggle = document.getElementById('toggle');
+  if (!toggle) return;
+
+  // Apply stored theme
+  const stored = localStorage.getItem('theme');
+  const isDark = stored === 'dark';
+  if (isDark) {
+    document.documentElement.classList.add('dark');
+    toggle.checked = true;
+  }
+
+  toggle.addEventListener('change', (e) => {
+    const nowDark = e.target.checked;
+    document.documentElement.classList.toggle('dark', nowDark);
+    localStorage.setItem('theme', nowDark ? 'dark' : 'light');
+  });
 }
