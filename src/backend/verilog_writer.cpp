@@ -78,7 +78,7 @@ int write_verilog_file(const std::string& inputFileName, const std::string& outp
     return 0;
 }
 
-int main() {
-    write_verilog_file("./build/MH_output_22.txt", "./build/verilog.sv", 4);
-    return 0;
-}
+// int main() {
+//     write_verilog_file("./build/MH_output_22.txt", "./build/verilog.sv", 4);
+//     return 0;
+// }
