@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include "webui.hpp"
+#include "../backend/matrixhandler.hpp"
 
 void inputMatrix(webui::window::event *e) {
     long long r1 = e->get_int();
@@ -17,6 +18,8 @@ void inputMatrix(webui::window::event *e) {
         e->return_string("error: invalid dimensions");
         return;
     }
+
+    writetofile(r1, c1, r2, c2);
 
     std::cout << "A: " << r1 << "x" << c1
                 << " | B: " << r2 << "x" << c2 << std::endl;
