@@ -44,7 +44,7 @@ int writeVerilogFile(const std::string& inputFileName, const std::string& output
             << "\t\t\tmul = As[i] * Bs[j];\n"
             << "\t\telse\n"
             << "\t\t\tmul = Au[i] * Bu[j];\n"
-            << "\tendfunction\n";
+            << "\tendfunction\n\n";
 
         // Actual Meat and Potatoes
         uint64_t a { 0 }, b { 0 }, c { 0 };
