@@ -14,6 +14,7 @@ void inputMatrix(webui::window::event *e) {
     long long q1 = e->get_int(4);
     long long q2 = e->get_int(5);
     // long long s1 = e->get_int(6); Signed bool value for from frontend
+    // user choice to do svd or not.
 
     std::cout << "Executing...\n";
 
