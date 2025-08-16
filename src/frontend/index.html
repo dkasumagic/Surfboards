@@ -3,11 +3,74 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title></title>
-    <link href="css/style.css" rel="stylesheet">
+    <title>Surfboard</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="/webui.js"></script>
   </head>
-  <body>
-  
-    <button type="button">click</button>
+  <body class="min-h-screen bg-neutral-100 text-neutral-800 antialiased">
+    <main class="min-h-screen flex items-center justify-center p-6">
+      <div class="w-full max-w-3xl">
+        <h1 class="text-4xl md:text-5xl font-semibold text-center text-neutral-900 mb-10 tracking-tight">
+          Surfboards
+        </h1>
+        <div class="grid gap-8 md:grid-cols-2">
+          <!-- Matrix A -->
+          <div class="rounded-xl bg-neutral-50 border border-neutral-200 shadow-sm p-6 flex flex-col gap-4">
+            <h2 class="text-base font-semibold text-neutral-700">
+              Matrix A
+            </h2>
+            <div class="flex gap-4">
+              <label class="flex flex-col text-[11px] font-medium text-neutral-500 flex-1 uppercase tracking-wide">
+                Rows
+                <input id="matrixA_rows" type="number" min="1" inputmode="numeric" placeholder="8"
+                  aria-describedby="matrix-a-hint"
+                  class="mt-1 w-full rounded-md border border-neutral-300 bg-white px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-neutral-400 focus:border-neutral-400">
+              </label>
+              <label class="flex flex-col text-[11px] font-medium text-neutral-500 flex-1 uppercase tracking-wide">
+                Columns
+                <input id="matrixA_cols" type="number" min="1" inputmode="numeric" placeholder="12"
+                  aria-describedby="matrix-a-hint"
+                  class="mt-1 w-full rounded-md border border-neutral-300 bg-white px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-neutral-400 focus:border-neutral-400">
+              </label>
+            </div>
+            <p id="matrix-a-hint" class="text-[10px] text-neutral-400">
+              rows × columns
+            </p>
+          </div>
+          <!-- Matrix B -->
+          <div class="rounded-xl bg-neutral-50 border border-neutral-200 shadow-sm p-6 flex flex-col gap-4">
+            <h2 class="text-base font-semibold text-neutral-700">
+              Matrix B
+            </h2>
+            <div class="flex gap-4">
+              <label class="flex flex-col text-[11px] font-medium text-neutral-500 flex-1 uppercase tracking-wide">
+                Rows
+                <input id="matrixB_rows" type="number" min="1" inputmode="numeric" placeholder="6"
+                  aria-describedby="matrix-b-hint"
+                  class="mt-1 w-full rounded-md border border-neutral-300 bg-white px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-neutral-400 focus:border-neutral-400">
+              </label>
+              <label class="flex flex-col text-[11px] font-medium text-neutral-500 flex-1 uppercase tracking-wide">
+                Columns
+                <input id="matrixB_cols" type="number" min="1" inputmode="numeric" placeholder="10"
+                  aria-describedby="matrix-b-hint"
+                  class="mt-1 w-full rounded-md border border-neutral-300 bg-white px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-neutral-400 focus:border-neutral-400">
+              </label>
+            </div>
+            <p id="matrix-b-hint" class="text-[10px] text-neutral-400">
+              rows × columns
+            </p>
+          </div>
+        </div>
+        <!-- Unified apply button -->
+        <div class="mt-8 flex justify-center">
+          <button id="applyMatricesBtn" type="button"
+            class="w-full md:w-auto inline-flex items-center justify-center rounded-md border border-neutral-300 bg-neutral-50 px-6 py-2.5 text-sm font-medium text-neutral-700 shadow-sm hover:bg-neutral-50 hover:border-neutral-400 focus:outline-none focus:ring-2 focus:ring-neutral-300 transition">
+            Apply Matrices
+          </button>
+        </div>
+      </div>
+    </main>
+    <script src="index.js"></script>
   </body>
 </html>

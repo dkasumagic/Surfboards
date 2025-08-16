@@ -25,10 +25,15 @@ pub fn build(b: *std.Build) void {
             "src/backend/verilog_writer.cpp",
             "src/backend/visualiser.cpp",
             // add more files here
+        },
+        .flags = &.{
+            "-std=c++17",
+            "-I/usr/include/eigen3",
         }
     });
 
     exe.addIncludePath(b.path("vendor/webui/include/"));
+
 
     exe.linkLibCpp();
     exe.linkLibrary(webui);
