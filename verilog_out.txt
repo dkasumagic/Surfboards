@@ -19,11 +19,13 @@ module surfboard #(
 	assign Au = A; assign Bu = B;
 	assign As = A; assign Bs = B;
 
-	function automatic logic [PROD_W-1:0] mul(input int i, input int j);
+	function automatic logic [W-1:0] mul(input int i, input int j);
+		logic [PROD_W-1:0] tempResult;
 		if (SIGNED)
-			mul = As[i] * Bs[j];
+			tempResult = As[i] * Bs[j];
 		else
-			mul = Au[i] * Bu[j];
+			tempResult = Au[i] * Bu[j];
+		mul = tempResult[3*(2*PROD_W)/4 - 2: PROD_W/4 - 1];
 	endfunction
 
 	assign C[0] = mul(0,0) + mul(1,10) + mul(2,20) + mul(3,30) + mul(4,40) + mul(5,50) + mul(6,60) + mul(7,70) + mul(8,80) + mul(9,90) + mul(10,100) + mul(11,110);

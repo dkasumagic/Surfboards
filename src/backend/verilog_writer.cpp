@@ -5,7 +5,7 @@
 #include <filesystem>
 #include <cstdint>
 
-int write_verilog_file(const std::string& inputFileName, const std::string& outputFileName) {
+int write_verilog_file(const std::string& inputFileName, const std::string& outputFileName, int numBits) {
     // HUMAN COMMENTS btw haha
     // Initalise my files
     std::ifstream inputFile { inputFileName };
@@ -20,9 +20,9 @@ int write_verilog_file(const std::string& inputFileName, const std::string& outp
         iss >> row >> col;
         const uint64_t maxCount = row * col;
         const uint64_t maxIndex = (row * col)-1;
-        const uint64_t numBits = 16; // TODO: eventually make this a user option
-        const bool signBit = true; // TODO: eventually make this a user option
-
+        // const uint64_t numBits = n; // TODO: eventually make this a user option
+        const bool signBit = true; // TODO: eventually make this a user option.
+ 
         // Write the preamble
         outputFile 
             << "`timescale 1ns/1ps\n\n"
@@ -36,17 +36,19 @@ int write_verilog_file(const std::string& inputFileName, const std::string& outp
             << ");\n"
             << "\tlocalparam int PROD_W = 2*W;\n" // This creates 32bit wire 
             << "\tlocalparam int SUMW   = PROD_W + 1;\n\n" //
-            << "\tlogic signed   [W-1:0] As [0:" << maxIndex << "];\n"
+            << "\tlogic signed   [W-1:0] As [0:" << maxIndex << "];\n" // Don't think we need signed here.
             << "\tlogic signed   [W-1:0] Bs [0:" << maxIndex << "];\n"
             << "\tlogic          [W-1:0] Au [0:" << maxIndex << "];\n"
             << "\tlogic          [W-1:0] Bu [0:" << maxIndex << "];\n\n"
             << "\tassign Au = A; assign Bu = B;\n"
             << "\tassign As = A; assign Bs = B;\n\n"
-            << "\tfunction automatic logic [PROD_W-1:0] mul(input int i, input int j);\n"
+            << "\tfunction automatic logic [W-1:0] mul(input int i, input int j);\n"
+            << "\t\tlogic [PROD_W-1:0] tempResult;\n"
             << "\t\tif (SIGNED)\n"
-            << "\t\t\tmul = As[i] * Bs[j];\n" // '*' needs to be changed out for a module
+            << "\t\t\ttempResult = As[i] * Bs[j];\n" // '*' needs to be changed out for a module
             << "\t\telse\n"
-            << "\t\t\tmul = Au[i] * Bu[j];\n"
+            << "\t\t\ttempResult = Au[i] * Bu[j];\n"
+            << "\t\tmul = tempResult[3*(2*PROD_W)/4 - 2: PROD_W/4 - 1];\n"
             << "\tendfunction\n\n";
 
         // Actual Meat and Potatoes
