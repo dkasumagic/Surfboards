@@ -1,0 +1,22 @@
+read_verilog build/rtl_conv.v
+hierarchy -check -auto-top
+
+proc; opt; fsm; opt; memory; opt
+techmap; opt
+dfflibmap -liberty build/libs/basic_cells.lib
+abc       -liberty build/libs/basic_cells.lib
+
+clean -purge
+write_edif build/design.edf
+write_verilog -noattr -noexpr -nodec build/design_gate.v
+write_json build/design.json
+
+
+
+# TO CONVERT verilog_writer.cpp output (*.sv) to (*.v):
+# sv2v -I build $(find build -type f \( -name '*.sv' -o -name '*.v' \) | sort) -w build/rtl_conv.v
+
+# TO BUILD THE CIRCUIT USING THE *.v
+# yosys -s src/backend/to_edif.ys -l build/yosys.log
+
+# Alternatively, use the python script to emit a *.kicad_sch from design.json

@@ -5,7 +5,7 @@
 #include <filesystem>
 #include <cstdint>
 
-int write_verilog_file(const std::string& inputFileName, const std::string& outputFileName, int numBits) {
+int write_verilog_file(const std::string& inputFileName, const std::string& outputFileName, const size_t& numBits) {
     // HUMAN COMMENTS btw haha
     // Initalise my files
     std::ifstream inputFile { inputFileName };
@@ -27,29 +27,25 @@ int write_verilog_file(const std::string& inputFileName, const std::string& outp
         outputFile 
             << "`timescale 1ns/1ps\n\n"
             << "module surfboard #(\n"
-            << "\tparameter int W = " << numBits << ",\n"// W is number of input bits
-            << "\tparameter bit SIGNED = " << signBit << "\n" // is it 2's compliment.
-            << ")(\n"
+            << "\tparameter int W = " << numBits << ",\n"
+            << "\tparameter bit SIGNED = " << signBit
+            << "\n)(\n"
             << "\tinput  logic [W-1:0] A [0:" << maxIndex << "],\n"
             << "\tinput  logic [W-1:0] B [0:" << maxIndex << "],\n"
-            << "\toutput logic [SUMW-1:0] C [0:" << maxIndex << "]\n"
+            << "\toutput logic [W-1:0] C [0:" << maxIndex << "]\n"
             << ");\n"
-            << "\tlocalparam int PROD_W = 2*W;\n" // This creates 32bit wire 
-            << "\tlocalparam int SUMW   = PROD_W + 1;\n\n" //
-            << "\tlogic signed   [W-1:0] As [0:" << maxIndex << "];\n" // Don't think we need signed here.
+            << "\tlogic signed   [W-1:0] As [0:" << maxIndex << "];\n"
             << "\tlogic signed   [W-1:0] Bs [0:" << maxIndex << "];\n"
             << "\tlogic          [W-1:0] Au [0:" << maxIndex << "];\n"
             << "\tlogic          [W-1:0] Bu [0:" << maxIndex << "];\n\n"
             << "\tassign Au = A; assign Bu = B;\n"
             << "\tassign As = A; assign Bs = B;\n\n"
             << "\tfunction automatic logic [W-1:0] mul(input int i, input int j);\n"
-            << "\t\tlogic [PROD_W-1:0] tempResult;\n"
             << "\t\tif (SIGNED)\n"
-            << "\t\t\ttempResult = As[i] * Bs[j];\n" // '*' needs to be changed out for a module
+            << "\t\t\tmul = As[i] * Bs[j];\n"
             << "\t\telse\n"
-            << "\t\t\ttempResult = Au[i] * Bu[j];\n"
-            << "\t\tmul = tempResult[3*(2*PROD_W)/4 - 2: PROD_W/4 - 1];\n"
-            << "\tendfunction\n\n";
+            << "\t\t\tmul = Au[i] * Bu[j];\n"
+            << "\tendfunction\n";
 
         // Actual Meat and Potatoes
         uint64_t a { 0 }, b { 0 }, c { 0 };
@@ -74,10 +70,15 @@ int write_verilog_file(const std::string& inputFileName, const std::string& outp
         std::cout << "Finish.\n";
     } else {
         std::cerr << "Error: could not open file/s: "
-            << (!inputFile.is_open() ? inputFileName + ".txt " : "")
-            << (!outputFile.is_open() ? outputFileName + ".txt " : "")
+            << (!inputFile.is_open() ? inputFileName : "")
+            << (!outputFile.is_open() ? outputFileName : "")
             << std::endl;
     }
 
+    return 0;
+}
+
+int main() {
+    write_verilog_file("./build/MH_output_22.txt", "./build/verilog.sv", 4);
     return 0;
 }
