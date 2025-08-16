@@ -1,7 +1,7 @@
 #ifndef MATRIXHANDLER_HPP
 #define MATRIXHANDLER_HPP
 
-void writetofile(int rows1, int cols1, int rows2, int cols2);
+void generateMatrixMathBlueprint(const std::string& outputFile, int rows1, int cols1, int rows2, int cols2);
 class MatrixIterator {
 public:
     MatrixIterator(int n, int m, int r);

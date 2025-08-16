@@ -5,7 +5,7 @@
 #include <filesystem>
 #include <cstdint>
 
-int write_verilog_file(const std::string& inputFileName, const std::string& outputFileName, const size_t& numBits) {
+int writeVerilogFile(const std::string& inputFileName, const std::string& outputFileName, const size_t& numBits) {
     // HUMAN COMMENTS btw haha
     // Initalise my files
     std::ifstream inputFile { inputFileName };
@@ -20,7 +20,6 @@ int write_verilog_file(const std::string& inputFileName, const std::string& outp
         iss >> row >> col;
         const uint64_t maxCount = row * col;
         const uint64_t maxIndex = (row * col)-1;
-        // const uint64_t numBits = n; // TODO: eventually make this a user option
         const bool signBit = true; // TODO: eventually make this a user option.
  
         // Write the preamble
@@ -79,6 +78,6 @@ int write_verilog_file(const std::string& inputFileName, const std::string& outp
 }
 
 // int main() {
-//     write_verilog_file("./build/MH_output_22.txt", "./build/verilog.sv", 4);
+//     writeVerilogFile("./build/MH_output_22.txt", "./build/verilog.sv", 4);
 //     return 0;
 // }

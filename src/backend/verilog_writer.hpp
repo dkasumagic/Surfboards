@@ -8,6 +8,6 @@
 #include <filesystem>
 #include <cstdint>
 
-int write_verilog_file(const std::string& inputFileName, const std::string& outputFileName, int numBits);
+int writeVerilogFile(const std::string& inputFileName, const std::string& outputFileName, const size_t& numBits);
 
 #endif

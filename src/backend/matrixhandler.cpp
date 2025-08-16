@@ -48,9 +48,8 @@ std::string MatrixIterator::next_line() {
 }
 
      
-void writetofile(int rows1, int cols1, int rows2, int cols2) {
-    std::ofstream output;
-    output.open("output.txt");
+void generateMatrixMathBlueprint(const std::string& outputFile, int rows1, int cols1, int rows2, int cols2) {
+    std::ofstream output { outputFile };
     output << rows1 << " " << cols2 << ";" << std::endl;
     for (int i = 0; i < rows1; i++) {
         for (int j = 0; j < cols2; j++) {
