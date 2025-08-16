@@ -31,14 +31,27 @@ int svd_verilog_writer(std::string& inputFile, std::string& outputFile, int numB
             << "module surfboard #(\n"
             << "\tparameter W = " << numBits << ",\n"
             << "\tparameter sign = " << sign << "\n"
-            << ") (\n"
-            << "\tinput logic [W-1:0] UA [0: " << uaMatSize << " - 1],\n"	// need to implement signed.	
-            << "\tinput logic [W-1:0] DA [0: " << daMatSize << " - 1],\n"		
-            << "\tinput logic [W-1:0] VA [0: " << vaMatSize << " - 1],\n"		
-            << "\tinput logic [W-1:0] UB [0: " << ubMatSize << " - 1],\n"		
-            << "\tinput logic [W-1:0] DB [0: " << dbMatSize << " - 1],\n"		
-            << "\tinput logic [W-1:0] VB [0: " << vbMatSize << " - 1],\n"		
-            << "\toutput logic [W-1:0] C [0: " << finMatSize << " - 1]\n"		
+            << ") (\n";
+        if (sign) {
+            writeFile
+                << "\tinput logic signed [W-1:0] UA [0: " << uaMatSize << " - 1],\n"		
+                << "\tinput logic signed [W-1:0] DA [0: " << daMatSize << " - 1],\n"		
+                << "\tinput logic signed [W-1:0] VA [0: " << vaMatSize << " - 1],\n"		
+                << "\tinput logic signed [W-1:0] UB [0: " << ubMatSize << " - 1],\n"		
+                << "\tinput logic signed [W-1:0] DB [0: " << dbMatSize << " - 1],\n"		
+                << "\tinput logic signed [W-1:0] VB [0: " << vbMatSize << " - 1],\n"		
+                << "\toutput logic signed [W-1:0] C [0: " << finMatSize << " - 1]\n";
+        } else {
+            writeFile
+                << "\tinput logic [W-1:0] UA [0: " << uaMatSize << " - 1],\n"		
+                << "\tinput logic [W-1:0] DA [0: " << daMatSize << " - 1],\n"		
+                << "\tinput logic [W-1:0] VA [0: " << vaMatSize << " - 1],\n"		
+                << "\tinput logic [W-1:0] UB [0: " << ubMatSize << " - 1],\n"		
+                << "\tinput logic [W-1:0] DB [0: " << dbMatSize << " - 1],\n"		
+                << "\tinput logic [W-1:0] VB [0: " << vbMatSize << " - 1],\n"		
+                << "\toutput logic [W-1:0] C [0: " << finMatSize << " - 1]\n";
+        }
+        writeFile
             << ");\n\n"
             << "\tlocalparam PROD_W_LEN = 2*W;\n\n"
             << "\tlogic [W-1:0] UADA [0: " << daMatSize << " - 1];\n"
@@ -52,8 +65,15 @@ int svd_verilog_writer(std::string& inputFile, std::string& outputFile, int numB
             << "\t\tinput logic [W-1:0] B[]\n"
             << "\t);\n"
             << "\t\tlogic [2*W-1] temp;\n"
-            << "\t\ttemp = A[i] * B[j];\n"
-            << "\t\tmul = temp[2*W-2:W-1];\n"
+            << "\t\ttemp = A[i] * B[j];\n";
+        if (sign) {
+            writeFile
+                << "\t\tmul = temp[W-1:0];\n";
+        } else {
+            writeFile
+                << "\t\tmul = temp[2*W-2:W-1];\n";
+        }
+        writeFile
             << "\tendfunction\n\n";
 
 
@@ -107,6 +127,7 @@ int svd_verilog_writer(std::string& inputFile, std::string& outputFile, int numB
             writeFile << "\n";
         }
         i++;
+        // line = gen.nextline();
     }
        writeFile << "\nendmodule\n";
     }
