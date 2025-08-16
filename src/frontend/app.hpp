@@ -10,6 +10,9 @@ void inputMatrix(webui::window::event *e) {
     long long c1 = e->get_int(1);
     long long r2 = e->get_int(2);
     long long c2 = e->get_int(3);
+    long long q1 = e->get_int(4);
+    long long q2 = e->get_int(5);
+
     std::cout << "hi\n";
 
     bool valid = r1 > 0 && c1 > 0 && r2 > 0 && c2 > 0;
@@ -23,7 +26,8 @@ void inputMatrix(webui::window::event *e) {
 
     std::cout << "A: " << r1 << "x" << c1
                 << " | B: " << r2 << "x" << c2 
-                << " | C: " << r1 << "x" << c2 << std::endl;
+                << " | C: " << r1 << "x" << c2 
+                << "\nQ" << q1 << "." << q2 << "\n";
 
     e->return_string("ok");
 }
@@ -44,6 +48,9 @@ public:
     std::string_view url = win.start_server(root_file);
     std::cout << url << "\n";
 
+  }
+
+  void run() {
     webui::wait();
   }
 
