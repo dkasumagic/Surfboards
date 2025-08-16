@@ -7,28 +7,28 @@
 
 int write_verilog_file(const std::string& inputFileName, const std::string& outputFileName) {
     // HUMAN COMMENTS btw haha
-    // Initalise my stuff
+    // Initalise my files
     std::ifstream inputFile { inputFileName };
     std::ofstream outputFile { outputFileName };
     std::string line;
    
     if (inputFile.is_open() && outputFile.is_open()) {
-        // Initalise some stuff and get the matrix size
+        // Initalise some more stuff and get the matrix size
         uint64_t row, col;
         std::getline(inputFile, line);
         std::istringstream iss(line);
         iss >> row >> col;
         const uint64_t maxCount = row * col;
         const uint64_t maxIndex = (row * col)-1;
-        const uint64_t numBits = 16;
-        const bool signBit = true;
+        const uint64_t numBits = 16; // TODO: eventually make this a user option
+        const bool signBit = true; // TODO: eventually make this a user option
 
         // Write the preamble
         outputFile 
             << "`timescale 1ns/1ps" << std::endl << std::endl
             << "module surfboard #(" << std::endl
-            << "\tparameter int W = " << numBits << "," << std::endl // TODO: eventually make this a user option
-            << "\tparameter bit SIGNED = " << signBit << std::endl // TODO: eventually make this a user option
+            << "\tparameter int W = " << numBits << "," << std::endl 
+            << "\tparameter bit SIGNED = " << signBit << std::endl 
             << ")(" << std::endl
             << "\tinput  logic [W-1:0] A [0:" << maxIndex << "]," << std::endl
             << "\tinput  logic [W-1:0] B [0:" << maxIndex << "]," << std::endl
@@ -58,29 +58,23 @@ int write_verilog_file(const std::string& inputFileName, const std::string& outp
             std::getline(inputFile, line);
             iss.str(line);
             
-            outputFile
-                << "\tassign C[" << c << "] = ";
+            outputFile << "\tassign C[" << c << "] = ";
             while (iss >> a >> op >> b) {
-                if (first) 
-                    first = false;
-                else
-                    outputFile << " + ";
-
-                outputFile
-                    << "mul(" << a << "," << b << ")";
-            } 
+                if (first) first = false;
+                else outputFile << " + ";
+                outputFile << "mul(" << a << "," << b << ")";
+            }
             outputFile << ";" << std::endl;
         }
-
         outputFile << std::endl << "endmodule" << std::endl;
 
         outputFile.close();
         std::cout << "Finish." << std::endl;
     } else {
-        std::cerr << "Error: could not open: "
-            << (!inputFile.is_open() ? inputFileName + " " : "")
-            << (!outputFile.is_open() ? outputFileName + " " : "")
-            << ".txt file" << std::endl;
+        std::cerr << "Error: could not open file/s: "
+            << (!inputFile.is_open() ? inputFileName + ".txt " : "")
+            << (!outputFile.is_open() ? outputFileName + ".txt " : "")
+            << std::endl;
     }
 
     return 0;
