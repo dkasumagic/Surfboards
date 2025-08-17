@@ -63,3 +63,157 @@
   border-color: var(--button-border);
   color: var(--text-secondary);
 }
+
+/* Ensure button SVG icons inherit theme colors */
+.theme-button svg {
+  color: var(--text-secondary);
+  stroke: var(--text-secondary);
+}
+
+.theme-button .theme-text-primary {
+  color: var(--text-secondary) !important;
+}
+
+/* Force button content to use correct theme colors */
+.theme-button span {
+  color: var(--text-secondary) !important;
+}
+
+/* SVG theme styling */
+.theme-svg {
+  color: var(--text-primary);
+}
+
+.svg-content {
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  padding: 32px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease-in-out;
+  transform-origin: top left; /* Ensure scaling starts from top-left */
+}
+
+/* Force SVG elements to respect theme colors */
+.theme-svg text {
+  fill: var(--text-primary) !important;
+}
+
+.theme-svg path,
+.theme-svg line,
+.theme-svg polyline,
+.theme-svg polygon,
+.theme-svg circle,
+.theme-svg rect {
+  stroke: var(--text-primary) !important;
+}
+
+.theme-svg path[fill="black"],
+.theme-svg circle[fill="black"],
+.theme-svg rect[fill="black"] {
+  fill: var(--text-primary) !important;
+}
+
+/* Scrollbar styling for SVG container */
+#svgContainer {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+#svgContainer::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+#svgContainer::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+#svgContainer::-webkit-scrollbar-track {
+  background: var(--card-bg);
+  border-radius: 4px;
+}
+
+#svgContainer::-webkit-scrollbar-thumb {
+  background: var(--text-muted);
+  border-radius: 4px;
+}
+
+#svgContainer::-webkit-scrollbar-thumb:hover {
+  background: var(--text-secondary);
+}
+
+/* Modal backdrop blur effect */
+.modal-backdrop {
+  backdrop-filter: blur(4px);
+  animation: fadeIn 0.3s ease;
+}
+
+/* Smooth modal animations */
+#modalOverlay {
+  transition: all 0.3s ease;
+}
+
+#modalOverlay.hidden {
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0.95);
+}
+
+#modalOverlay:not(.hidden) {
+  opacity: 1;
+  pointer-events: auto;
+  transform: scale(1);
+}
+
+#modalOverlay > div {
+  transition: transform 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Hover effects for info box */
+#infoBox:hover {
+  box-shadow: 0 8px 25px -8px rgba(0,0,0,0.15);
+}
+
+/* Fullscreen SVG styling */
+.fullscreen-svg {
+  background-color: var(--card-bg) !important;
+  color: var(--text-primary) !important;
+  padding: 20px !important;
+}
+
+.fullscreen-svg .svg-content {
+  background-color: var(--card-bg) !important;
+  width: 100% !important;
+  height: 100% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+/* Ensure theme colors work in fullscreen */
+.fullscreen-svg .theme-svg {
+  color: var(--text-primary) !important;
+}
+
+.fullscreen-svg .theme-svg text {
+  fill: var(--text-primary) !important;
+}
+
+.fullscreen-svg .theme-svg path,
+.fullscreen-svg .theme-svg line,
+.fullscreen-svg .theme-svg polyline,
+.fullscreen-svg .theme-svg polygon,
+.fullscreen-svg .theme-svg circle,
+.fullscreen-svg .theme-svg rect {
+  stroke: var(--text-primary) !important;
+}
+
+/* Dark theme for fullscreen */
+.dark .fullscreen-svg {
+  background-color: var(--card-bg) !important;
+}

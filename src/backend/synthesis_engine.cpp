@@ -30,7 +30,7 @@ SynthesisResult runSynthesis(const std::filesystem::path& verilogFilePath, const
     .code { -1 },
     .message { "Undefined Error" },
     .design_json { "build/design.json" },
-    .schematic_svg { "build/schematic.svg" },
+    .schematic_svg { "src/frontend/public/schematic.svg" },
     .yosys_log { "build/yosys.log" },
     .netlistsvg_log { "build/netlistsvg.log" }
   };

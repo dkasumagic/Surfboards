@@ -10,7 +10,10 @@ void workflow(webui::window::event *e){
   long long c2 = e->get_int(3);
   long long q1 = e->get_int(4);
   long long q2 = e->get_int(5);
-  // long long s1 = e->get_int(6); Signed bool value for from frontend
+  long long s1 = e->get_int(6);
+  long long useSVD = e->get_int(7);
+  long long singularValuesA = e->get_int(8); // Singular values for Matrix A
+  long long singularValuesB = e->get_int(9); // Singular values for Matrix B
 
   std::cout << "Executing...\n";
   bool valid = r1 > 0 && c1 > 0 && r2 > 0 && c2 > 0;
@@ -37,8 +40,14 @@ void workflow(webui::window::event *e){
   std::cout << "A: " << r1 << "x" << c1
     << " | B: " << r2 << "x" << c2 
     << " | C: " << r1 << "x" << c2 
-    << " | Q" << q1 << "." << q2 << "\n\n"
-    << "Success!\n\n";
+    << " | Q" << q1 << "." << q2
+    << " | SVD: " << (useSVD ? "enabled" : "disabled");
+  
+  if (useSVD) {
+    std::cout << " (A: " << singularValuesA << " values, B: " << singularValuesB << " values)";
+  }
+  
+  std::cout << "\n\n" << "Success!\n\n";
 
   e->return_string("ok");
 }

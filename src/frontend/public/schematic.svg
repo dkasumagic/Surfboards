@@ -1,0 +1,469 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:s="https://github.com/nturley/netlistsvg" width="752" height="671">
+  <style>svg {
+    stroke:#000;
+    fill:none;
+  }
+  text {
+    fill:#000;
+    stroke:none;
+    font-size:10px;
+    font-weight: bold;
+    font-family: "Courier New", monospace;
+  }
+  .nodelabel {
+    text-anchor: middle;
+  }
+  .inputPortLabel {
+    text-anchor: end;
+  }
+  .splitjoinBody {
+    fill:#000;
+  }</style>
+  <g s:type="and" transform="translate(381,260.5)" s:width="30" s:height="25" id="cell_$auto$simplemap.cc:83:simplemap_bitop$105">
+    <s:alias val="$and"/>
+    <s:alias val="$logic_and"/>
+    <s:alias val="$_AND_"/>
+    <path d="M0,0 L0,25 L15,25 A15 12.5 0 0 0 15,0 Z" class="cell_$auto$simplemap.cc:83:simplemap_bitop$105"/>
+    <g s:x="0" s:y="5" s:pid="A"/>
+    <g s:x="0" s:y="20" s:pid="B"/>
+    <g s:x="30" s:y="12.5" s:pid="Y"/>
+  </g>
+  <g s:type="and" transform="translate(179,360.5)" s:width="30" s:height="25" id="cell_$auto$simplemap.cc:83:simplemap_bitop$106">
+    <s:alias val="$and"/>
+    <s:alias val="$logic_and"/>
+    <s:alias val="$_AND_"/>
+    <path d="M0,0 L0,25 L15,25 A15 12.5 0 0 0 15,0 Z" class="cell_$auto$simplemap.cc:83:simplemap_bitop$106"/>
+    <g s:x="0" s:y="5" s:pid="A"/>
+    <g s:x="0" s:y="20" s:pid="B"/>
+    <g s:x="30" s:y="12.5" s:pid="Y"/>
+  </g>
+  <g s:type="and" transform="translate(245,43)" s:width="30" s:height="25" id="cell_$auto$simplemap.cc:83:simplemap_bitop$107">
+    <s:alias val="$and"/>
+    <s:alias val="$logic_and"/>
+    <s:alias val="$_AND_"/>
+    <path d="M0,0 L0,25 L15,25 A15 12.5 0 0 0 15,0 Z" class="cell_$auto$simplemap.cc:83:simplemap_bitop$107"/>
+    <g s:x="0" s:y="5" s:pid="A"/>
+    <g s:x="0" s:y="20" s:pid="B"/>
+    <g s:x="30" s:y="12.5" s:pid="Y"/>
+  </g>
+  <g s:type="and" transform="translate(595,12)" s:width="30" s:height="25" id="cell_$auto$simplemap.cc:83:simplemap_bitop$108">
+    <s:alias val="$and"/>
+    <s:alias val="$logic_and"/>
+    <s:alias val="$_AND_"/>
+    <path d="M0,0 L0,25 L15,25 A15 12.5 0 0 0 15,0 Z" class="cell_$auto$simplemap.cc:83:simplemap_bitop$108"/>
+    <g s:x="0" s:y="5" s:pid="A"/>
+    <g s:x="0" s:y="20" s:pid="B"/>
+    <g s:x="30" s:y="12.5" s:pid="Y"/>
+  </g>
+  <g s:type="and" transform="translate(381,529)" s:width="30" s:height="25" id="cell_$auto$simplemap.cc:83:simplemap_bitop$109">
+    <s:alias val="$and"/>
+    <s:alias val="$logic_and"/>
+    <s:alias val="$_AND_"/>
+    <path d="M0,0 L0,25 L15,25 A15 12.5 0 0 0 15,0 Z" class="cell_$auto$simplemap.cc:83:simplemap_bitop$109"/>
+    <g s:x="0" s:y="5" s:pid="A"/>
+    <g s:x="0" s:y="20" s:pid="B"/>
+    <g s:x="30" s:y="12.5" s:pid="Y"/>
+  </g>
+  <g s:type="and" transform="translate(179,420.5)" s:width="30" s:height="25" id="cell_$auto$simplemap.cc:83:simplemap_bitop$110">
+    <s:alias val="$and"/>
+    <s:alias val="$logic_and"/>
+    <s:alias val="$_AND_"/>
+    <path d="M0,0 L0,25 L15,25 A15 12.5 0 0 0 15,0 Z" class="cell_$auto$simplemap.cc:83:simplemap_bitop$110"/>
+    <g s:x="0" s:y="5" s:pid="A"/>
+    <g s:x="0" s:y="20" s:pid="B"/>
+    <g s:x="30" s:y="12.5" s:pid="Y"/>
+  </g>
+  <g s:type="and" transform="translate(245,103)" s:width="30" s:height="25" id="cell_$auto$simplemap.cc:83:simplemap_bitop$111">
+    <s:alias val="$and"/>
+    <s:alias val="$logic_and"/>
+    <s:alias val="$_AND_"/>
+    <path d="M0,0 L0,25 L15,25 A15 12.5 0 0 0 15,0 Z" class="cell_$auto$simplemap.cc:83:simplemap_bitop$111"/>
+    <g s:x="0" s:y="5" s:pid="A"/>
+    <g s:x="0" s:y="20" s:pid="B"/>
+    <g s:x="30" s:y="12.5" s:pid="Y"/>
+  </g>
+  <g s:type="and" transform="translate(245,466.5)" s:width="30" s:height="25" id="cell_$auto$simplemap.cc:83:simplemap_bitop$114">
+    <s:alias val="$and"/>
+    <s:alias val="$logic_and"/>
+    <s:alias val="$_AND_"/>
+    <path d="M0,0 L0,25 L15,25 A15 12.5 0 0 0 15,0 Z" class="cell_$auto$simplemap.cc:83:simplemap_bitop$114"/>
+    <g s:x="0" s:y="5" s:pid="A"/>
+    <g s:x="0" s:y="20" s:pid="B"/>
+    <g s:x="30" s:y="12.5" s:pid="Y"/>
+  </g>
+  <g s:type="and" transform="translate(313,133)" s:width="30" s:height="25" id="cell_$auto$simplemap.cc:83:simplemap_bitop$115">
+    <s:alias val="$and"/>
+    <s:alias val="$logic_and"/>
+    <s:alias val="$_AND_"/>
+    <path d="M0,0 L0,25 L15,25 A15 12.5 0 0 0 15,0 Z" class="cell_$auto$simplemap.cc:83:simplemap_bitop$115"/>
+    <g s:x="0" s:y="5" s:pid="A"/>
+    <g s:x="0" s:y="20" s:pid="B"/>
+    <g s:x="30" s:y="12.5" s:pid="Y"/>
+  </g>
+  <g s:type="and" transform="translate(454,581.5)" s:width="30" s:height="25" id="cell_$auto$simplemap.cc:83:simplemap_bitop$119">
+    <s:alias val="$and"/>
+    <s:alias val="$logic_and"/>
+    <s:alias val="$_AND_"/>
+    <path d="M0,0 L0,25 L15,25 A15 12.5 0 0 0 15,0 Z" class="cell_$auto$simplemap.cc:83:simplemap_bitop$119"/>
+    <g s:x="0" s:y="5" s:pid="A"/>
+    <g s:x="0" s:y="20" s:pid="B"/>
+    <g s:x="30" s:y="12.5" s:pid="Y"/>
+  </g>
+  <g s:type="or" transform="translate(381,200.5)" s:width="30" s:height="25" id="cell_$auto$simplemap.cc:83:simplemap_bitop$132">
+    <s:alias val="$or"/>
+    <s:alias val="$logic_or"/>
+    <s:alias val="$_OR_"/>
+    <path d="M0,25 L0,25 L15,25 A15 12.5 0 0 0 15,0 L0,0" class="cell_$auto$simplemap.cc:83:simplemap_bitop$132"/>
+    <path d="M0,0 A30 25 0 0 1 0,25" class="cell_$auto$simplemap.cc:83:simplemap_bitop$132"/>
+    <g s:x="3" s:y="5" s:pid="A"/>
+    <g s:x="3" s:y="20" s:pid="B"/>
+    <g s:x="30" s:y="12.5" s:pid="Y"/>
+  </g>
+  <g s:type="reduce_xor" transform="translate(453,461.5)" s:width="33" s:height="25" id="cell_$auto$simplemap.cc:83:simplemap_bitop$136">
+    <s:alias val="$xor"/>
+    <s:alias val="$reduce_xor"/>
+    <s:alias val="$_XOR_"/>
+    <path d="M3,0 A30 25 0 0 1 3,25 A30 25 0 0 0 33,12.5 A30 25 0 0 0 3,0" class="cell_$auto$simplemap.cc:83:simplemap_bitop$136"/>
+    <path d="M0,0 A30 25 0 0 1 0,25" class="cell_$auto$simplemap.cc:83:simplemap_bitop$136"/>
+    <g s:x="3" s:y="5" s:pid="A"/>
+    <g s:x="3" s:y="20" s:pid="B"/>
+    <g s:x="33" s:y="12.5" s:pid="Y"/>
+  </g>
+  <g s:type="reduce_xor" transform="translate(380,58)" s:width="33" s:height="25" id="cell_$auto$simplemap.cc:83:simplemap_bitop$137">
+    <s:alias val="$xor"/>
+    <s:alias val="$reduce_xor"/>
+    <s:alias val="$_XOR_"/>
+    <path d="M3,0 A30 25 0 0 1 3,25 A30 25 0 0 0 33,12.5 A30 25 0 0 0 3,0" class="cell_$auto$simplemap.cc:83:simplemap_bitop$137"/>
+    <path d="M0,0 A30 25 0 0 1 0,25" class="cell_$auto$simplemap.cc:83:simplemap_bitop$137"/>
+    <g s:x="3" s:y="5" s:pid="A"/>
+    <g s:x="3" s:y="20" s:pid="B"/>
+    <g s:x="33" s:y="12.5" s:pid="Y"/>
+  </g>
+  <g s:type="and" transform="translate(313,360.5)" s:width="30" s:height="25" id="cell_$auto$simplemap.cc:83:simplemap_bitop$140">
+    <s:alias val="$and"/>
+    <s:alias val="$logic_and"/>
+    <s:alias val="$_AND_"/>
+    <path d="M0,0 L0,25 L15,25 A15 12.5 0 0 0 15,0 Z" class="cell_$auto$simplemap.cc:83:simplemap_bitop$140"/>
+    <g s:x="0" s:y="5" s:pid="A"/>
+    <g s:x="0" s:y="20" s:pid="B"/>
+    <g s:x="30" s:y="12.5" s:pid="Y"/>
+  </g>
+  <g s:type="and" transform="translate(454,521.5)" s:width="30" s:height="25" id="cell_$auto$simplemap.cc:83:simplemap_bitop$143">
+    <s:alias val="$and"/>
+    <s:alias val="$logic_and"/>
+    <s:alias val="$_AND_"/>
+    <path d="M0,0 L0,25 L15,25 A15 12.5 0 0 0 15,0 Z" class="cell_$auto$simplemap.cc:83:simplemap_bitop$143"/>
+    <g s:x="0" s:y="5" s:pid="A"/>
+    <g s:x="0" s:y="20" s:pid="B"/>
+    <g s:x="30" s:y="12.5" s:pid="Y"/>
+  </g>
+  <g s:type="and" transform="translate(313,193)" s:width="30" s:height="25" id="cell_$auto$simplemap.cc:83:simplemap_bitop$144">
+    <s:alias val="$and"/>
+    <s:alias val="$logic_and"/>
+    <s:alias val="$_AND_"/>
+    <path d="M0,0 L0,25 L15,25 A15 12.5 0 0 0 15,0 Z" class="cell_$auto$simplemap.cc:83:simplemap_bitop$144"/>
+    <g s:x="0" s:y="5" s:pid="A"/>
+    <g s:x="0" s:y="20" s:pid="B"/>
+    <g s:x="30" s:y="12.5" s:pid="Y"/>
+  </g>
+  <g s:type="reduce_xor" transform="translate(594,268)" s:width="33" s:height="25" id="cell_$auto$simplemap.cc:83:simplemap_bitop$147">
+    <s:alias val="$xor"/>
+    <s:alias val="$reduce_xor"/>
+    <s:alias val="$_XOR_"/>
+    <path d="M3,0 A30 25 0 0 1 3,25 A30 25 0 0 0 33,12.5 A30 25 0 0 0 3,0" class="cell_$auto$simplemap.cc:83:simplemap_bitop$147"/>
+    <path d="M0,0 A30 25 0 0 1 0,25" class="cell_$auto$simplemap.cc:83:simplemap_bitop$147"/>
+    <g s:x="3" s:y="5" s:pid="A"/>
+    <g s:x="3" s:y="20" s:pid="B"/>
+    <g s:x="33" s:y="12.5" s:pid="Y"/>
+  </g>
+  <g s:type="reduce_xor" transform="translate(244,368)" s:width="33" s:height="25" id="cell_$auto$simplemap.cc:83:simplemap_bitop$148">
+    <s:alias val="$xor"/>
+    <s:alias val="$reduce_xor"/>
+    <s:alias val="$_XOR_"/>
+    <path d="M3,0 A30 25 0 0 1 3,25 A30 25 0 0 0 33,12.5 A30 25 0 0 0 3,0" class="cell_$auto$simplemap.cc:83:simplemap_bitop$148"/>
+    <path d="M0,0 A30 25 0 0 1 0,25" class="cell_$auto$simplemap.cc:83:simplemap_bitop$148"/>
+    <g s:x="3" s:y="5" s:pid="A"/>
+    <g s:x="3" s:y="20" s:pid="B"/>
+    <g s:x="33" s:y="12.5" s:pid="Y"/>
+  </g>
+  <g s:type="reduce_xor" transform="translate(312,50.5)" s:width="33" s:height="25" id="cell_$auto$simplemap.cc:83:simplemap_bitop$149">
+    <s:alias val="$xor"/>
+    <s:alias val="$reduce_xor"/>
+    <s:alias val="$_XOR_"/>
+    <path d="M3,0 A30 25 0 0 1 3,25 A30 25 0 0 0 33,12.5 A30 25 0 0 0 3,0" class="cell_$auto$simplemap.cc:83:simplemap_bitop$149"/>
+    <path d="M0,0 A30 25 0 0 1 0,25" class="cell_$auto$simplemap.cc:83:simplemap_bitop$149"/>
+    <g s:x="3" s:y="5" s:pid="A"/>
+    <g s:x="3" s:y="20" s:pid="B"/>
+    <g s:x="33" s:y="12.5" s:pid="Y"/>
+  </g>
+  <g s:type="reduce_xor" transform="translate(526,574)" s:width="33" s:height="25" id="cell_$auto$simplemap.cc:83:simplemap_bitop$157">
+    <s:alias val="$xor"/>
+    <s:alias val="$reduce_xor"/>
+    <s:alias val="$_XOR_"/>
+    <path d="M3,0 A30 25 0 0 1 3,25 A30 25 0 0 0 33,12.5 A30 25 0 0 0 3,0" class="cell_$auto$simplemap.cc:83:simplemap_bitop$157"/>
+    <path d="M0,0 A30 25 0 0 1 0,25" class="cell_$auto$simplemap.cc:83:simplemap_bitop$157"/>
+    <g s:x="3" s:y="5" s:pid="A"/>
+    <g s:x="3" s:y="20" s:pid="B"/>
+    <g s:x="33" s:y="12.5" s:pid="Y"/>
+  </g>
+  <g s:type="and" transform="translate(527,634)" s:width="30" s:height="25" id="cell_$auto$simplemap.cc:83:simplemap_bitop$164">
+    <s:alias val="$and"/>
+    <s:alias val="$logic_and"/>
+    <s:alias val="$_AND_"/>
+    <path d="M0,0 L0,25 L15,25 A15 12.5 0 0 0 15,0 Z" class="cell_$auto$simplemap.cc:83:simplemap_bitop$164"/>
+    <g s:x="0" s:y="5" s:pid="A"/>
+    <g s:x="0" s:y="20" s:pid="B"/>
+    <g s:x="30" s:y="12.5" s:pid="Y"/>
+  </g>
+  <g s:type="reduce_xor" transform="translate(594,469)" s:width="33" s:height="25" id="cell_$auto$simplemap.cc:83:simplemap_bitop$168">
+    <s:alias val="$xor"/>
+    <s:alias val="$reduce_xor"/>
+    <s:alias val="$_XOR_"/>
+    <path d="M3,0 A30 25 0 0 1 3,25 A30 25 0 0 0 33,12.5 A30 25 0 0 0 3,0" class="cell_$auto$simplemap.cc:83:simplemap_bitop$168"/>
+    <path d="M0,0 A30 25 0 0 1 0,25" class="cell_$auto$simplemap.cc:83:simplemap_bitop$168"/>
+    <g s:x="3" s:y="5" s:pid="A"/>
+    <g s:x="3" s:y="20" s:pid="B"/>
+    <g s:x="33" s:y="12.5" s:pid="Y"/>
+  </g>
+  <g s:type="reduce_xor" transform="translate(453,65.5)" s:width="33" s:height="25" id="cell_$auto$simplemap.cc:83:simplemap_bitop$169">
+    <s:alias val="$xor"/>
+    <s:alias val="$reduce_xor"/>
+    <s:alias val="$_XOR_"/>
+    <path d="M3,0 A30 25 0 0 1 3,25 A30 25 0 0 0 33,12.5 A30 25 0 0 0 3,0" class="cell_$auto$simplemap.cc:83:simplemap_bitop$169"/>
+    <path d="M0,0 A30 25 0 0 1 0,25" class="cell_$auto$simplemap.cc:83:simplemap_bitop$169"/>
+    <g s:x="3" s:y="5" s:pid="A"/>
+    <g s:x="3" s:y="20" s:pid="B"/>
+    <g s:x="33" s:y="12.5" s:pid="Y"/>
+  </g>
+  <g s:type="reduce_xor" transform="translate(594,581.5)" s:width="33" s:height="25" id="cell_$auto$simplemap.cc:83:simplemap_bitop$178">
+    <s:alias val="$xor"/>
+    <s:alias val="$reduce_xor"/>
+    <s:alias val="$_XOR_"/>
+    <path d="M3,0 A30 25 0 0 1 3,25 A30 25 0 0 0 33,12.5 A30 25 0 0 0 3,0" class="cell_$auto$simplemap.cc:83:simplemap_bitop$178"/>
+    <path d="M0,0 A30 25 0 0 1 0,25" class="cell_$auto$simplemap.cc:83:simplemap_bitop$178"/>
+    <g s:x="3" s:y="5" s:pid="A"/>
+    <g s:x="3" s:y="20" s:pid="B"/>
+    <g s:x="33" s:y="12.5" s:pid="Y"/>
+  </g>
+  <g s:type="inputExt" transform="translate(12,265.5)" s:width="30" s:height="20" id="cell_A">
+    <text x="15" y="-4" class="nodelabel cell_A" s:attribute="ref">A</text>
+    <s:alias val="$_inputExt_"/>
+    <path d="M0,0 L0,20 L15,20 L30,10 L15,0 Z" class="cell_A"/>
+    <g s:x="28" s:y="10" s:pid="Y"/>
+  </g>
+  <g s:type="inputExt" transform="translate(12,380.5)" s:width="30" s:height="20" id="cell_B">
+    <text x="15" y="-4" class="nodelabel cell_B" s:attribute="ref">B</text>
+    <s:alias val="$_inputExt_"/>
+    <path d="M0,0 L0,20 L15,20 L30,10 L15,0 Z" class="cell_B"/>
+    <g s:x="28" s:y="10" s:pid="Y"/>
+  </g>
+  <g s:type="outputExt" transform="translate(710,24.5)" s:width="30" s:height="20" id="cell_C">
+    <text x="15" y="-4" class="nodelabel cell_C" s:attribute="ref">C</text>
+    <s:alias val="$_outputExt_"/>
+    <path d="M30,0 L30,20 L15,20 L0,10 L15,0 Z" class="cell_C"/>
+    <g s:x="0" s:y="10" s:pid="A"/>
+  </g>
+  <g s:type="join" transform="translate(669,14)" s:width="4" s:height="40" id="cell_$join$,10,11,12,13,">
+    <rect width="5" height="80" class="splitjoinBody" s:generic="body"/>
+    <s:alias val="$_join_"/>
+    <g s:x="5" s:y="20" s:pid="out"/>
+    <g transform="translate(0,10)" s:x="0" s:y="10" s:pid="in0">
+      <text x="-3" y="-4" class="inputPortLabel">0</text>
+    </g>
+    <g transform="translate(0,30)" s:x="0" s:y="10" s:pid="in0">
+      <text x="-3" y="-4" class="inputPortLabel">1</text>
+    </g>
+    <g transform="translate(0,50)" s:x="0" s:y="10" s:pid="in0">
+      <text x="-3" y="-4" class="inputPortLabel">2</text>
+    </g>
+    <g transform="translate(0,70)" s:x="0" s:y="10" s:pid="in0">
+      <text x="-3" y="-4" class="inputPortLabel">3</text>
+    </g>
+  </g>
+  <g s:type="split" transform="translate(77,255)" s:width="5" s:height="40" id="cell_$split$,2,3,4,5,">
+    <rect width="5" height="80" class="splitjoinBody" s:generic="body"/>
+    <s:alias val="$_split_"/>
+    <g s:x="0" s:y="20" s:pid="in"/>
+    <g transform="translate(4,10)" s:x="4" s:y="10" s:pid="out0">
+      <text x="5" y="-4">0</text>
+    </g>
+    <g transform="translate(4,30)" s:x="4" s:y="10" s:pid="out0">
+      <text x="5" y="-4">1</text>
+    </g>
+    <g transform="translate(4,50)" s:x="4" s:y="10" s:pid="out0">
+      <text x="5" y="-4">2</text>
+    </g>
+    <g transform="translate(4,70)" s:x="4" s:y="10" s:pid="out0">
+      <text x="5" y="-4">3</text>
+    </g>
+  </g>
+  <g s:type="split" transform="translate(77,370)" s:width="5" s:height="40" id="cell_$split$,6,7,8,9,">
+    <rect width="5" height="80" class="splitjoinBody" s:generic="body"/>
+    <s:alias val="$_split_"/>
+    <g s:x="0" s:y="20" s:pid="in"/>
+    <g transform="translate(4,10)" s:x="4" s:y="10" s:pid="out0">
+      <text x="5" y="-4">1</text>
+    </g>
+    <g transform="translate(4,30)" s:x="4" s:y="10" s:pid="out0">
+      <text x="5" y="-4">0</text>
+    </g>
+    <g transform="translate(4,50)" s:x="4" s:y="10" s:pid="out0">
+      <text x="5" y="-4">2</text>
+    </g>
+    <g transform="translate(4,70)" s:x="4" s:y="10" s:pid="out0">
+      <text x="5" y="-4">3</text>
+    </g>
+  </g>
+  <line x1="82" x2="381" y1="265.5" y2="265.5" class="net_2"/>
+  <line x1="82" x2="109" y1="265.5" y2="265.5" class="net_2"/>
+  <line x1="109" x2="109" y1="265.5" y2="17" class="net_2"/>
+  <circle cx="109" cy="265.5" r="2" style="fill:#000" class="net_2"/>
+  <line x1="109" x2="595" y1="17" y2="17" class="net_2"/>
+  <line x1="82" x2="109" y1="265.5" y2="265.5" class="net_2"/>
+  <line x1="109" x2="109" y1="265.5" y2="471.5" class="net_2"/>
+  <circle cx="109" cy="471.5" r="2" style="fill:#000" class="net_2"/>
+  <line x1="109" x2="245" y1="471.5" y2="471.5" class="net_2"/>
+  <line x1="82" x2="109" y1="265.5" y2="265.5" class="net_2"/>
+  <line x1="109" x2="109" y1="265.5" y2="586.5" class="net_2"/>
+  <line x1="109" x2="454" y1="586.5" y2="586.5" class="net_2"/>
+  <line x1="82" x2="169" y1="380.5" y2="380.5" class="net_7"/>
+  <line x1="169" x2="169" y1="380.5" y2="455.5" class="net_7"/>
+  <line x1="169" x2="365" y1="455.5" y2="455.5" class="net_7"/>
+  <line x1="365" x2="365" y1="455.5" y2="280.5" class="net_7"/>
+  <circle cx="169" cy="380.5" r="2" style="fill:#000" class="net_7"/>
+  <line x1="365" x2="381" y1="280.5" y2="280.5" class="net_7"/>
+  <line x1="82" x2="179" y1="380.5" y2="380.5" class="net_7"/>
+  <line x1="82" x2="169" y1="380.5" y2="380.5" class="net_7"/>
+  <line x1="169" x2="169" y1="380.5" y2="63" class="net_7"/>
+  <line x1="169" x2="245" y1="63" y2="63" class="net_7"/>
+  <line x1="82" x2="149" y1="285.5" y2="285.5" class="net_3"/>
+  <line x1="149" x2="149" y1="285.5" y2="365.5" class="net_3"/>
+  <circle cx="149" cy="285.5" r="2" style="fill:#000" class="net_3"/>
+  <circle cx="149" cy="365.5" r="2" style="fill:#000" class="net_3"/>
+  <line x1="149" x2="179" y1="365.5" y2="365.5" class="net_3"/>
+  <line x1="82" x2="149" y1="285.5" y2="285.5" class="net_3"/>
+  <line x1="149" x2="149" y1="285.5" y2="534" class="net_3"/>
+  <line x1="149" x2="381" y1="534" y2="534" class="net_3"/>
+  <line x1="82" x2="149" y1="285.5" y2="285.5" class="net_3"/>
+  <line x1="149" x2="149" y1="285.5" y2="138" class="net_3"/>
+  <line x1="149" x2="313" y1="138" y2="138" class="net_3"/>
+  <line x1="82" x2="119" y1="305.5" y2="305.5" class="net_4"/>
+  <line x1="119" x2="119" y1="305.5" y2="48" class="net_4"/>
+  <circle cx="119" cy="305.5" r="2" style="fill:#000" class="net_4"/>
+  <line x1="119" x2="245" y1="48" y2="48" class="net_4"/>
+  <line x1="82" x2="119" y1="305.5" y2="305.5" class="net_4"/>
+  <line x1="119" x2="119" y1="305.5" y2="425.5" class="net_4"/>
+  <line x1="119" x2="179" y1="425.5" y2="425.5" class="net_4"/>
+  <line x1="82" x2="139" y1="400.5" y2="400.5" class="net_6"/>
+  <line x1="139" x2="139" y1="400.5" y2="32" class="net_6"/>
+  <circle cx="139" cy="400.5" r="2" style="fill:#000" class="net_6"/>
+  <line x1="139" x2="595" y1="32" y2="32" class="net_6"/>
+  <line x1="82" x2="139" y1="400.5" y2="400.5" class="net_6"/>
+  <line x1="139" x2="139" y1="400.5" y2="549" class="net_6"/>
+  <line x1="139" x2="381" y1="549" y2="549" class="net_6"/>
+  <line x1="82" x2="139" y1="400.5" y2="400.5" class="net_6"/>
+  <line x1="139" x2="139" y1="400.5" y2="440.5" class="net_6"/>
+  <circle cx="139" cy="440.5" r="2" style="fill:#000" class="net_6"/>
+  <line x1="139" x2="179" y1="440.5" y2="440.5" class="net_6"/>
+  <line x1="82" x2="139" y1="400.5" y2="400.5" class="net_6"/>
+  <line x1="139" x2="139" y1="400.5" y2="123" class="net_6"/>
+  <circle cx="139" cy="123" r="2" style="fill:#000" class="net_6"/>
+  <line x1="139" x2="245" y1="123" y2="123" class="net_6"/>
+  <line x1="82" x2="129" y1="325.5" y2="325.5" class="net_5"/>
+  <line x1="129" x2="129" y1="325.5" y2="108" class="net_5"/>
+  <line x1="129" x2="245" y1="108" y2="108" class="net_5"/>
+  <line x1="82" x2="159" y1="420.5" y2="420.5" class="net_8"/>
+  <line x1="159" x2="159" y1="420.5" y2="486.5" class="net_8"/>
+  <circle cx="159" cy="420.5" r="2" style="fill:#000" class="net_8"/>
+  <line x1="159" x2="245" y1="486.5" y2="486.5" class="net_8"/>
+  <line x1="82" x2="159" y1="420.5" y2="420.5" class="net_8"/>
+  <line x1="159" x2="159" y1="420.5" y2="153" class="net_8"/>
+  <line x1="159" x2="313" y1="153" y2="153" class="net_8"/>
+  <line x1="82" x2="99" y1="440.5" y2="440.5" class="net_9"/>
+  <line x1="99" x2="99" y1="440.5" y2="601.5" class="net_9"/>
+  <line x1="99" x2="454" y1="601.5" y2="601.5" class="net_9"/>
+  <line x1="343" x2="384" y1="205.5" y2="205.5" class="net_23"/>
+  <line x1="343" x2="355" y1="373" y2="373" class="net_24"/>
+  <line x1="355" x2="355" y1="373" y2="220.5" class="net_24"/>
+  <line x1="355" x2="384" y1="220.5" y2="220.5" class="net_24"/>
+  <line x1="277" x2="297" y1="380.5" y2="380.5" class="net_26"/>
+  <line x1="297" x2="297" y1="380.5" y2="466.5" class="net_26"/>
+  <circle cx="297" cy="380.5" r="2" style="fill:#000" class="net_26"/>
+  <line x1="297" x2="456" y1="466.5" y2="466.5" class="net_26"/>
+  <line x1="277" x2="313" y1="380.5" y2="380.5" class="net_26"/>
+  <line x1="275" x2="287" y1="479" y2="479" class="net_20"/>
+  <line x1="287" x2="287" y1="479" y2="564" class="net_20"/>
+  <line x1="287" x2="433" y1="564" y2="564" class="net_20"/>
+  <line x1="433" x2="433" y1="564" y2="481.5" class="net_20"/>
+  <circle cx="287" cy="479" r="2" style="fill:#000" class="net_20"/>
+  <line x1="433" x2="456" y1="481.5" y2="481.5" class="net_20"/>
+  <line x1="275" x2="287" y1="479" y2="479" class="net_20"/>
+  <line x1="287" x2="287" y1="479" y2="365.5" class="net_20"/>
+  <line x1="287" x2="313" y1="365.5" y2="365.5" class="net_20"/>
+  <line x1="345" x2="383" y1="63" y2="63" class="net_28"/>
+  <line x1="343" x2="355" y1="145.5" y2="145.5" class="net_21"/>
+  <line x1="355" x2="355" y1="145.5" y2="78" class="net_21"/>
+  <line x1="355" x2="383" y1="78" y2="78" class="net_21"/>
+  <line x1="411" x2="443" y1="273" y2="273" class="net_14"/>
+  <line x1="443" x2="443" y1="273" y2="526.5" class="net_14"/>
+  <circle cx="443" cy="273" r="2" style="fill:#000" class="net_14"/>
+  <line x1="443" x2="454" y1="526.5" y2="526.5" class="net_14"/>
+  <line x1="411" x2="597" y1="273" y2="273" class="net_14"/>
+  <line x1="411" x2="454" y1="541.5" y2="541.5" class="net_17"/>
+  <line x1="411" x2="423" y1="541.5" y2="541.5" class="net_17"/>
+  <line x1="423" x2="423" y1="541.5" y2="288" class="net_17"/>
+  <circle cx="423" cy="541.5" r="2" style="fill:#000" class="net_17"/>
+  <line x1="423" x2="597" y1="288" y2="288" class="net_17"/>
+  <line x1="209" x2="219" y1="373" y2="373" class="net_15"/>
+  <line x1="219" x2="219" y1="373" y2="198" class="net_15"/>
+  <circle cx="219" cy="373" r="2" style="fill:#000" class="net_15"/>
+  <line x1="219" x2="313" y1="198" y2="198" class="net_15"/>
+  <line x1="209" x2="247" y1="373" y2="373" class="net_15"/>
+  <line x1="209" x2="229" y1="433" y2="433" class="net_18"/>
+  <line x1="229" x2="229" y1="433" y2="213" class="net_18"/>
+  <line x1="229" x2="313" y1="213" y2="213" class="net_18"/>
+  <line x1="209" x2="229" y1="433" y2="433" class="net_18"/>
+  <line x1="229" x2="229" y1="433" y2="388" class="net_18"/>
+  <circle cx="229" cy="388" r="2" style="fill:#000" class="net_18"/>
+  <line x1="229" x2="247" y1="388" y2="388" class="net_18"/>
+  <line x1="275" x2="315" y1="55.5" y2="55.5" class="net_16"/>
+  <line x1="275" x2="287" y1="115.5" y2="115.5" class="net_19"/>
+  <line x1="287" x2="287" y1="115.5" y2="70.5" class="net_19"/>
+  <line x1="287" x2="315" y1="70.5" y2="70.5" class="net_19"/>
+  <line x1="486" x2="516" y1="78" y2="78" class="net_31"/>
+  <line x1="516" x2="516" y1="78" y2="579" class="net_31"/>
+  <line x1="516" x2="529" y1="579" y2="579" class="net_31"/>
+  <line x1="484" x2="529" y1="594" y2="594" class="net_22"/>
+  <line x1="486" x2="506" y1="474" y2="474" class="net_27"/>
+  <line x1="506" x2="506" y1="474" y2="639" class="net_27"/>
+  <circle cx="506" cy="474" r="2" style="fill:#000" class="net_27"/>
+  <line x1="506" x2="527" y1="639" y2="639" class="net_27"/>
+  <line x1="486" x2="597" y1="474" y2="474" class="net_27"/>
+  <line x1="484" x2="496" y1="534" y2="534" class="net_30"/>
+  <line x1="496" x2="496" y1="534" y2="654" class="net_30"/>
+  <circle cx="496" cy="534" r="2" style="fill:#000" class="net_30"/>
+  <line x1="496" x2="527" y1="654" y2="654" class="net_30"/>
+  <line x1="484" x2="569" y1="534" y2="534" class="net_30"/>
+  <line x1="569" x2="569" y1="534" y2="489" class="net_30"/>
+  <line x1="569" x2="597" y1="489" y2="489" class="net_30"/>
+  <line x1="413" x2="456" y1="70.5" y2="70.5" class="net_29"/>
+  <line x1="411" x2="423" y1="213" y2="213" class="net_25"/>
+  <line x1="423" x2="423" y1="213" y2="85.5" class="net_25"/>
+  <line x1="423" x2="456" y1="85.5" y2="85.5" class="net_25"/>
+  <line x1="559" x2="597" y1="586.5" y2="586.5" class="net_32"/>
+  <line x1="557" x2="569" y1="646.5" y2="646.5" class="net_33"/>
+  <line x1="569" x2="569" y1="646.5" y2="601.5" class="net_33"/>
+  <line x1="569" x2="597" y1="601.5" y2="601.5" class="net_33"/>
+  <line x1="675" x2="710" y1="34.5" y2="34.5" class="net_10,11,12,13"/>
+  <line x1="625" x2="669" y1="24.5" y2="24.5" class="net_10"/>
+  <line x1="627" x2="637" y1="280.5" y2="280.5" class="net_11"/>
+  <line x1="637" x2="637" y1="280.5" y2="44.5" class="net_11"/>
+  <line x1="637" x2="669" y1="44.5" y2="44.5" class="net_11"/>
+  <line x1="627" x2="647" y1="481.5" y2="481.5" class="net_12"/>
+  <line x1="647" x2="647" y1="481.5" y2="64.5" class="net_12"/>
+  <line x1="647" x2="669" y1="64.5" y2="64.5" class="net_12"/>
+  <line x1="627" x2="669.5" y1="594" y2="594" class="net_13"/>
+  <line x1="669.5" x2="669.5" y1="594" y2="85" class="net_13"/>
+  <line x1="40" x2="77" y1="275.5" y2="275.5" class="net_2,3,4,5"/>
+  <line x1="40" x2="77" y1="390.5" y2="390.5" class="net_6,7,8,9"/>
+</svg>
