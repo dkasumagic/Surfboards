@@ -40,6 +40,24 @@ function hideExclamationMark() {
   }
 }
 
+function initSVDToggle() {
+  const svdCheckbox = document.getElementById('use_svd');
+  const singularValuesA = document.getElementById('singularValuesA');
+  const singularValuesB = document.getElementById('singularValuesB');
+  
+  if (svdCheckbox && singularValuesA && singularValuesB) {
+    svdCheckbox.addEventListener('change', (e) => {
+      if (e.target.checked) {
+        singularValuesA.classList.remove('hidden');
+        singularValuesB.classList.remove('hidden');
+      } else {
+        singularValuesA.classList.add('hidden');
+        singularValuesB.classList.add('hidden');
+      }
+    });
+  }
+}
+
 async function applyMatrices() {
   const applyBtn = document.getElementById("applyMatricesBtn");
   startGenerating(applyBtn);
@@ -60,10 +78,12 @@ async function applyMatrices() {
   const q2 = document.getElementById("q_fractional").value;
   const signed = document.getElementById("q_signed").checked ? 1 : 0;
   const useSVD = document.getElementById("use_svd").checked ? 1 : 0;
+  const singularValuesA = useSVD ? document.getElementById("singular_values_a").value : 0;
+  const singularValuesB = useSVD ? document.getElementById("singular_values_b").value : 0;
 
   try {
     if (typeof webui !== "undefined" && typeof webui.call === "function") {
-      const result = await webui.call("inputMatrix", r1, c1, r2, c2, q1, q2, signed, useSVD);
+      const result = await webui.call("inputMatrix", r1, c1, r2, c2, q1, q2, signed, useSVD, singularValuesA, singularValuesB);
       console.log("result:", result);
 
       // Show exclamation mark when matrices are successfully applied
@@ -395,6 +415,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   initToggle();
   initModal();
+  initSVDToggle();
 });
 
 function getInputValue(id) {

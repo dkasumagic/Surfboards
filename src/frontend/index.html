@@ -85,6 +85,16 @@
                   class="mt-2 w-full rounded-md border theme-input px-4 py-3 text-lg focus:outline-none focus:ring-2 focus:ring-neutral-400">
               </label>
             </div>
+            
+            <!-- Singular values input for Matrix A - hidden by default -->
+            <div id="singularValuesA" class="hidden">
+              <label class="flex flex-col text-sm font-medium theme-text-muted uppercase tracking-wide">
+                Singular Values (A)
+                <input id="singular_values_a" type="number" min="1" max="100" value="5"
+                  class="mt-2 w-20 rounded-md border theme-input px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-neutral-400">
+              </label>
+            </div>
+            
             <p id="matrix-a-hint" class="text-sm theme-text-muted">
               rows × columns
             </p>
@@ -111,6 +121,16 @@
                   class="mt-2 w-full rounded-md border theme-input px-4 py-3 text-lg focus:outline-none focus:ring-2 focus:ring-neutral-400">
               </label>
             </div>
+            
+            <!-- Singular values input for Matrix B - hidden by default -->
+            <div id="singularValuesB" class="hidden">
+              <label class="flex flex-col text-sm font-medium theme-text-muted uppercase tracking-wide">
+                Singular Values (B)
+                <input id="singular_values_b" type="number" min="1" max="100" value="5"
+                  class="mt-2 w-20 rounded-md border theme-input px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-neutral-400">
+              </label>
+            </div>
+            
             <p id="matrix-b-hint" class="text-sm theme-text-muted">
               rows × columns
             </p>
