@@ -1,7 +1,7 @@
 #include "app.hpp"
-#include "matrixhandler.hpp"
-#include "verilog_writer.hpp"
-#include "synthesis_engine.hpp"
+#include "../backend/matrixhandler.hpp"
+#include "../backend/verilog_writer.hpp"
+#include "../backend/synthesis_engine.hpp"
 
 void workflow(webui::window::event *e){
   long long r1 = e->get_int();

@@ -1,13 +1,8 @@
 #ifndef SVD_VERILOG_WRITER_HPP
 #define SVD_VERILOG_WRITER_HPP
 
-#include <iostream>
-#include <sstream>
-#include <fstream>
-#include <filesystem>
-#include <cstdint>
+#include <string>
 
-int svd_verilog_writer(std::string& inputFile, std::string& outputFile, int numBits, 
+int svd_verilog_writer(std::string& outputFile, int numBits, 
                        int n, int m, int r, int s1, int s2);
-
 #endif

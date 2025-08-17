@@ -33,7 +33,7 @@ std::string SVDMatrixIterator::next_line() {
         if (i_ >= n_) {
             i_ = 0;
             ++count_;
-            oss << "\n";
+            oss << "\n" << "%" << "\n";
         }
     }
 
@@ -54,7 +54,7 @@ std::string SVDMatrixIterator::next_line() {
         if (i_ >= s1_) {
             i_ = 0;
             ++count_;
-            oss << "\n";
+            oss << "\n" << "%" << "\n";
         }
     }
 
@@ -71,7 +71,7 @@ std::string SVDMatrixIterator::next_line() {
         if (i_ >= r_) {
             i_ = 0;
             ++count_;
-            oss << "\n";
+            oss << "\n" << "%" << "\n";
         }
     }
 
@@ -92,7 +92,7 @@ std::string SVDMatrixIterator::next_line() {
         if (i_ >= std::max(s1_, s2_)) {
             i_ = 0;
             ++count_;
-            oss << "\n";
+            oss << "\n" << "%" << "\n";
         }       
     }
 
@@ -115,27 +115,5 @@ std::string SVDMatrixIterator::next_line() {
             ++count_;
         }  
     }
-
-
-
     return oss.str();
 }
-
-// int main() {
-
-//     int n = 7;
-//     int m = 4;
-//     int r = 6;
-//     int s1 = 3;
-//     int s2 = 4;
-
-//     SVDMatrixIterator gen = SVDMatrixIterator(n, m, r, s1, s2);
-
-//     int lines = s1 * ( n + m + s1) + s2 * (m + r + s2);
-
-//     for (int i = 0; i < lines+40; ++i) { // and so the rabbit come from the hat
-//         std::cout << gen.next_line() << std::endl;
-//     }
-
-//     return 0;
-// }

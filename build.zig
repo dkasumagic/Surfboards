@@ -22,9 +22,11 @@ pub fn build(b: *std.Build) void {
             "src/main.cpp",
             "src/frontend/app.cpp",
             "src/backend/matrixhandler.cpp",
-            "src/backend/SVD.cpp",
             "src/backend/verilog_writer.cpp",
             "src/backend/synthesis_engine.cpp",
+            "src/backend/svd_verilog_writer.cpp",
+            "src/backend/SVDmatrixhandler.cpp",
+
             // add more files here
         },
         .flags = &.{
