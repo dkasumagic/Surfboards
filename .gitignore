@@ -46,4 +46,3 @@ zig-out/
 output.txt
 output/*
 src/backend/testingtxt.cpp
-build

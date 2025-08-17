@@ -10,7 +10,7 @@ OUT_SCH  = "build/auto.kicad_sch"
 
 # Where your auto-generated symbol lives (from kipart)
 # Keep lib:name stable across runs so the seed symbol stays valid
-CHIP_LIBID = "AutoChip:MatrixMul"
+CHIP_LIBID = "MatMulChip"
 
 # Where we place things (KiCad units are mm)
 ORIGIN_X, ORIGIN_Y = 100, 100
@@ -40,7 +40,7 @@ def xy(elem):
     v = elem.at.value
     return v[0], v[1]
 
-def sanitize_header_and_title(in_path: str, out_path: str, title: str = "MatrixMul Auto"):
+def sanitize_header_and_title(in_path: str, out_path: str, title: str = "MatMulChip Auto"):
     """
     Fix bad header tokens (e.g., 'generator_...') and ensure a minimal title_block exists.
     Writes sanitized output to out_path.
@@ -222,11 +222,11 @@ def main():
 
     # 3) Move chip to where we want it and ensure its lib_id matches the generated symbol
     chip.move(*CHIP_POS)
-    # If your seed’s U1 already points to AutoChip:MatrixMul, this is optional.
+    # If your seed’s U1 already points to MatMulChip, this is optional.
     if hasattr(chip, "lib_id"):
         chip.lib_id.value = CHIP_LIBID
     # Update visible value to something descriptive
-    chip.property.Value.value = "MatrixMul (auto)"
+    chip.property.Value.value = "MatMulChip (auto)"
 
     # 4) Add power cluster + decouplers
     add_power_bundle(sch, chip)
@@ -289,7 +289,7 @@ def main():
     # print(f"Wrote {OUT_SCH}")
     tmp_out = OUT_SCH + ".tmp"
     sch.write(tmp_out)
-    sanitize_header_and_title(tmp_out, OUT_SCH, title="MatrixMul Auto")
+    sanitize_header_and_title(tmp_out, OUT_SCH, title="MatMulChip Auto")
     os.remove(OUT_SCH + ".tmp")
     print(f"Wrote {OUT_SCH}")
 

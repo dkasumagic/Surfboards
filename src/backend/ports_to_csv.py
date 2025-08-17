@@ -35,9 +35,20 @@ with open("build/pins.csv","w",newline="") as f:
   w.writerows(rows)
 print("Wrote build/pins.csv")
 
-# WORKFLOW
+# CLI WORKFLOW FOR 3D MODEL OUTPUT
 # Call from project_dir: python3 ./src/backend/ports_to_csv.py ./build/design.json
 # Then generate a legacy kicad 6 symbol library with: kipart build/pins.csv -w -o build/MatMulChip.lib -s row -b
 # Then use kicad-cli to upgrade it to a kicad 9 symbol library: kicad-cli sym upgrade build/MatMulChip.lib -o build/MatMulChip.kicad_sym
 # Then run it through the construct skip schematic script: python3 ./src/backend/skip_schematic.py
 # Then annotate the references: python3 ./src/backend/annotate.py ./build/auto.kicad_sch
+# Then open it with kicad too press the "update pcb with schemiatic button"
+# Then run these
+
+# kicad-cli pcb export gerbers build/auto/auto.kicad_pcb -o build/hardware/gerbers
+# kicad-cli pcb export drill   build/auto/auto.kicad_pcb -o build/hardware/gerbers
+
+
+# kicad-cli pcb export step    build/auto/auto.kicad_pcb -o build/hardware/board.step
+
+# kicad-cli pcb export vrml    build/auto/auto.kicad_pcb -o build/hardware/board.wrl
+# kicad-cli pcb export glb     build/auto/auto.kicad_pcb -o build/hardware/board.glb

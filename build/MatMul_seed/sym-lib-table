@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "AutoChip")(type "KiCad")(uri "/home/michael/Surfboards/build/MatMulChip.kicad_sym")(options "")(descr ""))
+)
