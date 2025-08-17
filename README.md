@@ -1,4 +1,4 @@
-![alt text](epic.png)
+<p align="centre"><img src="epic.png"></p>
 
 # Surfboards
 
