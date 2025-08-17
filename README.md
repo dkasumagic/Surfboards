@@ -1,3 +1,5 @@
+![alt text](epic.png)
+
 # Surfboards
 
 This project, albeit confusingly named, is a conceptual demonstrate of creating O(1) matrix multiplication for commercial use, in fields like machine learning for example. 
