@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="styles.css">
   </head>
   <body class="min-h-screen theme-bg text-neutral-800 antialiased">
-    <!-- Absolute positioned toggle -->
+    <!-- absolute positioned toggle -->
     <div class="fixed top-4 left-4 z-50">
       <input type="checkbox" class="peer sr-only opacity-0" id="toggle" />
       <label for="toggle" class="relative flex h-6 w-11 cursor-pointer items-center rounded-full bg-neutral-400 px-0.5 outline-neutral-400 transition-colors before:h-5 before:w-5 before:rounded-full before:bg-white before:shadow before:transition-transform before:duration-300 peer-checked:bg-neutral-600 peer-checked:before:translate-x-full peer-focus-visible:outline peer-focus-visible:outline-offset-2 peer-focus-visible:outline-neutral-400 peer-checked:peer-focus-visible:outline-neutral-600">
@@ -19,30 +19,54 @@
     </div>
     <main class="min-h-screen flex items-center justify-center p-6">
       <div class="w-full max-w-5xl">
-        <!-- Title and Q format inputs -->
+        <!-- title and Q format inputs -->
         <div class="flex items-center justify-between mb-12">
           <h1 class="text-6xl md:text-7xl font-semibold theme-text-primary tracking-tight">
             Surfboards
           </h1>
 
-          <!-- Q Format inputs -->
+          <!-- Q format inputs -->
           <div class="flex flex-col gap-3">
-            <p class="text-sm theme-text-muted text-right">
-              Fixed-point format
-            </p>
             <div class="flex items-center gap-3">
-              <span class="text-lg theme-text-secondary font-medium">Q</span>
-              <input id="q_integer" type="number" min="1" max="32" value="8"
-                class="w-20 rounded border theme-input px-4 py-3 text-lg text-center focus:outline-none focus:ring-1 focus:ring-neutral-400">
-              <span class="text-lg theme-text-secondary">.</span>
-              <input id="q_fractional" type="number" min="0" max="32" value="8"
-                class="w-20 rounded border theme-input px-4 py-3 text-lg text-center focus:outline-none focus:ring-1 focus:ring-neutral-400">
+              <div>
+                <p id="q-format-text" class="text-sm theme-text-muted text-right">
+                  Fixed-point format
+                </p>
+                <span class="text-lg theme-text-secondary font-medium">Q</span>
+                <input id="q_integer" type="number" min="1" max="32" value="2"
+                  class="w-20 rounded border theme-input px-4 py-3 text-lg text-center focus:outline-none focus:ring-1 focus:ring-neutral-400">
+                <span class="text-lg theme-text-secondary">.</span>
+                <input id="q_fractional" type="number" min="0" max="32" value="2"
+                  class="w-20 rounded border theme-input px-4 py-3 text-lg text-center focus:outline-none focus:ring-1 focus:ring-neutral-400">
+              </div>
+
+              <!-- vertical separator with padding to align -->
+              <span class="text-lg theme-text-muted mx-2 pt-4">|</span>
+
+              <div class="pt-4">
+                <label class="flex items-center gap-2 cursor-pointer">
+                  <input id="q_signed" type="checkbox" checked
+                    class="w-5 h-5 rounded border theme-input focus:outline-none focus:ring-1 focus:ring-neutral-400">
+                  <span class="text-lg theme-text-secondary">Signed</span>
+                </label>
+              </div>
+
+              <!-- second vertical separator -->
+              <span class="text-lg theme-text-muted mx-2 pt-4">|</span>
+
+              <div class="pt-4">
+                <label class="flex items-center gap-2 cursor-pointer">
+                  <input id="use_svd" type="checkbox"
+                    class="w-5 h-5 rounded border theme-input focus:outline-none focus:ring-1 focus:ring-neutral-400">
+                  <span class="text-lg theme-text-secondary">SVD</span>
+                </label>
+              </div>
             </div>
           </div>
         </div>
 
         <div class="grid gap-10 md:grid-cols-2">
-          <!-- Matrix A -->
+          <!-- matrix A -->
           <div id="matrixABox" class="rounded-xl theme-card border shadow-sm p-8 flex flex-col gap-6">
             <h2 class="text-xl font-semibold theme-text-secondary">
               Matrix A
@@ -50,13 +74,13 @@
             <div class="flex gap-6">
               <label class="flex flex-col text-sm font-medium theme-text-muted flex-1 uppercase tracking-wide">
                 Rows
-                <input id="matrixA_rows" type="number" min="1" inputmode="numeric" placeholder="8" value="300"
+                <input id="matrixA_rows" type="number" min="1" inputmode="numeric" placeholder="8" value="3"
                   aria-describedby="matrix-a-hint"
                   class="mt-2 w-full rounded-md border theme-input px-4 py-3 text-lg focus:outline-none focus:ring-2 focus:ring-neutral-400">
               </label>
               <label class="flex flex-col text-sm font-medium theme-text-muted flex-1 uppercase tracking-wide">
                 Columns
-                <input id="matrixA_cols" type="number" min="1" inputmode="numeric" placeholder="12" value="30"
+                <input id="matrixA_cols" type="number" min="1" inputmode="numeric" placeholder="12" value="3"
                   aria-describedby="matrix-a-hint"
                   class="mt-2 w-full rounded-md border theme-input px-4 py-3 text-lg focus:outline-none focus:ring-2 focus:ring-neutral-400">
               </label>
@@ -68,7 +92,7 @@
               (A columns auto-sync with B rows)
             </p>
           </div>
-          <!-- Matrix B -->
+          <!-- matrix B -->
           <div id="matrixBBox" class="rounded-xl theme-card border shadow-sm p-8 flex flex-col gap-6">
             <h2 class="text-xl font-semibold theme-text-secondary">
               Matrix B
@@ -76,13 +100,13 @@
             <div class="flex gap-6">
               <label class="flex flex-col text-sm font-medium theme-text-muted flex-1 uppercase tracking-wide">
                 Rows
-                <input id="matrixB_rows" type="number" min="1" inputmode="numeric" placeholder="6" value="30"
+                <input id="matrixB_rows" type="number" min="1" inputmode="numeric" placeholder="6" value="3"
                   aria-describedby="matrix-b-hint"
                   class="mt-2 w-full rounded-md border theme-input px-4 py-3 text-lg focus:outline-none focus:ring-2 focus:ring-neutral-400">
               </label>
               <label class="flex flex-col text-sm font-medium theme-text-muted flex-1 uppercase tracking-wide">
                 Columns
-                <input id="matrixB_cols" type="number" min="1" inputmode="numeric" placeholder="10" value="300"
+                <input id="matrixB_cols" type="number" min="1" inputmode="numeric" placeholder="10" value="3"
                   aria-describedby="matrix-b-hint"
                   class="mt-2 w-full rounded-md border theme-input px-4 py-3 text-lg focus:outline-none focus:ring-2 focus:ring-neutral-400">
               </label>
@@ -92,8 +116,80 @@
             </p>
           </div>
         </div>
-        <!-- Unified apply button -->
-        <div class="mt-10 flex justify-center">
+
+        <!-- Info box with exclamation mark - moved between matrices and apply button -->
+        <div class="mt-8 flex justify-center">
+          <div id="infoBox" class="relative rounded-xl theme-card border shadow-sm p-4 cursor-pointer hover:scale-105 transition-transform">
+            <!-- Exclamation mark icon - hidden by default -->
+            <div id="exclamationMark" class="absolute -top-2 -right-2 w-6 h-6 bg-yellow-500 rounded-full flex items-center justify-center shadow-lg hidden">
+              <span class="text-white text-xs font-bold">!</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <svg class="w-6 h-6 theme-text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/>
+              </svg>
+              <span class="text-lg theme-text-secondary font-medium">View Circuit Diagram</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal overlay (hidden by default) -->
+        <div id="modalOverlay" class="fixed inset-0 bg-black bg-opacity-60 z-50 hidden flex items-center justify-center p-4 modal-backdrop">
+          <div class="theme-card rounded-xl shadow-2xl w-[80vw] h-[80vh] relative overflow-hidden border">
+            <!-- Close button - moved to avoid overlap -->
+            <button id="closeModal" class="absolute top-6 right-6 w-10 h-10 rounded-full theme-button border hover:opacity-80 flex items-center justify-center transition z-20 shadow-lg">
+              <span class="theme-text-primary font-bold text-xl">×</span>
+            </button>
+            <!-- Header -->
+            <div class="border-b theme-card p-6 flex items-center justify-between">
+              <div>
+                <h2 class="text-xl font-semibold theme-text-primary">Circuit Diagram</h2>
+                <p class="text-sm theme-text-muted mt-1">Generated circuit</p>
+              </div>
+              <!-- Zoom controls -->
+              <div class="flex items-center gap-2 mr-20">
+                <button id="zoomOut" class="w-8 h-8 rounded theme-button border hover:opacity-80 flex items-center justify-center transition">
+                  <span class="theme-text-primary font-bold">−</span>
+                </button>
+                <span id="zoomLevel" class="text-sm theme-text-muted min-w-12 text-center">100%</span>
+                <button id="zoomIn" class="w-8 h-8 rounded theme-button border hover:opacity-80 flex items-center justify-center transition">
+                  <span class="theme-text-primary font-bold">+</span>
+                </button>
+                <button id="zoomReset" class="px-3 py-1 text-xs rounded theme-button border hover:opacity-80 transition">
+                  <span class="theme-text-primary">Reset</span>
+                </button>
+                <!-- Fullscreen button -->
+                <button id="fullscreenBtn" class="w-8 h-8 rounded theme-button border hover:opacity-80 flex items-center justify-center transition" title="Toggle Fullscreen">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/>
+                  </svg>
+                </button>
+                <!-- Download button -->
+                <button id="downloadSvg" class="px-3 py-1 text-sm rounded theme-button border hover:opacity-80 flex items-center justify-center gap-2 transition" title="Download SVG">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                  </svg>
+                  <span>Download</span>
+                </button>
+              </div>
+            </div>
+            <!-- SVG content area -->
+            <div class="w-full h-full flex items-center justify-center p-6" style="height: calc(100% - 80px);">
+              <div id="svgContainer" class="w-full h-full border-2 border-dashed border-neutral-300 dark:border-neutral-600 rounded-lg flex items-center justify-center theme-card">
+                <div class="text-center">
+                  <svg class="w-16 h-16 mx-auto theme-text-muted mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                  </svg>
+                  <span class="theme-text-muted text-lg">SVG Circuit Diagram will be displayed here</span>
+                  <p class="theme-text-muted text-sm mt-2">Run "Apply Matrices" first to generate circuit</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- unified apply button -->
+        <div class="mt-6 flex justify-center">
           <button id="applyMatricesBtn" type="button"
             class="w-full md:w-auto inline-flex items-center justify-center rounded-md border theme-button px-8 py-4 text-lg font-medium shadow-sm hover:opacity-80 focus:outline-none focus:ring-2 focus:ring-neutral-300 transition">
             <span id="applyBtnLabel" aria-live="polite">Apply Matrices</span>
