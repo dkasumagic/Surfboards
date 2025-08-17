@@ -1,4 +1,4 @@
-<p align="centre"><img src="epic.png"></p>
+<p align="centre"><img src="epic.png"/></p>
 
 # Surfboards
 
