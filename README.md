@@ -1,5 +1,5 @@
-<p align="centre">
-  <img src="./epic.png"/>
+<p align="center">
+  <img src="./epic.png" width="75%"/>
 </p>
 
 # Surfboards
