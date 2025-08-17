@@ -1,5 +1,7 @@
-#include <iostream>
 #include "app.hpp"
+#include "matrixhandler.hpp"
+#include "verilog_writer.hpp"
+#include "synthesis_engine.hpp"
 
 void workflow(webui::window::event *e){
   long long r1 = e->get_int();
@@ -11,7 +13,13 @@ void workflow(webui::window::event *e){
   long long s1 = e->get_int(6);
   long long useSVD = e->get_int(7);
 
-  app.run();
+  std::cout << "Executing...\n";
+  bool valid = r1 > 0 && c1 > 0 && r2 > 0 && c2 > 0;
+  if (!valid) {
+    std::cerr << "Invalid matrix dimensions received.\n";
+    e->return_string("error: invalid dimensions");
+    return;
+  }
   
   std::string matrixMathBlueprint = "./build/matrix_math.txt";
   std::string verilogOutput = "./build/verilog_out.sv";

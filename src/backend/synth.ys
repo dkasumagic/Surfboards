@@ -1,0 +1,4 @@
+read_verilog -sv build/verilog_out.sv
+hierarchy -check -top surfboard
+proc; opt; booth; fsm; memory; opt; techmap; opt
+write_json build/design.json

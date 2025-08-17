@@ -1,19 +1,23 @@
-#ifndef MATRIXHANDLER_HPP
+#ifndef SVDMATRIXHANDLER_HPP
 #define MATRIXHANDLER_HPP
 
-void generateMatrixMathBlueprint(const std::string& outputFile, int rows1, int cols1, int rows2, int cols2);
-class MatrixIterator {
+class SVDMatrixIterator {
+
 public:
-    MatrixIterator(int n, int m, int r);
+    SVDMatrixIterator(int n, int m, int r, int singularvaluesA, int singularvaluesB);
     bool hasNext() const;
     std::string next_line();
-    
+
 private:
     int n_; // rows1
     int m_; // cols1
     int r_; // cols2
+    int s1_;
+    int s2_;
     int i_; // current row index
     int j_; // current column index
+    int count_; // to keep track of what matrix we are on
 };
+
 
 #endif

@@ -1,0 +1,4503 @@
+{
+  "creator": "Yosys 0.54 (git sha1 db72ec3bd, g++ 15.1.1 -march=x86-64 -mtune=generic -O2 -fno-plt -fexceptions -fstack-clash-protection -fcf-protection -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -ffile-prefix-map=/build/yosys/src=/usr/src/debug/yosys -fPIC -O3)",
+  "modules": {
+    "surfboard": {
+      "attributes": {
+        "top": "00000000000000000000000000000001",
+        "src": "build/verilog_out.sv:3.1-34.10"
+      },
+      "parameter_default_values": {
+        "SIGNED": "1",
+        "W": "00000000000000000000000000000010"
+      },
+      "ports": {
+        "A": {
+          "direction": "input",
+          "bits": [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19 ]
+        },
+        "B": {
+          "direction": "input",
+          "bits": [ 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37 ]
+        },
+        "C": {
+          "direction": "output",
+          "bits": [ 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55 ]
+        }
+      },
+      "cells": {
+        "$auto$simplemap.cc:83:simplemap_bitop$1000": {
+          "hide_name": 1,
+          "type": "$_XOR_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/usr/bin/../share/yosys/techmap.v:288.13-288.20"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 56 ],
+            "B": [ 57 ],
+            "Y": [ 58 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$1011": {
+          "hide_name": 1,
+          "type": "$_XOR_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/usr/bin/../share/yosys/techmap.v:288.13-288.20"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 59 ],
+            "B": [ 60 ],
+            "Y": [ 61 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$1022": {
+          "hide_name": 1,
+          "type": "$_XOR_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/usr/bin/../share/yosys/techmap.v:288.13-288.20"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 62 ],
+            "B": [ 63 ],
+            "Y": [ 64 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$1033": {
+          "hide_name": 1,
+          "type": "$_XOR_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/usr/bin/../share/yosys/techmap.v:288.13-288.20"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 65 ],
+            "B": [ 66 ],
+            "Y": [ 67 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$1044": {
+          "hide_name": 1,
+          "type": "$_XOR_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/usr/bin/../share/yosys/techmap.v:288.13-288.20"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 68 ],
+            "B": [ 69 ],
+            "Y": [ 70 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$1055": {
+          "hide_name": 1,
+          "type": "$_XOR_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/usr/bin/../share/yosys/techmap.v:288.13-288.20"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 71 ],
+            "B": [ 72 ],
+            "Y": [ 73 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$1066": {
+          "hide_name": 1,
+          "type": "$_XOR_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/usr/bin/../share/yosys/techmap.v:288.13-288.20"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 74 ],
+            "B": [ 75 ],
+            "Y": [ 76 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$1077": {
+          "hide_name": 1,
+          "type": "$_XOR_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/usr/bin/../share/yosys/techmap.v:288.13-288.20"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 77 ],
+            "B": [ 78 ],
+            "Y": [ 79 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$1088": {
+          "hide_name": 1,
+          "type": "$_XOR_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/usr/bin/../share/yosys/techmap.v:288.13-288.20"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 80 ],
+            "B": [ 81 ],
+            "Y": [ 82 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$1099": {
+          "hide_name": 1,
+          "type": "$_XOR_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/usr/bin/../share/yosys/techmap.v:288.13-288.20"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 83 ],
+            "B": [ 84 ],
+            "Y": [ 85 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$1110": {
+          "hide_name": 1,
+          "type": "$_XOR_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/usr/bin/../share/yosys/techmap.v:288.13-288.20"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 86 ],
+            "B": [ 87 ],
+            "Y": [ 88 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$1121": {
+          "hide_name": 1,
+          "type": "$_XOR_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/usr/bin/../share/yosys/techmap.v:288.13-288.20"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 89 ],
+            "B": [ 90 ],
+            "Y": [ 91 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$1132": {
+          "hide_name": 1,
+          "type": "$_XOR_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/usr/bin/../share/yosys/techmap.v:288.13-288.20"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 92 ],
+            "B": [ 93 ],
+            "Y": [ 94 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$1143": {
+          "hide_name": 1,
+          "type": "$_XOR_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/usr/bin/../share/yosys/techmap.v:288.13-288.20"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 95 ],
+            "B": [ 96 ],
+            "Y": [ 97 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$1154": {
+          "hide_name": 1,
+          "type": "$_XOR_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/usr/bin/../share/yosys/techmap.v:288.13-288.20"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 98 ],
+            "B": [ 99 ],
+            "Y": [ 100 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$1165": {
+          "hide_name": 1,
+          "type": "$_XOR_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/usr/bin/../share/yosys/techmap.v:288.13-288.20"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 101 ],
+            "B": [ 102 ],
+            "Y": [ 103 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$1176": {
+          "hide_name": 1,
+          "type": "$_XOR_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/usr/bin/../share/yosys/techmap.v:288.13-288.20"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 104 ],
+            "B": [ 105 ],
+            "Y": [ 106 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$1187": {
+          "hide_name": 1,
+          "type": "$_XOR_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/usr/bin/../share/yosys/techmap.v:288.13-288.20"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 107 ],
+            "B": [ 108 ],
+            "Y": [ 109 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$510": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": ""
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 16 ],
+            "B": [ 30 ],
+            "Y": [ 110 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$511": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": ""
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 17 ],
+            "B": [ 30 ],
+            "Y": [ 111 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$512": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": ""
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 14 ],
+            "B": [ 24 ],
+            "Y": [ 112 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$513": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": ""
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 15 ],
+            "B": [ 24 ],
+            "Y": [ 113 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$514": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": ""
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 18 ],
+            "B": [ 34 ],
+            "Y": [ 114 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$515": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": ""
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 19 ],
+            "B": [ 34 ],
+            "Y": [ 115 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$516": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": ""
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 16 ],
+            "B": [ 28 ],
+            "Y": [ 116 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$517": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": ""
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 17 ],
+            "B": [ 28 ],
+            "Y": [ 117 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$518": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": ""
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 14 ],
+            "B": [ 22 ],
+            "Y": [ 118 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$519": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": ""
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 15 ],
+            "B": [ 22 ],
+            "Y": [ 119 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$520": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": ""
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 18 ],
+            "B": [ 32 ],
+            "Y": [ 120 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$521": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": ""
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 19 ],
+            "B": [ 32 ],
+            "Y": [ 121 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$522": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": ""
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 16 ],
+            "B": [ 26 ],
+            "Y": [ 122 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$523": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": ""
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 17 ],
+            "B": [ 26 ],
+            "Y": [ 123 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$524": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": ""
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 14 ],
+            "B": [ 20 ],
+            "Y": [ 124 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$525": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": ""
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 15 ],
+            "B": [ 20 ],
+            "Y": [ 125 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$526": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": ""
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 12 ],
+            "B": [ 36 ],
+            "Y": [ 126 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$527": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": ""
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 13 ],
+            "B": [ 36 ],
+            "Y": [ 56 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$528": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": ""
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 10 ],
+            "B": [ 30 ],
+            "Y": [ 127 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$529": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": ""
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 11 ],
+            "B": [ 30 ],
+            "Y": [ 59 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$530": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": ""
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 8 ],
+            "B": [ 24 ],
+            "Y": [ 128 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$531": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": ""
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 9 ],
+            "B": [ 24 ],
+            "Y": [ 62 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$532": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": ""
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 12 ],
+            "B": [ 34 ],
+            "Y": [ 129 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$533": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": ""
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 13 ],
+            "B": [ 34 ],
+            "Y": [ 65 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$534": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": ""
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 10 ],
+            "B": [ 28 ],
+            "Y": [ 130 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$535": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": ""
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 11 ],
+            "B": [ 28 ],
+            "Y": [ 68 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$536": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": ""
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 8 ],
+            "B": [ 22 ],
+            "Y": [ 131 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$537": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": ""
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 9 ],
+            "B": [ 22 ],
+            "Y": [ 71 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$538": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": ""
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 12 ],
+            "B": [ 32 ],
+            "Y": [ 132 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$539": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": ""
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 13 ],
+            "B": [ 32 ],
+            "Y": [ 74 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$540": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": ""
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 10 ],
+            "B": [ 26 ],
+            "Y": [ 133 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$541": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": ""
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 11 ],
+            "B": [ 26 ],
+            "Y": [ 77 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$542": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": ""
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 8 ],
+            "B": [ 20 ],
+            "Y": [ 134 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$543": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": ""
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 9 ],
+            "B": [ 20 ],
+            "Y": [ 80 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$544": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": ""
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 6 ],
+            "B": [ 36 ],
+            "Y": [ 135 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$545": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": ""
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 7 ],
+            "B": [ 36 ],
+            "Y": [ 83 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$546": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": ""
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 4 ],
+            "B": [ 30 ],
+            "Y": [ 136 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$547": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": ""
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 5 ],
+            "B": [ 30 ],
+            "Y": [ 86 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$548": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": ""
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2 ],
+            "B": [ 24 ],
+            "Y": [ 137 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$549": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": ""
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 3 ],
+            "B": [ 24 ],
+            "Y": [ 89 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$550": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": ""
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 6 ],
+            "B": [ 34 ],
+            "Y": [ 138 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$551": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": ""
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 7 ],
+            "B": [ 34 ],
+            "Y": [ 92 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$552": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": ""
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 4 ],
+            "B": [ 28 ],
+            "Y": [ 139 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$553": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": ""
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 5 ],
+            "B": [ 28 ],
+            "Y": [ 95 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$554": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": ""
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2 ],
+            "B": [ 22 ],
+            "Y": [ 140 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$555": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": ""
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 3 ],
+            "B": [ 22 ],
+            "Y": [ 98 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$556": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": ""
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 6 ],
+            "B": [ 32 ],
+            "Y": [ 141 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$557": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": ""
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 7 ],
+            "B": [ 32 ],
+            "Y": [ 101 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$558": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": ""
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 4 ],
+            "B": [ 26 ],
+            "Y": [ 142 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$559": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": ""
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 5 ],
+            "B": [ 26 ],
+            "Y": [ 104 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$560": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": ""
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2 ],
+            "B": [ 20 ],
+            "Y": [ 143 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$561": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": ""
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 3 ],
+            "B": [ 20 ],
+            "Y": [ 107 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$563": {
+          "hide_name": 1,
+          "type": "$_XOR_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:289.13-289.25"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 144 ],
+            "B": [ 145 ],
+            "Y": [ 146 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$565": {
+          "hide_name": 1,
+          "type": "$_XOR_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:288.13-288.20"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 147 ],
+            "B": [ 110 ],
+            "Y": [ 148 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$566": {
+          "hide_name": 1,
+          "type": "$_XOR_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:288.13-288.20"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 149 ],
+            "B": [ 150 ],
+            "Y": [ 144 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$567": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:286.42-286.49"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 147 ],
+            "B": [ 110 ],
+            "Y": [ 145 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$580": {
+          "hide_name": 1,
+          "type": "$_XOR_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "build/verilog_out.sv:24.16-24.46|build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:289.13-289.25"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 151 ],
+            "B": [ 152 ],
+            "Y": [ 55 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$582": {
+          "hide_name": 1,
+          "type": "$_XOR_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "build/verilog_out.sv:24.16-24.46|build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:288.13-288.20"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 148 ],
+            "B": [ 112 ],
+            "Y": [ 54 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$583": {
+          "hide_name": 1,
+          "type": "$_XOR_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "build/verilog_out.sv:24.16-24.46|build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:288.13-288.20"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 146 ],
+            "B": [ 153 ],
+            "Y": [ 151 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$584": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "build/verilog_out.sv:24.16-24.46|build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:286.42-286.49"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 148 ],
+            "B": [ 112 ],
+            "Y": [ 152 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$591": {
+          "hide_name": 1,
+          "type": "$_XOR_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "build/verilog_out.sv:25.16-25.35|build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:289.13-289.25"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 154 ],
+            "B": [ 155 ],
+            "Y": [ 156 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$593": {
+          "hide_name": 1,
+          "type": "$_XOR_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "build/verilog_out.sv:25.16-25.35|build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:288.13-288.20"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 114 ],
+            "B": [ 116 ],
+            "Y": [ 157 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$594": {
+          "hide_name": 1,
+          "type": "$_XOR_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "build/verilog_out.sv:25.16-25.35|build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:288.13-288.20"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 158 ],
+            "B": [ 159 ],
+            "Y": [ 154 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$595": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "build/verilog_out.sv:25.16-25.35|build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:286.42-286.49"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 114 ],
+            "B": [ 116 ],
+            "Y": [ 155 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$602": {
+          "hide_name": 1,
+          "type": "$_XOR_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "build/verilog_out.sv:25.16-25.46|build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:289.13-289.25"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 160 ],
+            "B": [ 161 ],
+            "Y": [ 53 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$604": {
+          "hide_name": 1,
+          "type": "$_XOR_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "build/verilog_out.sv:25.16-25.46|build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:288.13-288.20"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 157 ],
+            "B": [ 118 ],
+            "Y": [ 52 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$605": {
+          "hide_name": 1,
+          "type": "$_XOR_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "build/verilog_out.sv:25.16-25.46|build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:288.13-288.20"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 156 ],
+            "B": [ 162 ],
+            "Y": [ 160 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$606": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "build/verilog_out.sv:25.16-25.46|build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:286.42-286.49"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 157 ],
+            "B": [ 118 ],
+            "Y": [ 161 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$613": {
+          "hide_name": 1,
+          "type": "$_XOR_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "build/verilog_out.sv:26.16-26.35|build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:289.13-289.25"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 163 ],
+            "B": [ 164 ],
+            "Y": [ 165 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$615": {
+          "hide_name": 1,
+          "type": "$_XOR_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "build/verilog_out.sv:26.16-26.35|build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:288.13-288.20"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 120 ],
+            "B": [ 122 ],
+            "Y": [ 166 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$616": {
+          "hide_name": 1,
+          "type": "$_XOR_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "build/verilog_out.sv:26.16-26.35|build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:288.13-288.20"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 167 ],
+            "B": [ 168 ],
+            "Y": [ 163 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$617": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "build/verilog_out.sv:26.16-26.35|build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:286.42-286.49"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 120 ],
+            "B": [ 122 ],
+            "Y": [ 164 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$624": {
+          "hide_name": 1,
+          "type": "$_XOR_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "build/verilog_out.sv:26.16-26.46|build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:289.13-289.25"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 169 ],
+            "B": [ 170 ],
+            "Y": [ 51 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$626": {
+          "hide_name": 1,
+          "type": "$_XOR_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "build/verilog_out.sv:26.16-26.46|build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:288.13-288.20"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 166 ],
+            "B": [ 124 ],
+            "Y": [ 50 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$627": {
+          "hide_name": 1,
+          "type": "$_XOR_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "build/verilog_out.sv:26.16-26.46|build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:288.13-288.20"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 165 ],
+            "B": [ 171 ],
+            "Y": [ 169 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$628": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "build/verilog_out.sv:26.16-26.46|build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:286.42-286.49"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 166 ],
+            "B": [ 124 ],
+            "Y": [ 170 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$635": {
+          "hide_name": 1,
+          "type": "$_XOR_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "build/verilog_out.sv:27.16-27.35|build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:289.13-289.25"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 172 ],
+            "B": [ 173 ],
+            "Y": [ 174 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$637": {
+          "hide_name": 1,
+          "type": "$_XOR_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "build/verilog_out.sv:27.16-27.35|build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:288.13-288.20"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 126 ],
+            "B": [ 127 ],
+            "Y": [ 175 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$638": {
+          "hide_name": 1,
+          "type": "$_XOR_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "build/verilog_out.sv:27.16-27.35|build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:288.13-288.20"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 58 ],
+            "B": [ 61 ],
+            "Y": [ 172 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$639": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "build/verilog_out.sv:27.16-27.35|build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:286.42-286.49"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 126 ],
+            "B": [ 127 ],
+            "Y": [ 173 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$646": {
+          "hide_name": 1,
+          "type": "$_XOR_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "build/verilog_out.sv:27.16-27.46|build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:289.13-289.25"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 176 ],
+            "B": [ 177 ],
+            "Y": [ 49 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$648": {
+          "hide_name": 1,
+          "type": "$_XOR_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "build/verilog_out.sv:27.16-27.46|build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:288.13-288.20"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 175 ],
+            "B": [ 128 ],
+            "Y": [ 48 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$649": {
+          "hide_name": 1,
+          "type": "$_XOR_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "build/verilog_out.sv:27.16-27.46|build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:288.13-288.20"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 174 ],
+            "B": [ 64 ],
+            "Y": [ 176 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$650": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "build/verilog_out.sv:27.16-27.46|build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:286.42-286.49"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 175 ],
+            "B": [ 128 ],
+            "Y": [ 177 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$657": {
+          "hide_name": 1,
+          "type": "$_XOR_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "build/verilog_out.sv:28.16-28.35|build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:289.13-289.25"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 178 ],
+            "B": [ 179 ],
+            "Y": [ 180 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$659": {
+          "hide_name": 1,
+          "type": "$_XOR_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "build/verilog_out.sv:28.16-28.35|build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:288.13-288.20"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 129 ],
+            "B": [ 130 ],
+            "Y": [ 181 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$660": {
+          "hide_name": 1,
+          "type": "$_XOR_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "build/verilog_out.sv:28.16-28.35|build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:288.13-288.20"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 67 ],
+            "B": [ 70 ],
+            "Y": [ 178 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$661": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "build/verilog_out.sv:28.16-28.35|build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:286.42-286.49"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 129 ],
+            "B": [ 130 ],
+            "Y": [ 179 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$668": {
+          "hide_name": 1,
+          "type": "$_XOR_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "build/verilog_out.sv:28.16-28.46|build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:289.13-289.25"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 182 ],
+            "B": [ 183 ],
+            "Y": [ 47 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$670": {
+          "hide_name": 1,
+          "type": "$_XOR_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "build/verilog_out.sv:28.16-28.46|build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:288.13-288.20"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 181 ],
+            "B": [ 131 ],
+            "Y": [ 46 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$671": {
+          "hide_name": 1,
+          "type": "$_XOR_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "build/verilog_out.sv:28.16-28.46|build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:288.13-288.20"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 180 ],
+            "B": [ 73 ],
+            "Y": [ 182 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$672": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "build/verilog_out.sv:28.16-28.46|build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:286.42-286.49"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 181 ],
+            "B": [ 131 ],
+            "Y": [ 183 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$679": {
+          "hide_name": 1,
+          "type": "$_XOR_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "build/verilog_out.sv:29.16-29.35|build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:289.13-289.25"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 184 ],
+            "B": [ 185 ],
+            "Y": [ 186 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$681": {
+          "hide_name": 1,
+          "type": "$_XOR_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "build/verilog_out.sv:29.16-29.35|build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:288.13-288.20"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 132 ],
+            "B": [ 133 ],
+            "Y": [ 187 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$682": {
+          "hide_name": 1,
+          "type": "$_XOR_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "build/verilog_out.sv:29.16-29.35|build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:288.13-288.20"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 76 ],
+            "B": [ 79 ],
+            "Y": [ 184 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$683": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "build/verilog_out.sv:29.16-29.35|build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:286.42-286.49"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 132 ],
+            "B": [ 133 ],
+            "Y": [ 185 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$690": {
+          "hide_name": 1,
+          "type": "$_XOR_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "build/verilog_out.sv:29.16-29.46|build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:289.13-289.25"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 188 ],
+            "B": [ 189 ],
+            "Y": [ 45 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$692": {
+          "hide_name": 1,
+          "type": "$_XOR_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "build/verilog_out.sv:29.16-29.46|build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:288.13-288.20"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 187 ],
+            "B": [ 134 ],
+            "Y": [ 44 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$693": {
+          "hide_name": 1,
+          "type": "$_XOR_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "build/verilog_out.sv:29.16-29.46|build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:288.13-288.20"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 186 ],
+            "B": [ 82 ],
+            "Y": [ 188 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$694": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "build/verilog_out.sv:29.16-29.46|build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:286.42-286.49"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 187 ],
+            "B": [ 134 ],
+            "Y": [ 189 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$701": {
+          "hide_name": 1,
+          "type": "$_XOR_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "build/verilog_out.sv:30.16-30.35|build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:289.13-289.25"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 190 ],
+            "B": [ 191 ],
+            "Y": [ 192 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$703": {
+          "hide_name": 1,
+          "type": "$_XOR_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "build/verilog_out.sv:30.16-30.35|build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:288.13-288.20"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 135 ],
+            "B": [ 136 ],
+            "Y": [ 193 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$704": {
+          "hide_name": 1,
+          "type": "$_XOR_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "build/verilog_out.sv:30.16-30.35|build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:288.13-288.20"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 85 ],
+            "B": [ 88 ],
+            "Y": [ 190 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$705": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "build/verilog_out.sv:30.16-30.35|build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:286.42-286.49"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 135 ],
+            "B": [ 136 ],
+            "Y": [ 191 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$712": {
+          "hide_name": 1,
+          "type": "$_XOR_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "build/verilog_out.sv:30.16-30.46|build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:289.13-289.25"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 194 ],
+            "B": [ 195 ],
+            "Y": [ 43 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$714": {
+          "hide_name": 1,
+          "type": "$_XOR_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "build/verilog_out.sv:30.16-30.46|build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:288.13-288.20"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 193 ],
+            "B": [ 137 ],
+            "Y": [ 42 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$715": {
+          "hide_name": 1,
+          "type": "$_XOR_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "build/verilog_out.sv:30.16-30.46|build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:288.13-288.20"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 192 ],
+            "B": [ 91 ],
+            "Y": [ 194 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$716": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "build/verilog_out.sv:30.16-30.46|build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:286.42-286.49"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 193 ],
+            "B": [ 137 ],
+            "Y": [ 195 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$723": {
+          "hide_name": 1,
+          "type": "$_XOR_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "build/verilog_out.sv:31.16-31.35|build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:289.13-289.25"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 196 ],
+            "B": [ 197 ],
+            "Y": [ 198 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$725": {
+          "hide_name": 1,
+          "type": "$_XOR_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "build/verilog_out.sv:31.16-31.35|build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:288.13-288.20"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 138 ],
+            "B": [ 139 ],
+            "Y": [ 199 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$726": {
+          "hide_name": 1,
+          "type": "$_XOR_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "build/verilog_out.sv:31.16-31.35|build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:288.13-288.20"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 94 ],
+            "B": [ 97 ],
+            "Y": [ 196 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$727": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "build/verilog_out.sv:31.16-31.35|build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:286.42-286.49"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 138 ],
+            "B": [ 139 ],
+            "Y": [ 197 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$734": {
+          "hide_name": 1,
+          "type": "$_XOR_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "build/verilog_out.sv:31.16-31.46|build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:289.13-289.25"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 200 ],
+            "B": [ 201 ],
+            "Y": [ 41 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$736": {
+          "hide_name": 1,
+          "type": "$_XOR_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "build/verilog_out.sv:31.16-31.46|build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:288.13-288.20"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 199 ],
+            "B": [ 140 ],
+            "Y": [ 40 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$737": {
+          "hide_name": 1,
+          "type": "$_XOR_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "build/verilog_out.sv:31.16-31.46|build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:288.13-288.20"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 198 ],
+            "B": [ 100 ],
+            "Y": [ 200 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$738": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "build/verilog_out.sv:31.16-31.46|build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:286.42-286.49"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 199 ],
+            "B": [ 140 ],
+            "Y": [ 201 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$745": {
+          "hide_name": 1,
+          "type": "$_XOR_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "build/verilog_out.sv:32.16-32.35|build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:289.13-289.25"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 202 ],
+            "B": [ 203 ],
+            "Y": [ 204 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$747": {
+          "hide_name": 1,
+          "type": "$_XOR_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "build/verilog_out.sv:32.16-32.35|build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:288.13-288.20"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 141 ],
+            "B": [ 142 ],
+            "Y": [ 205 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$748": {
+          "hide_name": 1,
+          "type": "$_XOR_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "build/verilog_out.sv:32.16-32.35|build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:288.13-288.20"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 103 ],
+            "B": [ 106 ],
+            "Y": [ 202 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$749": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "build/verilog_out.sv:32.16-32.35|build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:286.42-286.49"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 141 ],
+            "B": [ 142 ],
+            "Y": [ 203 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$756": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": ""
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 18 ],
+            "B": [ 37 ],
+            "Y": [ 206 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$757": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": ""
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 18 ],
+            "B": [ 36 ],
+            "Y": [ 147 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$758": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": ""
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 19 ],
+            "B": [ 36 ],
+            "Y": [ 207 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$760": {
+          "hide_name": 1,
+          "type": "$_XOR_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "build/verilog_out.sv:32.16-32.46|build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:289.13-289.25"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 208 ],
+            "B": [ 209 ],
+            "Y": [ 39 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$762": {
+          "hide_name": 1,
+          "type": "$_XOR_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "build/verilog_out.sv:32.16-32.46|build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:288.13-288.20"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 205 ],
+            "B": [ 143 ],
+            "Y": [ 38 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$763": {
+          "hide_name": 1,
+          "type": "$_XOR_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "build/verilog_out.sv:32.16-32.46|build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:288.13-288.20"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 204 ],
+            "B": [ 109 ],
+            "Y": [ 208 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$764": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "build/verilog_out.sv:32.16-32.46|build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:286.42-286.49"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 205 ],
+            "B": [ 143 ],
+            "Y": [ 209 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$771": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": ""
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 16 ],
+            "B": [ 31 ],
+            "Y": [ 210 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$773": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": ""
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 14 ],
+            "B": [ 25 ],
+            "Y": [ 211 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$775": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": ""
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 18 ],
+            "B": [ 35 ],
+            "Y": [ 212 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$777": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": ""
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 16 ],
+            "B": [ 29 ],
+            "Y": [ 213 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$779": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": ""
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 14 ],
+            "B": [ 23 ],
+            "Y": [ 214 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$781": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": ""
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 18 ],
+            "B": [ 33 ],
+            "Y": [ 215 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$783": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": ""
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 16 ],
+            "B": [ 27 ],
+            "Y": [ 216 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$785": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": ""
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 14 ],
+            "B": [ 21 ],
+            "Y": [ 217 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$787": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": ""
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 12 ],
+            "B": [ 37 ],
+            "Y": [ 57 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$789": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": ""
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 10 ],
+            "B": [ 31 ],
+            "Y": [ 60 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$791": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": ""
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 8 ],
+            "B": [ 25 ],
+            "Y": [ 63 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$793": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": ""
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 12 ],
+            "B": [ 35 ],
+            "Y": [ 66 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$795": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": ""
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 10 ],
+            "B": [ 29 ],
+            "Y": [ 69 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$797": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": ""
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 8 ],
+            "B": [ 23 ],
+            "Y": [ 72 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$799": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": ""
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 12 ],
+            "B": [ 33 ],
+            "Y": [ 75 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$801": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": ""
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 10 ],
+            "B": [ 27 ],
+            "Y": [ 78 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$803": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": ""
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 8 ],
+            "B": [ 21 ],
+            "Y": [ 81 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$805": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": ""
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 6 ],
+            "B": [ 37 ],
+            "Y": [ 84 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$807": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": ""
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 4 ],
+            "B": [ 31 ],
+            "Y": [ 87 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$809": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": ""
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2 ],
+            "B": [ 25 ],
+            "Y": [ 90 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$811": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": ""
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 6 ],
+            "B": [ 35 ],
+            "Y": [ 93 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$813": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": ""
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 4 ],
+            "B": [ 29 ],
+            "Y": [ 96 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$815": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": ""
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2 ],
+            "B": [ 23 ],
+            "Y": [ 99 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$817": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": ""
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 6 ],
+            "B": [ 33 ],
+            "Y": [ 102 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$819": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": ""
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 4 ],
+            "B": [ 27 ],
+            "Y": [ 105 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$821": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": ""
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2 ],
+            "B": [ 21 ],
+            "Y": [ 108 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$897": {
+          "hide_name": 1,
+          "type": "$_XOR_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/usr/bin/../share/yosys/techmap.v:288.13-288.20"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 206 ],
+            "B": [ 207 ],
+            "Y": [ 149 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$912": {
+          "hide_name": 1,
+          "type": "$_XOR_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/usr/bin/../share/yosys/techmap.v:288.13-288.20"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 111 ],
+            "B": [ 210 ],
+            "Y": [ 150 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$923": {
+          "hide_name": 1,
+          "type": "$_XOR_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/usr/bin/../share/yosys/techmap.v:288.13-288.20"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 113 ],
+            "B": [ 211 ],
+            "Y": [ 153 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$934": {
+          "hide_name": 1,
+          "type": "$_XOR_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/usr/bin/../share/yosys/techmap.v:288.13-288.20"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 115 ],
+            "B": [ 212 ],
+            "Y": [ 158 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$945": {
+          "hide_name": 1,
+          "type": "$_XOR_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/usr/bin/../share/yosys/techmap.v:288.13-288.20"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 117 ],
+            "B": [ 213 ],
+            "Y": [ 159 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$956": {
+          "hide_name": 1,
+          "type": "$_XOR_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/usr/bin/../share/yosys/techmap.v:288.13-288.20"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 119 ],
+            "B": [ 214 ],
+            "Y": [ 162 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$967": {
+          "hide_name": 1,
+          "type": "$_XOR_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/usr/bin/../share/yosys/techmap.v:288.13-288.20"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 121 ],
+            "B": [ 215 ],
+            "Y": [ 167 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$978": {
+          "hide_name": 1,
+          "type": "$_XOR_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/usr/bin/../share/yosys/techmap.v:288.13-288.20"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 123 ],
+            "B": [ 216 ],
+            "Y": [ 168 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$989": {
+          "hide_name": 1,
+          "type": "$_XOR_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/usr/bin/../share/yosys/techmap.v:288.13-288.20"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 125 ],
+            "B": [ 217 ],
+            "Y": [ 171 ]
+          }
+        }
+      },
+      "netnames": {
+        "$auto$maccmap.cc:240:synth$298.A": {
+          "hide_name": 1,
+          "bits": [ "0", 206 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "/usr/bin/../share/yosys/techmap.v:266.22-266.23"
+          }
+        },
+        "$auto$maccmap.cc:240:synth$298.B": {
+          "hide_name": 1,
+          "bits": [ 147, 207 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "/usr/bin/../share/yosys/techmap.v:268.22-268.23"
+          }
+        },
+        "$auto$maccmap.cc:240:synth$306.A": {
+          "hide_name": 1,
+          "bits": [ 110, 111 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "/usr/bin/../share/yosys/techmap.v:266.22-266.23"
+          }
+        },
+        "$auto$maccmap.cc:240:synth$306.B": {
+          "hide_name": 1,
+          "bits": [ "0", 210 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "/usr/bin/../share/yosys/techmap.v:268.22-268.23"
+          }
+        },
+        "$auto$maccmap.cc:240:synth$314.A": {
+          "hide_name": 1,
+          "bits": [ 112, 113 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "/usr/bin/../share/yosys/techmap.v:266.22-266.23"
+          }
+        },
+        "$auto$maccmap.cc:240:synth$314.B": {
+          "hide_name": 1,
+          "bits": [ "0", 211 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "/usr/bin/../share/yosys/techmap.v:268.22-268.23"
+          }
+        },
+        "$auto$maccmap.cc:240:synth$322.A": {
+          "hide_name": 1,
+          "bits": [ 114, 115 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "/usr/bin/../share/yosys/techmap.v:266.22-266.23"
+          }
+        },
+        "$auto$maccmap.cc:240:synth$322.B": {
+          "hide_name": 1,
+          "bits": [ "0", 212 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "/usr/bin/../share/yosys/techmap.v:268.22-268.23"
+          }
+        },
+        "$auto$maccmap.cc:240:synth$330.A": {
+          "hide_name": 1,
+          "bits": [ 116, 117 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "/usr/bin/../share/yosys/techmap.v:266.22-266.23"
+          }
+        },
+        "$auto$maccmap.cc:240:synth$330.B": {
+          "hide_name": 1,
+          "bits": [ "0", 213 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "/usr/bin/../share/yosys/techmap.v:268.22-268.23"
+          }
+        },
+        "$auto$maccmap.cc:240:synth$338.A": {
+          "hide_name": 1,
+          "bits": [ 118, 119 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "/usr/bin/../share/yosys/techmap.v:266.22-266.23"
+          }
+        },
+        "$auto$maccmap.cc:240:synth$338.B": {
+          "hide_name": 1,
+          "bits": [ "0", 214 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "/usr/bin/../share/yosys/techmap.v:268.22-268.23"
+          }
+        },
+        "$auto$maccmap.cc:240:synth$346.A": {
+          "hide_name": 1,
+          "bits": [ 120, 121 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "/usr/bin/../share/yosys/techmap.v:266.22-266.23"
+          }
+        },
+        "$auto$maccmap.cc:240:synth$346.B": {
+          "hide_name": 1,
+          "bits": [ "0", 215 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "/usr/bin/../share/yosys/techmap.v:268.22-268.23"
+          }
+        },
+        "$auto$maccmap.cc:240:synth$354.A": {
+          "hide_name": 1,
+          "bits": [ 122, 123 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "/usr/bin/../share/yosys/techmap.v:266.22-266.23"
+          }
+        },
+        "$auto$maccmap.cc:240:synth$354.B": {
+          "hide_name": 1,
+          "bits": [ "0", 216 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "/usr/bin/../share/yosys/techmap.v:268.22-268.23"
+          }
+        },
+        "$auto$maccmap.cc:240:synth$362.A": {
+          "hide_name": 1,
+          "bits": [ 124, 125 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "/usr/bin/../share/yosys/techmap.v:266.22-266.23"
+          }
+        },
+        "$auto$maccmap.cc:240:synth$362.B": {
+          "hide_name": 1,
+          "bits": [ "0", 217 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "/usr/bin/../share/yosys/techmap.v:268.22-268.23"
+          }
+        },
+        "$auto$maccmap.cc:240:synth$370.A": {
+          "hide_name": 1,
+          "bits": [ 126, 56 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "/usr/bin/../share/yosys/techmap.v:266.22-266.23"
+          }
+        },
+        "$auto$maccmap.cc:240:synth$370.B": {
+          "hide_name": 1,
+          "bits": [ "0", 57 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "/usr/bin/../share/yosys/techmap.v:268.22-268.23"
+          }
+        },
+        "$auto$maccmap.cc:240:synth$378.A": {
+          "hide_name": 1,
+          "bits": [ 127, 59 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "/usr/bin/../share/yosys/techmap.v:266.22-266.23"
+          }
+        },
+        "$auto$maccmap.cc:240:synth$378.B": {
+          "hide_name": 1,
+          "bits": [ "0", 60 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "/usr/bin/../share/yosys/techmap.v:268.22-268.23"
+          }
+        },
+        "$auto$maccmap.cc:240:synth$386.A": {
+          "hide_name": 1,
+          "bits": [ 128, 62 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "/usr/bin/../share/yosys/techmap.v:266.22-266.23"
+          }
+        },
+        "$auto$maccmap.cc:240:synth$386.B": {
+          "hide_name": 1,
+          "bits": [ "0", 63 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "/usr/bin/../share/yosys/techmap.v:268.22-268.23"
+          }
+        },
+        "$auto$maccmap.cc:240:synth$394.A": {
+          "hide_name": 1,
+          "bits": [ 129, 65 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "/usr/bin/../share/yosys/techmap.v:266.22-266.23"
+          }
+        },
+        "$auto$maccmap.cc:240:synth$394.B": {
+          "hide_name": 1,
+          "bits": [ "0", 66 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "/usr/bin/../share/yosys/techmap.v:268.22-268.23"
+          }
+        },
+        "$auto$maccmap.cc:240:synth$402.A": {
+          "hide_name": 1,
+          "bits": [ 130, 68 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "/usr/bin/../share/yosys/techmap.v:266.22-266.23"
+          }
+        },
+        "$auto$maccmap.cc:240:synth$402.B": {
+          "hide_name": 1,
+          "bits": [ "0", 69 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "/usr/bin/../share/yosys/techmap.v:268.22-268.23"
+          }
+        },
+        "$auto$maccmap.cc:240:synth$410.A": {
+          "hide_name": 1,
+          "bits": [ 131, 71 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "/usr/bin/../share/yosys/techmap.v:266.22-266.23"
+          }
+        },
+        "$auto$maccmap.cc:240:synth$410.B": {
+          "hide_name": 1,
+          "bits": [ "0", 72 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "/usr/bin/../share/yosys/techmap.v:268.22-268.23"
+          }
+        },
+        "$auto$maccmap.cc:240:synth$418.A": {
+          "hide_name": 1,
+          "bits": [ 132, 74 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "/usr/bin/../share/yosys/techmap.v:266.22-266.23"
+          }
+        },
+        "$auto$maccmap.cc:240:synth$418.B": {
+          "hide_name": 1,
+          "bits": [ "0", 75 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "/usr/bin/../share/yosys/techmap.v:268.22-268.23"
+          }
+        },
+        "$auto$maccmap.cc:240:synth$426.A": {
+          "hide_name": 1,
+          "bits": [ 133, 77 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "/usr/bin/../share/yosys/techmap.v:266.22-266.23"
+          }
+        },
+        "$auto$maccmap.cc:240:synth$426.B": {
+          "hide_name": 1,
+          "bits": [ "0", 78 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "/usr/bin/../share/yosys/techmap.v:268.22-268.23"
+          }
+        },
+        "$auto$maccmap.cc:240:synth$434.A": {
+          "hide_name": 1,
+          "bits": [ 134, 80 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "/usr/bin/../share/yosys/techmap.v:266.22-266.23"
+          }
+        },
+        "$auto$maccmap.cc:240:synth$434.B": {
+          "hide_name": 1,
+          "bits": [ "0", 81 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "/usr/bin/../share/yosys/techmap.v:268.22-268.23"
+          }
+        },
+        "$auto$maccmap.cc:240:synth$442.A": {
+          "hide_name": 1,
+          "bits": [ 135, 83 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "/usr/bin/../share/yosys/techmap.v:266.22-266.23"
+          }
+        },
+        "$auto$maccmap.cc:240:synth$442.B": {
+          "hide_name": 1,
+          "bits": [ "0", 84 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "/usr/bin/../share/yosys/techmap.v:268.22-268.23"
+          }
+        },
+        "$auto$maccmap.cc:240:synth$450.A": {
+          "hide_name": 1,
+          "bits": [ 136, 86 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "/usr/bin/../share/yosys/techmap.v:266.22-266.23"
+          }
+        },
+        "$auto$maccmap.cc:240:synth$450.B": {
+          "hide_name": 1,
+          "bits": [ "0", 87 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "/usr/bin/../share/yosys/techmap.v:268.22-268.23"
+          }
+        },
+        "$auto$maccmap.cc:240:synth$458.A": {
+          "hide_name": 1,
+          "bits": [ 137, 89 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "/usr/bin/../share/yosys/techmap.v:266.22-266.23"
+          }
+        },
+        "$auto$maccmap.cc:240:synth$458.B": {
+          "hide_name": 1,
+          "bits": [ "0", 90 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "/usr/bin/../share/yosys/techmap.v:268.22-268.23"
+          }
+        },
+        "$auto$maccmap.cc:240:synth$466.A": {
+          "hide_name": 1,
+          "bits": [ 138, 92 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "/usr/bin/../share/yosys/techmap.v:266.22-266.23"
+          }
+        },
+        "$auto$maccmap.cc:240:synth$466.B": {
+          "hide_name": 1,
+          "bits": [ "0", 93 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "/usr/bin/../share/yosys/techmap.v:268.22-268.23"
+          }
+        },
+        "$auto$maccmap.cc:240:synth$474.A": {
+          "hide_name": 1,
+          "bits": [ 139, 95 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "/usr/bin/../share/yosys/techmap.v:266.22-266.23"
+          }
+        },
+        "$auto$maccmap.cc:240:synth$474.B": {
+          "hide_name": 1,
+          "bits": [ "0", 96 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "/usr/bin/../share/yosys/techmap.v:268.22-268.23"
+          }
+        },
+        "$auto$maccmap.cc:240:synth$482.A": {
+          "hide_name": 1,
+          "bits": [ 140, 98 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "/usr/bin/../share/yosys/techmap.v:266.22-266.23"
+          }
+        },
+        "$auto$maccmap.cc:240:synth$482.B": {
+          "hide_name": 1,
+          "bits": [ "0", 99 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "/usr/bin/../share/yosys/techmap.v:268.22-268.23"
+          }
+        },
+        "$auto$maccmap.cc:240:synth$490.A": {
+          "hide_name": 1,
+          "bits": [ 141, 101 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "/usr/bin/../share/yosys/techmap.v:266.22-266.23"
+          }
+        },
+        "$auto$maccmap.cc:240:synth$490.B": {
+          "hide_name": 1,
+          "bits": [ "0", 102 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "/usr/bin/../share/yosys/techmap.v:268.22-268.23"
+          }
+        },
+        "$auto$maccmap.cc:240:synth$498.A": {
+          "hide_name": 1,
+          "bits": [ 142, 104 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "/usr/bin/../share/yosys/techmap.v:266.22-266.23"
+          }
+        },
+        "$auto$maccmap.cc:240:synth$498.B": {
+          "hide_name": 1,
+          "bits": [ "0", 105 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "/usr/bin/../share/yosys/techmap.v:268.22-268.23"
+          }
+        },
+        "$auto$maccmap.cc:240:synth$506.A": {
+          "hide_name": 1,
+          "bits": [ 143, 107 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "/usr/bin/../share/yosys/techmap.v:266.22-266.23"
+          }
+        },
+        "$auto$maccmap.cc:240:synth$506.B": {
+          "hide_name": 1,
+          "bits": [ "0", 108 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "/usr/bin/../share/yosys/techmap.v:268.22-268.23"
+          }
+        },
+        "$techmap$add$build/verilog_out.sv:24$55.$auto$alumacc.cc:495:replace_alu$285.CO": {
+          "hide_name": 1,
+          "bits": [ 145, 218 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:274.23-274.25",
+            "unused_bits": "1 "
+          }
+        },
+        "$techmap$add$build/verilog_out.sv:24$55.$auto$alumacc.cc:495:replace_alu$285.X": {
+          "hide_name": 1,
+          "bits": [ 148, 144 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:270.23-270.24"
+          }
+        },
+        "$techmap$add$build/verilog_out.sv:24$55.$auto$alumacc.cc:495:replace_alu$285.Y": {
+          "hide_name": 1,
+          "bits": [ 148, 146 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:270.26-270.27"
+          }
+        },
+        "$techmap$add$build/verilog_out.sv:24$56.$auto$alumacc.cc:495:replace_alu$285.CO": {
+          "hide_name": 1,
+          "bits": [ 152, 219 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "build/verilog_out.sv:24.16-24.46|build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:274.23-274.25",
+            "unused_bits": "1 "
+          }
+        },
+        "$techmap$add$build/verilog_out.sv:24$56.$auto$alumacc.cc:495:replace_alu$285.X": {
+          "hide_name": 1,
+          "bits": [ 54, 151 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "build/verilog_out.sv:24.16-24.46|build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:270.23-270.24"
+          }
+        },
+        "$techmap$add$build/verilog_out.sv:25$57.$auto$alumacc.cc:495:replace_alu$285.CO": {
+          "hide_name": 1,
+          "bits": [ 155, 220 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "build/verilog_out.sv:25.16-25.35|build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:274.23-274.25",
+            "unused_bits": "1 "
+          }
+        },
+        "$techmap$add$build/verilog_out.sv:25$57.$auto$alumacc.cc:495:replace_alu$285.X": {
+          "hide_name": 1,
+          "bits": [ 157, 154 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "build/verilog_out.sv:25.16-25.35|build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:270.23-270.24"
+          }
+        },
+        "$techmap$add$build/verilog_out.sv:25$57.$auto$alumacc.cc:495:replace_alu$285.Y": {
+          "hide_name": 1,
+          "bits": [ 157, 156 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "build/verilog_out.sv:25.16-25.35|build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:270.26-270.27"
+          }
+        },
+        "$techmap$add$build/verilog_out.sv:25$58.$auto$alumacc.cc:495:replace_alu$285.CO": {
+          "hide_name": 1,
+          "bits": [ 161, 221 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "build/verilog_out.sv:25.16-25.46|build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:274.23-274.25",
+            "unused_bits": "1 "
+          }
+        },
+        "$techmap$add$build/verilog_out.sv:25$58.$auto$alumacc.cc:495:replace_alu$285.X": {
+          "hide_name": 1,
+          "bits": [ 52, 160 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "build/verilog_out.sv:25.16-25.46|build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:270.23-270.24"
+          }
+        },
+        "$techmap$add$build/verilog_out.sv:26$59.$auto$alumacc.cc:495:replace_alu$285.CO": {
+          "hide_name": 1,
+          "bits": [ 164, 222 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "build/verilog_out.sv:26.16-26.35|build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:274.23-274.25",
+            "unused_bits": "1 "
+          }
+        },
+        "$techmap$add$build/verilog_out.sv:26$59.$auto$alumacc.cc:495:replace_alu$285.X": {
+          "hide_name": 1,
+          "bits": [ 166, 163 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "build/verilog_out.sv:26.16-26.35|build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:270.23-270.24"
+          }
+        },
+        "$techmap$add$build/verilog_out.sv:26$59.$auto$alumacc.cc:495:replace_alu$285.Y": {
+          "hide_name": 1,
+          "bits": [ 166, 165 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "build/verilog_out.sv:26.16-26.35|build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:270.26-270.27"
+          }
+        },
+        "$techmap$add$build/verilog_out.sv:26$60.$auto$alumacc.cc:495:replace_alu$285.CO": {
+          "hide_name": 1,
+          "bits": [ 170, 223 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "build/verilog_out.sv:26.16-26.46|build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:274.23-274.25",
+            "unused_bits": "1 "
+          }
+        },
+        "$techmap$add$build/verilog_out.sv:26$60.$auto$alumacc.cc:495:replace_alu$285.X": {
+          "hide_name": 1,
+          "bits": [ 50, 169 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "build/verilog_out.sv:26.16-26.46|build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:270.23-270.24"
+          }
+        },
+        "$techmap$add$build/verilog_out.sv:27$61.$auto$alumacc.cc:495:replace_alu$285.CO": {
+          "hide_name": 1,
+          "bits": [ 173, 224 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "build/verilog_out.sv:27.16-27.35|build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:274.23-274.25",
+            "unused_bits": "1 "
+          }
+        },
+        "$techmap$add$build/verilog_out.sv:27$61.$auto$alumacc.cc:495:replace_alu$285.X": {
+          "hide_name": 1,
+          "bits": [ 175, 172 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "build/verilog_out.sv:27.16-27.35|build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:270.23-270.24"
+          }
+        },
+        "$techmap$add$build/verilog_out.sv:27$61.$auto$alumacc.cc:495:replace_alu$285.Y": {
+          "hide_name": 1,
+          "bits": [ 175, 174 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "build/verilog_out.sv:27.16-27.35|build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:270.26-270.27"
+          }
+        },
+        "$techmap$add$build/verilog_out.sv:27$62.$auto$alumacc.cc:495:replace_alu$285.CO": {
+          "hide_name": 1,
+          "bits": [ 177, 225 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "build/verilog_out.sv:27.16-27.46|build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:274.23-274.25",
+            "unused_bits": "1 "
+          }
+        },
+        "$techmap$add$build/verilog_out.sv:27$62.$auto$alumacc.cc:495:replace_alu$285.X": {
+          "hide_name": 1,
+          "bits": [ 48, 176 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "build/verilog_out.sv:27.16-27.46|build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:270.23-270.24"
+          }
+        },
+        "$techmap$add$build/verilog_out.sv:28$63.$auto$alumacc.cc:495:replace_alu$285.CO": {
+          "hide_name": 1,
+          "bits": [ 179, 226 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "build/verilog_out.sv:28.16-28.35|build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:274.23-274.25",
+            "unused_bits": "1 "
+          }
+        },
+        "$techmap$add$build/verilog_out.sv:28$63.$auto$alumacc.cc:495:replace_alu$285.X": {
+          "hide_name": 1,
+          "bits": [ 181, 178 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "build/verilog_out.sv:28.16-28.35|build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:270.23-270.24"
+          }
+        },
+        "$techmap$add$build/verilog_out.sv:28$63.$auto$alumacc.cc:495:replace_alu$285.Y": {
+          "hide_name": 1,
+          "bits": [ 181, 180 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "build/verilog_out.sv:28.16-28.35|build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:270.26-270.27"
+          }
+        },
+        "$techmap$add$build/verilog_out.sv:28$64.$auto$alumacc.cc:495:replace_alu$285.CO": {
+          "hide_name": 1,
+          "bits": [ 183, 227 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "build/verilog_out.sv:28.16-28.46|build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:274.23-274.25",
+            "unused_bits": "1 "
+          }
+        },
+        "$techmap$add$build/verilog_out.sv:28$64.$auto$alumacc.cc:495:replace_alu$285.X": {
+          "hide_name": 1,
+          "bits": [ 46, 182 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "build/verilog_out.sv:28.16-28.46|build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:270.23-270.24"
+          }
+        },
+        "$techmap$add$build/verilog_out.sv:29$65.$auto$alumacc.cc:495:replace_alu$285.CO": {
+          "hide_name": 1,
+          "bits": [ 185, 228 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "build/verilog_out.sv:29.16-29.35|build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:274.23-274.25",
+            "unused_bits": "1 "
+          }
+        },
+        "$techmap$add$build/verilog_out.sv:29$65.$auto$alumacc.cc:495:replace_alu$285.X": {
+          "hide_name": 1,
+          "bits": [ 187, 184 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "build/verilog_out.sv:29.16-29.35|build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:270.23-270.24"
+          }
+        },
+        "$techmap$add$build/verilog_out.sv:29$65.$auto$alumacc.cc:495:replace_alu$285.Y": {
+          "hide_name": 1,
+          "bits": [ 187, 186 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "build/verilog_out.sv:29.16-29.35|build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:270.26-270.27"
+          }
+        },
+        "$techmap$add$build/verilog_out.sv:29$66.$auto$alumacc.cc:495:replace_alu$285.CO": {
+          "hide_name": 1,
+          "bits": [ 189, 229 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "build/verilog_out.sv:29.16-29.46|build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:274.23-274.25",
+            "unused_bits": "1 "
+          }
+        },
+        "$techmap$add$build/verilog_out.sv:29$66.$auto$alumacc.cc:495:replace_alu$285.X": {
+          "hide_name": 1,
+          "bits": [ 44, 188 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "build/verilog_out.sv:29.16-29.46|build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:270.23-270.24"
+          }
+        },
+        "$techmap$add$build/verilog_out.sv:30$67.$auto$alumacc.cc:495:replace_alu$285.CO": {
+          "hide_name": 1,
+          "bits": [ 191, 230 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "build/verilog_out.sv:30.16-30.35|build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:274.23-274.25",
+            "unused_bits": "1 "
+          }
+        },
+        "$techmap$add$build/verilog_out.sv:30$67.$auto$alumacc.cc:495:replace_alu$285.X": {
+          "hide_name": 1,
+          "bits": [ 193, 190 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "build/verilog_out.sv:30.16-30.35|build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:270.23-270.24"
+          }
+        },
+        "$techmap$add$build/verilog_out.sv:30$67.$auto$alumacc.cc:495:replace_alu$285.Y": {
+          "hide_name": 1,
+          "bits": [ 193, 192 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "build/verilog_out.sv:30.16-30.35|build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:270.26-270.27"
+          }
+        },
+        "$techmap$add$build/verilog_out.sv:30$68.$auto$alumacc.cc:495:replace_alu$285.CO": {
+          "hide_name": 1,
+          "bits": [ 195, 231 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "build/verilog_out.sv:30.16-30.46|build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:274.23-274.25",
+            "unused_bits": "1 "
+          }
+        },
+        "$techmap$add$build/verilog_out.sv:30$68.$auto$alumacc.cc:495:replace_alu$285.X": {
+          "hide_name": 1,
+          "bits": [ 42, 194 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "build/verilog_out.sv:30.16-30.46|build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:270.23-270.24"
+          }
+        },
+        "$techmap$add$build/verilog_out.sv:31$69.$auto$alumacc.cc:495:replace_alu$285.CO": {
+          "hide_name": 1,
+          "bits": [ 197, 232 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "build/verilog_out.sv:31.16-31.35|build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:274.23-274.25",
+            "unused_bits": "1 "
+          }
+        },
+        "$techmap$add$build/verilog_out.sv:31$69.$auto$alumacc.cc:495:replace_alu$285.X": {
+          "hide_name": 1,
+          "bits": [ 199, 196 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "build/verilog_out.sv:31.16-31.35|build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:270.23-270.24"
+          }
+        },
+        "$techmap$add$build/verilog_out.sv:31$69.$auto$alumacc.cc:495:replace_alu$285.Y": {
+          "hide_name": 1,
+          "bits": [ 199, 198 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "build/verilog_out.sv:31.16-31.35|build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:270.26-270.27"
+          }
+        },
+        "$techmap$add$build/verilog_out.sv:31$70.$auto$alumacc.cc:495:replace_alu$285.CO": {
+          "hide_name": 1,
+          "bits": [ 201, 233 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "build/verilog_out.sv:31.16-31.46|build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:274.23-274.25",
+            "unused_bits": "1 "
+          }
+        },
+        "$techmap$add$build/verilog_out.sv:31$70.$auto$alumacc.cc:495:replace_alu$285.X": {
+          "hide_name": 1,
+          "bits": [ 40, 200 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "build/verilog_out.sv:31.16-31.46|build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:270.23-270.24"
+          }
+        },
+        "$techmap$add$build/verilog_out.sv:32$71.$auto$alumacc.cc:495:replace_alu$285.CO": {
+          "hide_name": 1,
+          "bits": [ 203, 234 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "build/verilog_out.sv:32.16-32.35|build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:274.23-274.25",
+            "unused_bits": "1 "
+          }
+        },
+        "$techmap$add$build/verilog_out.sv:32$71.$auto$alumacc.cc:495:replace_alu$285.X": {
+          "hide_name": 1,
+          "bits": [ 205, 202 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "build/verilog_out.sv:32.16-32.35|build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:270.23-270.24"
+          }
+        },
+        "$techmap$add$build/verilog_out.sv:32$71.$auto$alumacc.cc:495:replace_alu$285.Y": {
+          "hide_name": 1,
+          "bits": [ 205, 204 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "build/verilog_out.sv:32.16-32.35|build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:270.26-270.27"
+          }
+        },
+        "$techmap$add$build/verilog_out.sv:32$72.$auto$alumacc.cc:495:replace_alu$285.CO": {
+          "hide_name": 1,
+          "bits": [ 209, 235 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "build/verilog_out.sv:32.16-32.46|build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:274.23-274.25",
+            "unused_bits": "1 "
+          }
+        },
+        "$techmap$add$build/verilog_out.sv:32$72.$auto$alumacc.cc:495:replace_alu$285.X": {
+          "hide_name": 1,
+          "bits": [ 38, 208 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "build/verilog_out.sv:32.16-32.46|build/verilog_out.sv:24.16-24.35|/usr/bin/../share/yosys/techmap.v:270.23-270.24"
+          }
+        },
+        "A": {
+          "hide_name": 0,
+          "bits": [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19 ],
+          "attributes": {
+            "src": "build/verilog_out.sv:7.28-7.29"
+          }
+        },
+        "As": {
+          "hide_name": 0,
+          "bits": [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19 ],
+          "signed": 1,
+          "attributes": {
+            "src": "build/verilog_out.sv:11.28-11.30"
+          }
+        },
+        "Au": {
+          "hide_name": 0,
+          "bits": [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19 ],
+          "attributes": {
+            "src": "build/verilog_out.sv:13.28-13.30"
+          }
+        },
+        "B": {
+          "hide_name": 0,
+          "bits": [ 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37 ],
+          "attributes": {
+            "src": "build/verilog_out.sv:8.28-8.29"
+          }
+        },
+        "Bs": {
+          "hide_name": 0,
+          "bits": [ 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37 ],
+          "signed": 1,
+          "attributes": {
+            "src": "build/verilog_out.sv:12.28-12.30"
+          }
+        },
+        "Bu": {
+          "hide_name": 0,
+          "bits": [ 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37 ],
+          "attributes": {
+            "src": "build/verilog_out.sv:14.28-14.30"
+          }
+        },
+        "C": {
+          "hide_name": 0,
+          "bits": [ 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55 ],
+          "attributes": {
+            "src": "build/verilog_out.sv:9.28-9.29"
+          }
+        },
+        "mul$func$build/verilog_out.sv:24$1.$result": {
+          "hide_name": 0,
+          "bits": [ 147, 149 ],
+          "attributes": {
+            "src": "build/verilog_out.sv:0.0-0.0"
+          }
+        },
+        "mul$func$build/verilog_out.sv:24$2.$result": {
+          "hide_name": 0,
+          "bits": [ 110, 150 ],
+          "attributes": {
+            "src": "build/verilog_out.sv:0.0-0.0"
+          }
+        },
+        "mul$func$build/verilog_out.sv:24$3.$result": {
+          "hide_name": 0,
+          "bits": [ 112, 153 ],
+          "attributes": {
+            "src": "build/verilog_out.sv:0.0-0.0"
+          }
+        },
+        "mul$func$build/verilog_out.sv:25$4.$result": {
+          "hide_name": 0,
+          "bits": [ 114, 158 ],
+          "attributes": {
+            "src": "build/verilog_out.sv:0.0-0.0"
+          }
+        },
+        "mul$func$build/verilog_out.sv:25$5.$result": {
+          "hide_name": 0,
+          "bits": [ 116, 159 ],
+          "attributes": {
+            "src": "build/verilog_out.sv:0.0-0.0"
+          }
+        },
+        "mul$func$build/verilog_out.sv:25$6.$result": {
+          "hide_name": 0,
+          "bits": [ 118, 162 ],
+          "attributes": {
+            "src": "build/verilog_out.sv:0.0-0.0"
+          }
+        },
+        "mul$func$build/verilog_out.sv:26$7.$result": {
+          "hide_name": 0,
+          "bits": [ 120, 167 ],
+          "attributes": {
+            "src": "build/verilog_out.sv:0.0-0.0"
+          }
+        },
+        "mul$func$build/verilog_out.sv:26$8.$result": {
+          "hide_name": 0,
+          "bits": [ 122, 168 ],
+          "attributes": {
+            "src": "build/verilog_out.sv:0.0-0.0"
+          }
+        },
+        "mul$func$build/verilog_out.sv:26$9.$result": {
+          "hide_name": 0,
+          "bits": [ 124, 171 ],
+          "attributes": {
+            "src": "build/verilog_out.sv:0.0-0.0"
+          }
+        },
+        "mul$func$build/verilog_out.sv:27$10.$result": {
+          "hide_name": 0,
+          "bits": [ 126, 58 ],
+          "attributes": {
+            "src": "build/verilog_out.sv:0.0-0.0"
+          }
+        },
+        "mul$func$build/verilog_out.sv:27$11.$result": {
+          "hide_name": 0,
+          "bits": [ 127, 61 ],
+          "attributes": {
+            "src": "build/verilog_out.sv:0.0-0.0"
+          }
+        },
+        "mul$func$build/verilog_out.sv:27$12.$result": {
+          "hide_name": 0,
+          "bits": [ 128, 64 ],
+          "attributes": {
+            "src": "build/verilog_out.sv:0.0-0.0"
+          }
+        },
+        "mul$func$build/verilog_out.sv:28$13.$result": {
+          "hide_name": 0,
+          "bits": [ 129, 67 ],
+          "attributes": {
+            "src": "build/verilog_out.sv:0.0-0.0"
+          }
+        },
+        "mul$func$build/verilog_out.sv:28$14.$result": {
+          "hide_name": 0,
+          "bits": [ 130, 70 ],
+          "attributes": {
+            "src": "build/verilog_out.sv:0.0-0.0"
+          }
+        },
+        "mul$func$build/verilog_out.sv:28$15.$result": {
+          "hide_name": 0,
+          "bits": [ 131, 73 ],
+          "attributes": {
+            "src": "build/verilog_out.sv:0.0-0.0"
+          }
+        },
+        "mul$func$build/verilog_out.sv:29$16.$result": {
+          "hide_name": 0,
+          "bits": [ 132, 76 ],
+          "attributes": {
+            "src": "build/verilog_out.sv:0.0-0.0"
+          }
+        },
+        "mul$func$build/verilog_out.sv:29$17.$result": {
+          "hide_name": 0,
+          "bits": [ 133, 79 ],
+          "attributes": {
+            "src": "build/verilog_out.sv:0.0-0.0"
+          }
+        },
+        "mul$func$build/verilog_out.sv:29$18.$result": {
+          "hide_name": 0,
+          "bits": [ 134, 82 ],
+          "attributes": {
+            "src": "build/verilog_out.sv:0.0-0.0"
+          }
+        },
+        "mul$func$build/verilog_out.sv:30$19.$result": {
+          "hide_name": 0,
+          "bits": [ 135, 85 ],
+          "attributes": {
+            "src": "build/verilog_out.sv:0.0-0.0"
+          }
+        },
+        "mul$func$build/verilog_out.sv:30$20.$result": {
+          "hide_name": 0,
+          "bits": [ 136, 88 ],
+          "attributes": {
+            "src": "build/verilog_out.sv:0.0-0.0"
+          }
+        },
+        "mul$func$build/verilog_out.sv:30$21.$result": {
+          "hide_name": 0,
+          "bits": [ 137, 91 ],
+          "attributes": {
+            "src": "build/verilog_out.sv:0.0-0.0"
+          }
+        },
+        "mul$func$build/verilog_out.sv:31$22.$result": {
+          "hide_name": 0,
+          "bits": [ 138, 94 ],
+          "attributes": {
+            "src": "build/verilog_out.sv:0.0-0.0"
+          }
+        },
+        "mul$func$build/verilog_out.sv:31$23.$result": {
+          "hide_name": 0,
+          "bits": [ 139, 97 ],
+          "attributes": {
+            "src": "build/verilog_out.sv:0.0-0.0"
+          }
+        },
+        "mul$func$build/verilog_out.sv:31$24.$result": {
+          "hide_name": 0,
+          "bits": [ 140, 100 ],
+          "attributes": {
+            "src": "build/verilog_out.sv:0.0-0.0"
+          }
+        },
+        "mul$func$build/verilog_out.sv:32$25.$result": {
+          "hide_name": 0,
+          "bits": [ 141, 103 ],
+          "attributes": {
+            "src": "build/verilog_out.sv:0.0-0.0"
+          }
+        },
+        "mul$func$build/verilog_out.sv:32$26.$result": {
+          "hide_name": 0,
+          "bits": [ 142, 106 ],
+          "attributes": {
+            "src": "build/verilog_out.sv:0.0-0.0"
+          }
+        },
+        "mul$func$build/verilog_out.sv:32$27.$result": {
+          "hide_name": 0,
+          "bits": [ 143, 109 ],
+          "attributes": {
+            "src": "build/verilog_out.sv:0.0-0.0"
+          }
+        }
+      }
+    }
+  }
+}
