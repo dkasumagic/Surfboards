@@ -28,8 +28,12 @@ function stopGenerating(btn) {
 
 function showExclamationMark() {
   const exclamationMark = document.getElementById('exclamationMark');
+  const exclamationMark3D = document.getElementById('exclamationMark3D');
   if (exclamationMark) {
     exclamationMark.classList.remove('hidden');
+  }
+  if (exclamationMark3D) {
+    exclamationMark3D.classList.remove('hidden');
   }
 }
 
@@ -37,6 +41,13 @@ function hideExclamationMark() {
   const exclamationMark = document.getElementById('exclamationMark');
   if (exclamationMark) {
     exclamationMark.classList.add('hidden');
+  }
+}
+
+function hide3DExclamationMark() {
+  const exclamationMark3D = document.getElementById('exclamationMark3D');
+  if (exclamationMark3D) {
+    exclamationMark3D.classList.add('hidden');
   }
 }
 
@@ -391,6 +402,308 @@ function updateQFormatDisplay() {
   }
 }
 
+// Three.js variables
+let scene, camera, renderer, controls, model;
+let isWireframe = false;
+
+function init3DViewer() {
+  const container = document.getElementById('threejsContainer');
+  const placeholder = document.getElementById('threejsPlaceholder');
+  
+  if (!container) return;
+
+  // Check if Three.js is available
+  if (typeof THREE === 'undefined') {
+    throw new Error('Three.js library not loaded');
+  }
+
+  // Clear placeholder
+  if (placeholder) placeholder.style.display = 'none';
+
+  // Scene setup
+  scene = new THREE.Scene();
+  scene.background = new THREE.Color(0x1a1a1a); // Slightly lighter dark background
+
+  // Camera setup - better position for inspection
+  camera = new THREE.PerspectiveCamera(75, container.clientWidth / container.clientHeight, 0.1, 1000);
+  camera.position.set(8, 6, 8);
+
+  // Renderer setup
+  renderer = new THREE.WebGLRenderer({ antialias: true });
+  renderer.setSize(container.clientWidth, container.clientHeight);
+  renderer.shadowMap.enabled = true;
+  renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+  renderer.outputEncoding = THREE.sRGBEncoding; // Better color rendering
+  
+  // Clear container and add renderer
+  container.innerHTML = '';
+  container.appendChild(renderer.domElement);
+
+  // Check if OrbitControls is available
+  if (typeof THREE.OrbitControls === 'undefined') {
+    throw new Error('OrbitControls not loaded');
+  }
+
+  // Controls setup - enhanced for better inspection
+  controls = new THREE.OrbitControls(camera, renderer.domElement);
+  controls.enableDamping = true;
+  controls.dampingFactor = 0.05; // Smoother damping
+  controls.enableZoom = true;
+  controls.enablePan = true;
+  controls.enableRotate = true;
+  controls.minDistance = 1;
+  controls.maxDistance = 50;
+  controls.target.set(0, 0, 0); // Look at center
+  controls.screenSpacePanning = false; // Better panning behavior
+  controls.autoRotate = false;
+  controls.rotateSpeed = 1.0;
+  controls.zoomSpeed = 1.0;
+  controls.panSpeed = 1.0;
+
+  // Enhanced lighting for better visibility
+  const ambientLight = new THREE.AmbientLight(0xffffff, 0.8); // Brighter ambient
+  scene.add(ambientLight);
+
+  // Main directional light
+  const directionalLight1 = new THREE.DirectionalLight(0xffffff, 1.0);
+  directionalLight1.position.set(10, 10, 5);
+  directionalLight1.castShadow = true;
+  scene.add(directionalLight1);
+
+  // Secondary light from opposite side
+  const directionalLight2 = new THREE.DirectionalLight(0xffffff, 0.6);
+  directionalLight2.position.set(-10, 5, -5);
+  scene.add(directionalLight2);
+
+  // Top light for better visibility
+  const topLight = new THREE.DirectionalLight(0xffffff, 0.4);
+  topLight.position.set(0, 20, 0);
+  scene.add(topLight);
+
+  // Animation loop
+  function animate() {
+    requestAnimationFrame(animate);
+    controls.update();
+    renderer.render(scene, camera);
+  }
+  animate();
+
+  // Handle window resize
+  window.addEventListener('resize', () => {
+    if (container.clientWidth > 0 && container.clientHeight > 0) {
+      camera.aspect = container.clientWidth / container.clientHeight;
+      camera.updateProjectionMatrix();
+      renderer.setSize(container.clientWidth, container.clientHeight);
+    }
+  });
+}
+
+async function load3DModel() {
+  const container = document.getElementById('threejsContainer');
+  if (!container) return;
+
+  try {
+    // Show loading
+    container.innerHTML = `
+      <div class="w-full h-full flex items-center justify-center">
+        <div class="text-center">
+          <div class="animate-spin w-8 h-8 border-2 border-neutral-400 border-t-transparent rounded-full mx-auto mb-4"></div>
+          <span class="theme-text-muted">Loading 3D model...</span>
+        </div>
+      </div>
+    `;
+
+    // Initialize 3D viewer
+    init3DViewer();
+
+    // Check if GLTFLoader is available
+    if (typeof THREE.GLTFLoader === 'undefined') {
+      throw new Error('GLTFLoader not loaded');
+    }
+
+    // Load GLB model
+    const loader = new THREE.GLTFLoader();
+    
+    loader.load(
+      'public/hardware/board.glb',
+      (gltf) => {
+        model = gltf.scene;
+        
+        // Calculate bounding box for proper centering
+        const box = new THREE.Box3().setFromObject(model);
+        const center = box.getCenter(new THREE.Vector3());
+        const size = box.getSize(new THREE.Vector3());
+        
+        // Get the largest dimension for proper scaling
+        const maxDim = Math.max(size.x, size.y, size.z);
+        
+        // Center the model at origin
+        model.position.x = -center.x;
+        model.position.y = -center.y;
+        model.position.z = -center.z;
+        
+        // Scale to reasonable size (adjust this value as needed)
+        const targetSize = 4; // Adjust this to make model larger/smaller
+        const scale = targetSize / maxDim;
+        model.scale.setScalar(scale);
+        
+        // Ensure materials are visible
+        model.traverse((child) => {
+          if (child.isMesh) {
+            // Enhance material properties for better visibility
+            if (child.material) {
+              child.material.needsUpdate = true;
+              // Add some metalness and roughness for better lighting
+              if (child.material.metalness !== undefined) {
+                child.material.metalness = 0.1;
+                child.material.roughness = 0.8;
+              }
+            }
+            child.castShadow = true;
+            child.receiveShadow = true;
+          }
+        });
+        
+        scene.add(model);
+        
+        // Position camera to look at the centered model (now at origin)
+        const distance = targetSize * 2; // Distance from model
+        camera.position.set(distance, distance * 0.75, distance);
+        camera.lookAt(0, 0, 0); // Look at origin where model is centered
+        
+        // Set controls target to origin (where model is now centered)
+        controls.target.set(0, 0, 0);
+        controls.update();
+        
+        console.log('3D model loaded successfully');
+        console.log('Model size:', size);
+        console.log('Original model center:', center);
+        console.log('Model position after centering:', model.position);
+        console.log('Camera position:', camera.position);
+        console.log('Controls target:', controls.target);
+      },
+      (progress) => {
+        console.log('Loading progress:', (progress.loaded / progress.total * 100) + '%');
+      },
+      (error) => {
+        console.error('Error loading 3D model:', error);
+        container.innerHTML = `
+          <div class="w-full h-full flex items-center justify-center">
+            <div class="text-center">
+              <svg class="w-16 h-16 mx-auto theme-text-muted mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+              <span class="theme-text-muted text-lg">3D model not available</span>
+              <p class="theme-text-muted text-sm mt-2">Model file could not be loaded</p>
+              <p class="theme-text-muted text-xs mt-1">Looking for: public/hardware/board.glb</p>
+            </div>
+          </div>
+        `;
+      }
+    );
+  } catch (error) {
+    console.error('3D viewer initialization failed:', error);
+    container.innerHTML = `
+      <div class="w-full h-full flex items-center justify-center">
+        <div class="text-center">
+          <svg class="w-16 h-16 mx-auto theme-text-muted mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+          <span class="theme-text-muted text-lg">3D viewer not available</span>
+          <p class="theme-text-muted text-sm mt-2">Three.js libraries failed to load</p>
+          <p class="theme-text-muted text-xs mt-1">Error: ${error.message}</p>
+        </div>
+      </div>
+    `;
+  }
+}
+
+function init3DControls() {
+  const reset3DView = document.getElementById('reset3DView');
+  const wireframe3D = document.getElementById('wireframe3D');
+
+  if (reset3DView) {
+    reset3DView.addEventListener('click', () => {
+      if (camera && controls && model) {
+        // Reset to a good viewing angle based on model size
+        const targetSize = 4; // Should match the target size used in load3DModel
+        const distance = targetSize * 2;
+        camera.position.set(distance, distance * 0.75, distance);
+        camera.lookAt(0, 0, 0);
+        controls.target.set(0, 0, 0);
+        controls.update();
+      }
+    });
+  }
+
+  if (wireframe3D) {
+    wireframe3D.addEventListener('click', () => {
+      if (model) {
+        isWireframe = !isWireframe;
+        model.traverse((child) => {
+          if (child.isMesh && child.material) {
+            if (Array.isArray(child.material)) {
+              child.material.forEach(mat => mat.wireframe = isWireframe);
+            } else {
+              child.material.wireframe = isWireframe;
+            }
+          }
+        });
+        wireframe3D.querySelector('span').textContent = isWireframe ? 'Solid' : 'Wireframe';
+      }
+    });
+  }
+}
+
+function init3DModal() {
+  const info3DBox = document.getElementById('info3DBox');
+  const modal3DOverlay = document.getElementById('modal3DOverlay');
+  const close3DModal = document.getElementById('close3DModal');
+
+  if (info3DBox && modal3DOverlay && close3DModal) {
+    // Open 3D modal when info box is clicked
+    info3DBox.addEventListener('click', () => {
+      modal3DOverlay.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+      load3DModel();
+      
+      // Hide 3D exclamation mark when viewing
+      hide3DExclamationMark();
+    });
+
+    // Close 3D modal functions
+    const close3DModalFn = () => {
+      modal3DOverlay.classList.add('hidden');
+      document.body.style.overflow = 'auto';
+      
+      // Clean up Three.js resources
+      if (renderer) {
+        renderer.dispose();
+        renderer = null;
+      }
+      if (scene) {
+        while(scene.children.length > 0) {
+          scene.remove(scene.children[0]);
+        }
+        scene = null;
+      }
+      model = null;
+      camera = null;
+      controls = null;
+    };
+
+    close3DModal.addEventListener('click', close3DModalFn);
+    modal3DOverlay.addEventListener('click', (e) => {
+      if (e.target === modal3DOverlay) close3DModalFn();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !modal3DOverlay.classList.contains('hidden')) {
+        close3DModalFn();
+      }
+    });
+  }
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   const btn = document.getElementById("applyMatricesBtn");
   if (btn) btn.addEventListener("click", applyMatrices);
@@ -415,7 +728,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   initToggle();
   initModal();
+  init3DModal();
   initSVDToggle();
+  
+  // Initialize 3D controls
+  init3DControls();
 });
 
 function getInputValue(id) {

@@ -7,6 +7,10 @@
 
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="/webui.js"></script>
+    <!-- Use a working Three.js CDN setup -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
     <link rel="stylesheet" href="styles.css">
   </head>
   <body class="min-h-screen theme-bg text-neutral-800 antialiased">
@@ -99,7 +103,7 @@
               rows × columns
             </p>
             <p class="text-sm theme-text-muted">
-              (A columns auto-sync with B rows) <!--this maybe isn't needed-->
+              (A columns auto-sync with B rows)
             </p>
           </div>
           <!-- matrix B -->
@@ -138,7 +142,7 @@
         </div>
 
         <!-- Info box with exclamation mark - moved between matrices and apply button -->
-        <div class="mt-8 flex justify-center">
+        <div class="mt-8 flex justify-center gap-4">
           <div id="infoBox" class="relative rounded-xl theme-card border shadow-sm p-4 cursor-pointer hover:scale-105 transition-transform">
             <!-- Exclamation mark icon - hidden by default -->
             <div id="exclamationMark" class="absolute -top-2 -right-2 w-6 h-6 bg-yellow-500 rounded-full flex items-center justify-center shadow-lg hidden">
@@ -149,6 +153,60 @@
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/>
               </svg>
               <span class="text-lg theme-text-secondary font-medium">View Circuit Diagram</span>
+            </div>
+          </div>
+
+          <!-- 3D Circuit Diagram Button -->
+          <div id="info3DBox" class="relative rounded-xl theme-card border shadow-sm p-4 cursor-pointer hover:scale-105 transition-transform">
+            <!-- Exclamation mark icon - hidden by default -->
+            <div id="exclamationMark3D" class="absolute -top-2 -right-2 w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center shadow-lg hidden">
+              <span class="text-white text-xs font-bold">3D</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <svg class="w-6 h-6 theme-text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
+              </svg>
+              <span class="text-lg theme-text-secondary font-medium">View 3D Circuit</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3D Modal overlay (hidden by default) -->
+        <div id="modal3DOverlay" class="fixed inset-0 bg-black bg-opacity-60 z-50 hidden flex items-center justify-center p-4 modal-backdrop">
+          <div class="theme-card rounded-xl shadow-2xl w-[80vw] h-[80vh] relative overflow-hidden border">
+            <!-- Close button -->
+            <button id="close3DModal" class="absolute top-6 right-6 w-10 h-10 rounded-full theme-button border hover:opacity-80 flex items-center justify-center transition z-20 shadow-lg">
+              <span class="theme-text-primary font-bold text-xl">×</span>
+            </button>
+            <!-- Header -->
+            <div class="border-b theme-card p-6 flex items-center justify-between">
+              <div>
+                <h2 class="text-xl font-semibold theme-text-primary">3D Circuit Diagram</h2>
+                <p class="text-sm theme-text-muted mt-1">Interactive 3D hardware visualization</p>
+              </div>
+              <!-- 3D Controls -->
+              <div class="flex items-center gap-2 mr-20">
+                <button id="reset3DView" class="px-3 py-1 text-xs rounded theme-button border hover:opacity-80 transition">
+                  <span class="theme-text-primary">Reset View</span>
+                </button>
+                <button id="wireframe3D" class="px-3 py-1 text-xs rounded theme-button border hover:opacity-80 transition">
+                  <span class="theme-text-primary">Wireframe</span>
+                </button>
+              </div>
+            </div>
+            <!-- 3D content area -->
+            <div class="w-full h-full" style="height: calc(100% - 80px);">
+              <div id="threejsContainer" class="w-full h-full theme-card">
+                <div id="threejsPlaceholder" class="w-full h-full flex items-center justify-center">
+                  <div class="text-center">
+                    <svg class="w-16 h-16 mx-auto theme-text-muted mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
+                    </svg>
+                    <span class="theme-text-muted text-lg">3D Circuit Model will be displayed here</span>
+                    <p class="theme-text-muted text-sm mt-2">Run "Apply Matrices" first to generate 3D model</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
