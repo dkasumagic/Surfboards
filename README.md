@@ -24,6 +24,8 @@ The user chooses their desired matrix sizes, with the inner dimensions being loc
 
 After this, the user presses the generate button and should receive the applicable circuit diagram.
 
+To reduce the monumental space of the chip and to reduce input wires coming into the surfboard, we researched, developed, and implemented a "first-of-its-kind" (that we know of) "proprietary" "symbolic" "vectorised" SVD (Singular Value Decomposition, not to be confused with...) algorithm that can reduce the amount of inputs into the chip by 90%!* 
+
 # Examples/Demos
 TODO: insert demo images here please.
 
